@@ -53,7 +53,10 @@ void EllMatrix::scatter(const std::vector<bool>& spikes,
 
 void EllMatrix::gather(const std::vector<bool>& spikes,
                        std::vector<double>& output) const {
-    // Pull: same traversal order as scatter for ELL.
+    // For ELL, gather traverses entries in the same row-major order as scatter.
+    // Both operations produce identical numerical results; the distinction is
+    // conceptual (pull vs push initiator).  ELL's regular layout is particularly
+    // valuable for GPU coalesced access regardless of operation direction.
     for (std::size_t i = 0; i < rows_; ++i) {
         if (!spikes[i]) continue;
         const std::size_t base = i * max_cols_;

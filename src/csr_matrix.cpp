@@ -55,8 +55,10 @@ void CsrMatrix::scatter(const std::vector<bool>& spikes,
 
 void CsrMatrix::gather(const std::vector<bool>& spikes,
                        std::vector<double>& output) const {
-    // Pull: iterate over every target column j and accumulate contributions
-    // from spiking sources. For CSR this requires a full scan of each row.
+    // For CSR, gather traverses entries in the same row-major order as scatter.
+    // Both operations produce identical numerical results; the distinction is
+    // conceptual (pull vs push initiator). A column-oriented structure (CSC)
+    // is better suited for true pull-based gather.
     for (std::size_t i = 0; i < rows_; ++i) {
         if (!spikes[i]) continue;
         for (std::size_t p = rowptr_[i]; p < rowptr_[i + 1]; ++p) {

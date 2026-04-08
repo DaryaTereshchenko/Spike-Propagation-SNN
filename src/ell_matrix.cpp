@@ -64,6 +64,20 @@ double ELLMatrix::gather(int target,
     return sum;
 }
 
+void ELLMatrix::gather_all(const std::vector<int>& spike_sources,
+                           std::vector<double>&    out_buffer) const
+{
+    // ELL gather_all: iterate spiking rows and distribute to columns.
+    for (int r : spike_sources) {
+        const int base = r * max_nnz_;
+        for (int k = 0; k < max_nnz_; ++k) {
+            int c = indices_[base + k];
+            if (c < 0) break;
+            out_buffer[c] += values_[base + k];
+        }
+    }
+}
+
 size_t ELLMatrix::memory_bytes() const
 {
     return indices_.size() * sizeof(int)

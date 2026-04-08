@@ -31,11 +31,18 @@ public:
     virtual void scatter(const std::vector<int>& spike_sources,
                          std::vector<double>&    out_buffer) const = 0;
 
-    /// Pull-based synaptic input (secondary operation).
+    /// Pull-based synaptic input (secondary operation, single target).
     /// Return the total synaptic input arriving at neuron @p target from the
     /// neurons listed in @p spike_sources.
     virtual double gather(int target,
                           const std::vector<int>& spike_sources) const = 0;
+
+    /// Pull-based synaptic input for ALL target neurons (gather benchmark).
+    /// For every target neuron, sum incoming weights from @p spike_sources
+    /// and write the result to @p out_buffer.
+    /// @p out_buffer must be pre-allocated to size num_cols() and zeroed.
+    virtual void gather_all(const std::vector<int>& spike_sources,
+                            std::vector<double>&    out_buffer) const = 0;
 
     /// Number of bytes used by the internal storage arrays (excluding this
     /// object's overhead).

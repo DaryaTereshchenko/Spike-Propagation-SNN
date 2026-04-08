@@ -1,39 +1,74 @@
 # Running Benchmarks — CPU and GPU
 
-## CPU Benchmarks (ARM64)
+## CPU Benchmarks
 
 ```bash
 # 1. Clone the repo
 git clone https://github.com/DaryaTereshchenko/Spike-Propagation-SNN.git
 cd Spike-Propagation-SNN
 
-# 2. Install dependencies
-sudo apt update && sudo apt install -y build-essential cmake linux-tools-generic
+# 2. Build
+cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j$(nproc)
 
-# 3. Quick smoke test first
-./scripts/run_benchmarks.sh --small
+# 3. Run tests
+cd build && ctest --output-on-failure && cd ..
 
-# 4. Full benchmark sweep (takes ~30-60 min)
-./scripts/run_benchmarks.sh
+# 4. Single benchmark run
+./build/spike_benchmark --format csr --topology er --size 5000 --density 0.05
 
-# 5. Full sweep WITH hardware counters (cache misses, IPC)
+# 5. Full parameter sweep (in-process, shared RSS)
+./build/spike_benchmark --sweep --output-csv results/benchmark_results.csv
+
+# 6. Full sweep with per-config RSS (subprocess mode — recommended)
+./build/spike_benchmark --sweep --subprocess --output-csv results/benchmark_results.csv
+
+# 7. Spike-rate sweep (characterise cost vs. activity level)
+./build/spike_benchmark --sweep --subprocess \
+    --sweep-sizes "1000 5000" --sweep-densities "0.05" \
+    --sweep-rates "5 10 15 20 25 30" \
+    --output-csv results/rate_sweep_results.csv
+
+# 8. Full sweep WITH hardware counters (cache misses, IPC)
 ./scripts/run_benchmarks.sh --perf
 
-# 6. Generate plots
+# 9. Generate plots
 pip install matplotlib pandas numpy
 python3 scripts/plot_results.py
 ```
 
-**Output files:**
-- `results/benchmark_results.csv` — timing, memory, spike counts
-- `results/perf_results.csv` — cache misses, instructions, cycles (if `--perf`)
-- `results/*.png` — 5 publication-quality plots
+### CLI Reference
 
-> **Note on `perf` with ARM64:** If `perf stat` fails with a permissions error, run:
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--format {coo\|csr\|csc\|ell}` | Sparse matrix format | `csr` |
+| `--topology {er\|fi\|ba\|ws}` | Network topology | `er` |
+| `--size N` | Number of neurons | `1000` |
+| `--density p` | Connection density / degree param | `0.05` |
+| `--timesteps T` | Simulation timesteps | `1000` |
+| `--trials R` | Repeat count | `10` |
+| `--seed S` | Random seed | `42` |
+| `--poisson-rate R` | External Poisson rate (spikes/neuron/step) | `15.0` |
+| `--poisson-weight W` | External spike weight (mV) | `1.5` |
+| `--coupling G` | Recurrent weight = G/sqrt(K) | `2.0` |
+| `--output-csv FILE` | Write results as CSV | (none) |
+| `--sweep` | Run full parameter sweep | (off) |
+| `--sweep-sizes "..."` | Space-separated sizes to sweep | `"1000 5000 10000"` |
+| `--sweep-densities "..."` | Space-separated densities | `"0.01 0.05 0.1"` |
+| `--sweep-rates "..."` | Space-separated Poisson rates | (single rate) |
+| `--subprocess` | Fork child process per config for accurate RSS | (off) |
+| `--single-config` | Internal: run one config, print CSV to stdout | (off) |
+
+**Output files:**
+- `results/benchmark_results.csv` — scatter/gather timing, memory, spike counts
+- `results/rate_sweep_results.csv` — spike-rate sweep data (if run)
+- `results/perf_results.csv` — cache misses, instructions, cycles (if `--perf`)
+- `results/*.png` — publication-quality plots
+
+> **Note on `perf`:** If `perf stat` fails with a permissions error, run:
 > ```bash
 > sudo sysctl -w kernel.perf_event_paranoid=-1
 > ```
-> Or run the benchmark with `sudo`.
 
 ---
 

@@ -33,9 +33,11 @@ Two algorithmic approaches exist:
 | **Scatter** (push) | Iterate over spiking neurons; for each, iterate over its post-synaptic targets and *add* the weight to the target's current | Column-oriented access per spiking neuron | **CSR** (row = target, column = source; rows of W indexed by target) |
 | **Gather** (pull) | Iterate over all neurons; for each target, iterate over its pre-synaptic sources and check if they spiked | Row-oriented access per target | **CSC** (quick column traversal for gather) |
 
-In our implementation, `scatter` is the **primary benchmark operation** because
-it visits only the outgoing synapses of spiking neurons, which is typically a
-small fraction of the matrix.
+In our implementation, **scatter** is the primary benchmark operation (push-based:
+iterate spiking neurons, distribute weights to targets) and **gather** is the
+symmetric counterpart (pull-based: for each target, sum incoming weights from
+spiking sources).  Both operations are benchmarked at every timestep to enable
+fair scatter-vs-gather comparison across formats.
 
 ---
 
@@ -158,18 +160,27 @@ class SparseMatrix {
 public:
     virtual ~SparseMatrix() = default;
 
-    virtual void scatter(const std::vector<bool>& spikes,
-                         std::vector<double>& out_current) const = 0;
-    virtual void gather(int target_neuron,
-                        const std::vector<bool>& spikes,
-                        double& out_current) const = 0;
+    // Push-based spike delivery (scatter benchmark).
+    virtual void scatter(const std::vector<int>& spike_sources,
+                         std::vector<double>&    out_buffer) const = 0;
+
+    // Pull-based synaptic input for a single target.
+    virtual double gather(int target,
+                          const std::vector<int>& spike_sources) const = 0;
+
+    // Pull-based synaptic input for ALL targets (gather benchmark).
+    virtual void gather_all(const std::vector<int>& spike_sources,
+                            std::vector<double>&    out_buffer) const = 0;
 
     virtual int    num_rows()     const = 0;
     virtual int    num_cols()     const = 0;
-    virtual int    num_nonzeros() const = 0;
+    virtual size_t num_nonzeros() const = 0;
     virtual size_t memory_bytes() const = 0;
 };
 ```
+
+`scatter` and `gather_all` are the two operations benchmarked in the timed
+loop.  `gather` (single-target) is used in unit tests.
 
 ### Interchange Format: `COOTriplets`
 

@@ -64,6 +64,20 @@ double CSRMatrix::gather(int target,
     return sum;
 }
 
+void CSRMatrix::gather_all(const std::vector<int>& spike_sources,
+                           std::vector<double>&    out_buffer) const
+{
+    // CSR gather: for each spiking row, iterate its entries and accumulate
+    // into out_buffer by column.  Same work as scatter but different semantics.
+    for (int r : spike_sources) {
+        const int start = row_ptr_[r];
+        const int end   = row_ptr_[r + 1];
+        for (int j = start; j < end; ++j) {
+            out_buffer[col_idx_[j]] += val_[j];
+        }
+    }
+}
+
 size_t CSRMatrix::memory_bytes() const
 {
     return row_ptr_.size()  * sizeof(int)

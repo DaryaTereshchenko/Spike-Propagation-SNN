@@ -136,6 +136,40 @@ TEST_CASE("Gather with no spikes returns zero", "[formats][gather]")
 }
 
 // ---------------------------------------------------------------------------
+// Test: gather_all produces identical results to scatter (same operation)
+// ---------------------------------------------------------------------------
+TEST_CASE("Gather_all matches scatter across formats", "[formats][gather]")
+{
+    AllFormats f;
+    std::vector<int> spikes = {0, 4};
+
+    // scatter and gather_all should produce identical output since both
+    // compute the same SpMV product for the spiking rows.
+    auto run_scatter = [&](SparseMatrix& m) {
+        std::vector<double> out(5, 0.0);
+        m.scatter(spikes, out);
+        return out;
+    };
+
+    auto run_gather_all = [&](SparseMatrix& m) {
+        std::vector<double> out(5, 0.0);
+        m.gather_all(spikes, out);
+        return out;
+    };
+
+    auto scatter_ref = run_scatter(*f.coo);
+
+    for (auto* m : std::vector<SparseMatrix*>{f.coo.get(), f.csr.get(),
+                                                f.csc.get(), f.ell.get()}) {
+        auto g = run_gather_all(*m);
+        for (int i = 0; i < 5; ++i) {
+            INFO("index " << i);
+            REQUIRE(g[i] == scatter_ref[i]);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
 // Test: scatter with all neurons spiking
 // ---------------------------------------------------------------------------
 TEST_CASE("Scatter with all spikes", "[formats][scatter]")

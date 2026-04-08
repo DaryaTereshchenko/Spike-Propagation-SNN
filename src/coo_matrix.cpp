@@ -42,6 +42,22 @@ double COOMatrix::gather(int target,
     return sum;
 }
 
+void COOMatrix::gather_all(const std::vector<int>& spike_sources,
+                           std::vector<double>&    out_buffer) const
+{
+    std::vector<bool> is_spiking(nrows_, false);
+    for (int s : spike_sources) {
+        is_spiking[s] = true;
+    }
+
+    const size_t nnz = row_.size();
+    for (size_t i = 0; i < nnz; ++i) {
+        if (is_spiking[row_[i]]) {
+            out_buffer[col_[i]] += val_[i];
+        }
+    }
+}
+
 size_t COOMatrix::memory_bytes() const
 {
     return row_.size() * sizeof(int)

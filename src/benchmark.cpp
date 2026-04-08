@@ -147,6 +147,16 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
     COOTriplets triplets = generate_topology(config.topology, config.N,
                                              config.density, config.seed);
 
+    // Normalise recurrent weights: w = coupling_strength / sqrt(K_avg).
+    // Ensures consistent network dynamics across all topologies.
+    {
+        double K_avg = static_cast<double>(triplets.nnz()) / config.N;
+        double w = config.coupling_strength / std::sqrt(std::max(K_avg, 1.0));
+        for (auto& v : triplets.vals) {
+            v = w;
+        }
+    }
+
     // 2. Build sparse matrix.
     auto matrix = build_matrix(config.format, triplets);
 
@@ -158,6 +168,7 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
 
     // Storage for per-trial timings and spike counts.
     std::vector<double> trial_times(config.trials);
+    std::vector<double> gather_times(config.trials);
     long total_spikes_all = 0;
 
     for (int trial = 0; trial < config.trials; ++trial) {
@@ -174,6 +185,11 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
             }
         }
 
+        // RNG for external Poisson drive.
+        std::mt19937 ext_rng(config.seed + trial + 1000);
+        std::poisson_distribution<int> poisson_dist(config.poisson_rate);
+
+        // ---- Scatter benchmark (push-based spike delivery) ----
         auto t0 = std::chrono::high_resolution_clock::now();
 
         for (int t = 0; t < config.timesteps; ++t) {
@@ -185,6 +201,13 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
                 matrix->scatter(spikes, I_syn);
             }
 
+            // External Poisson drive: each neuron receives
+            // Poisson-distributed external spikes per timestep,
+            // modelling background cortical input (Brunel 2000).
+            for (int i = 0; i < N; ++i) {
+                I_syn[i] += poisson_dist(ext_rng) * config.poisson_weight;
+            }
+
             // Step LIF and collect new spikes for next iteration.
             spikes = lif.step(I_syn);
             trial_spikes += static_cast<long>(spikes.size());
@@ -194,9 +217,43 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
         double ms = std::chrono::duration<double, std::milli>(t1 - t0).count();
         trial_times[trial] = ms;
         total_spikes_all += trial_spikes;
+
+        // ---- Gather benchmark (pull-based synaptic input) ----
+        // Re-seed and replay the same simulation to get matching spike
+        // patterns, but time gather_all instead of scatter.
+        lif.reset();
+        std::vector<int> g_spikes;
+        {
+            std::mt19937 init_rng(config.seed + trial);
+            std::uniform_real_distribution<double> dist(0.0, 1.0);
+            for (int i = 0; i < N; ++i) {
+                if (dist(init_rng) < 0.01) g_spikes.push_back(i);
+            }
+        }
+        std::mt19937 g_ext_rng(config.seed + trial + 1000);
+        std::poisson_distribution<int> g_poisson_dist(config.poisson_rate);
+
+        auto g0 = std::chrono::high_resolution_clock::now();
+
+        for (int t = 0; t < config.timesteps; ++t) {
+            std::fill(I_syn.begin(), I_syn.end(), 0.0);
+
+            if (!g_spikes.empty()) {
+                matrix->gather_all(g_spikes, I_syn);
+            }
+
+            for (int i = 0; i < N; ++i) {
+                I_syn[i] += g_poisson_dist(g_ext_rng) * config.poisson_weight;
+            }
+
+            g_spikes = lif.step(I_syn);
+        }
+
+        auto g1 = std::chrono::high_resolution_clock::now();
+        gather_times[trial] = std::chrono::duration<double, std::milli>(g1 - g0).count();
     }
 
-    // Compute mean and std of trial times.
+    // Compute mean and std of scatter trial times.
     double sum  = std::accumulate(trial_times.begin(), trial_times.end(), 0.0);
     double mean = sum / config.trials;
     double sq_sum = 0.0;
@@ -204,6 +261,15 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
         sq_sum += (t - mean) * (t - mean);
     }
     double std_dev = std::sqrt(sq_sum / config.trials);
+
+    // Compute mean and std of gather trial times.
+    double g_sum  = std::accumulate(gather_times.begin(), gather_times.end(), 0.0);
+    double g_mean = g_sum / config.trials;
+    double g_sq_sum = 0.0;
+    for (double t : gather_times) {
+        g_sq_sum += (t - g_mean) * (t - g_mean);
+    }
+    double g_std = std::sqrt(g_sq_sum / config.trials);
 
     BenchmarkResult result;
     result.format        = config.format;
@@ -220,6 +286,11 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
                            / config.timesteps;
     result.memory_bytes  = matrix->memory_bytes();
     result.nnz           = matrix->num_nonzeros();
+    result.poisson_rate  = config.poisson_rate;
+
+    // --- Gather metrics ---
+    result.gather_mean_time_ms = g_mean;
+    result.gather_std_time_ms  = g_std;
 
     // --- Compute derived metrics ---
     // Effective bandwidth: during scatter, each spike reads its row of the
@@ -239,6 +310,14 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
         double edges_traversed = result.spikes_per_step * avg_out_degree
                                * config.timesteps;
         result.scatter_throughput = edges_traversed / mean;
+    }
+
+    // Gather throughput: same edge counting, divided by gather time.
+    if (g_mean > 0.0 && result.N > 0) {
+        double avg_out_degree = static_cast<double>(result.nnz) / result.N;
+        double edges_traversed = result.spikes_per_step * avg_out_degree
+                               * config.timesteps;
+        result.gather_throughput = edges_traversed / g_mean;
     }
 
     // Bytes per spike: matrix memory / total spikes propagated.
@@ -267,7 +346,10 @@ void write_csv_header(const std::string& filename)
          "mean_time_ms,std_time_ms,peak_rss_kb,"
          "total_spikes,spikes_per_step,memory_bytes,nnz,"
          "effective_bw_gbps,scatter_throughput_edges_per_ms,"
-         "bytes_per_spike,cache_ratio_L1,cache_ratio_L2,cache_ratio_L3\n";
+         "bytes_per_spike,"
+         "gather_mean_time_ms,gather_std_time_ms,gather_throughput_edges_per_ms,"
+         "cache_ratio_L1,cache_ratio_L2,cache_ratio_L3,"
+         "poisson_rate\n";
 }
 
 void append_csv_row(const std::string& filename, const BenchmarkResult& r)
@@ -281,7 +363,10 @@ void append_csv_row(const std::string& filename, const BenchmarkResult& r)
       << r.memory_bytes  << "," << r.nnz << ","
       << r.effective_bw_gbps << "," << r.scatter_throughput << ","
       << r.bytes_per_spike << ","
+      << r.gather_mean_time_ms << "," << r.gather_std_time_ms << ","
+      << r.gather_throughput << ","
       << r.matrix_cache_ratio_L1 << ","
       << r.matrix_cache_ratio_L2 << ","
-      << r.matrix_cache_ratio_L3 << "\n";
+      << r.matrix_cache_ratio_L3 << ","
+      << r.poisson_rate << "\n";
 }

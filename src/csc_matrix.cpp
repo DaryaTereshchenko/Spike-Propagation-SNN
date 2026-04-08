@@ -74,6 +74,26 @@ double CSCMatrix::gather(int target,
     return sum;
 }
 
+void CSCMatrix::gather_all(const std::vector<int>& spike_sources,
+                           std::vector<double>&    out_buffer) const
+{
+    // CSC is optimal for gather_all: iterate each column directly.
+    std::vector<bool> is_spiking(nrows_, false);
+    for (int s : spike_sources) {
+        is_spiking[s] = true;
+    }
+
+    for (int c = 0; c < ncols_; ++c) {
+        const int start = col_ptr_[c];
+        const int end   = col_ptr_[c + 1];
+        for (int j = start; j < end; ++j) {
+            if (is_spiking[row_idx_[j]]) {
+                out_buffer[c] += val_[j];
+            }
+        }
+    }
+}
+
 size_t CSCMatrix::memory_bytes() const
 {
     return col_ptr_.size()  * sizeof(int)

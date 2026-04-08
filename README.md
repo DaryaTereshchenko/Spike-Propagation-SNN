@@ -4,7 +4,7 @@ A C++17 benchmark framework for evaluating sparse matrix storage formats
 in the context of spiking neural network (SNN) spike propagation.  Compares
 **COO**, **CSR**, **CSC**, and **ELLPACK** formats across four network
 topologies, measuring wall-clock time, memory consumption, and cache
-behaviour.
+behaviour for both **scatter** (push) and **gather** (pull) operations.
 
 ## Quick Start
 
@@ -20,8 +20,16 @@ cd build && ctest --output-on-failure && cd ..
 ./build/spike_benchmark --format csr --topology erdos_renyi \
     --size 5000 --density 0.05 --timesteps 1000
 
-# Full sweep
+# Full sweep (in-process)
 ./build/spike_benchmark --sweep --output-csv results/benchmark_results.csv
+
+# Full sweep (subprocess per config — accurate per-config RSS)
+./build/spike_benchmark --sweep --subprocess \
+    --output-csv results/benchmark_results.csv
+
+# Spike-rate sweep (vary Poisson drive across multiple rates)
+./build/spike_benchmark --sweep --sweep-rates "5 10 15 20 25 30" \
+    --output-csv results/rate_sweep_results.csv
 
 # Plot results
 python3 scripts/plot_results.py
@@ -73,12 +81,12 @@ python3 scripts/plot_results.py
 
 ## Sparse Matrix Formats
 
-| Format | Memory | Scatter Cost | Best For |
-|--------|--------|-------------|----------|
-| COO    | 3 × nnz arrays | O(nnz) | Interchange |
-| CSR    | N+1 + 2×nnz | O(Σ deg_out) | Scatter (push) |
-| CSC    | N+1 + 2×nnz | O(Σ deg_out) | Gather (pull) |
-| ELL    | N × K_max × 2 | O(\|S\| × K) | Regular topologies |
+| Format | Memory | Scatter Cost | Gather Cost | Best For |
+|--------|--------|-------------|-------------|----------|
+| COO    | 3 × nnz arrays | O(nnz) | O(nnz) | Interchange |
+| CSR    | N+1 + 2×nnz | O(Σ deg_out) | O(N × deg) | Scatter (push) |
+| CSC    | N+1 + 2×nnz | O(N × deg) | O(Σ deg_in) | Gather (pull) |
+| ELL    | N × K_max × 2 | O(\|S\| × K) | O(N × K) | Regular topologies |
 
 ## Network Topologies
 
@@ -110,6 +118,8 @@ Detailed module descriptions are in `docs/`:
 | [docs/README_topology.md](docs/README_topology.md) | Graph models, biological relevance |
 | [docs/README_lif_neuron.md](docs/README_lif_neuron.md) | LIF equations, Euler discretisation |
 | [docs/README_benchmark.md](docs/README_benchmark.md) | Methodology, sweep parameters, CSV schema |
+| [docs/README_cache_and_metrics.md](docs/README_cache_and_metrics.md) | Cache hierarchy, derived metrics |
+| [docs/README_running.md](docs/README_running.md) | CLI reference, subprocess & sweep modes |
 | [docs/README_csv_io.md](docs/README_csv_io.md) | CSV format, NEST integration |
 | [docs/README_plotting.md](docs/README_plotting.md) | Plot descriptions, interpretation |
 | [docs/README_gpu_validation.md](docs/README_gpu_validation.md) | GeNN setup, GPU profiling |

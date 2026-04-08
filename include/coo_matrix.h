@@ -17,6 +17,8 @@ public:
                    std::vector<double>&    out_buffer) const override;
     double gather(int target,
                   const std::vector<int>& spike_sources) const override;
+    void   gather_all(const std::vector<int>& spike_sources,
+                      std::vector<double>&    out_buffer) const override;
 
     size_t memory_bytes() const override;
     int    num_rows()     const override { return nrows_; }

@@ -21,6 +21,12 @@ struct BenchmarkConfig {
     int         timesteps = 1000;
     int         trials    = 10;
     unsigned    seed      = 42;
+
+    // External Poisson drive — models background cortical input.
+    double      poisson_rate      = 15.0;  // Mean external spikes per neuron per step
+    double      poisson_weight    = 1.5;   // Weight (mV) per external spike
+    // Recurrent weight normalisation: w = coupling_strength / sqrt(K_avg).
+    double      coupling_strength = 2.0;
 };
 
 /// Results from a single benchmark configuration.
@@ -39,13 +45,23 @@ struct BenchmarkResult {
     size_t      memory_bytes   = 0;
     size_t      nnz            = 0;
 
-    // --- Derived metrics ---
+    // --- Scatter metrics ---
     double      effective_bw_gbps  = 0.0;  // Effective bandwidth (GB/s)
     double      scatter_throughput = 0.0;  // Edges processed per ms
     double      bytes_per_spike    = 0.0;  // Memory cost per propagated spike
+
+    // --- Gather metrics ---
+    double      gather_mean_time_ms = 0.0; // Mean gather trial time (ms)
+    double      gather_std_time_ms  = 0.0; // Std of gather trial time (ms)
+    double      gather_throughput   = 0.0; // Edges processed per ms (gather)
+
+    // --- Cache ratios ---
     double      matrix_cache_ratio_L1 = 0.0; // matrix_bytes / L1d size
     double      matrix_cache_ratio_L2 = 0.0; // matrix_bytes / L2 size
     double      matrix_cache_ratio_L3 = 0.0; // matrix_bytes / L3 size
+
+    // --- Drive parameters (recorded for spike-rate sweep analysis) ---
+    double      poisson_rate   = 0.0;
 };
 
 /// Run a single benchmark configuration and return aggregated results.

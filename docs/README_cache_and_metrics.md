@@ -70,7 +70,7 @@ analysis.
 
 ## Derived Metrics
 
-Six derived metrics are computed for every benchmark configuration. They
+Seven derived metrics are computed for every benchmark configuration. They
 transform raw timing and memory data into quantities that explain **why**
 one format outperforms another.
 
@@ -127,7 +127,7 @@ simulation uses. It assumes the entire matrix is read once per trial.
 
 ### 3. Scatter Throughput (edges/ms)
 
-$$S = \frac{\bar{s} \times \bar{d}_{\text{out}} \times T}{t_{\text{mean}}}$$
+$$S_{\text{scatter}} = \frac{\bar{s} \times \bar{d}_{\text{out}} \times T}{t_{\text{scatter}}}$$
 
 where $\bar{s}$ is the average number of spikes per timestep,
 $\bar{d}_{\text{out}} = \text{nnz}/N$ is the average out-degree, and
@@ -135,13 +135,25 @@ $T$ is the number of timesteps.
 
 **Interpretation:**
 - This directly measures how many synaptic connections are processed
-  per millisecond of wall-clock time.
+  per millisecond of wall-clock time during push-based propagation.
 - Higher values indicate a more cache-friendly access pattern.
-- CSR should excel here for scatter operations because it stores rows
-  contiguously — each spiking neuron's outgoing connections are read
-  sequentially.
+- CSR and ELL excel here because they store rows contiguously — each
+  spiking neuron's outgoing connections are read sequentially.
 
-### 4. Bytes per Spike
+### 4. Gather Throughput (edges/ms)
+
+$$S_{\text{gather}} = \frac{\bar{s} \times \bar{d}_{\text{out}} \times T}{t_{\text{gather}}}$$
+
+Same edge-count formula, but divided by the gather trial time.
+
+**Interpretation:**
+- Measures pull-based synaptic input collection efficiency.
+- CSC should excel here because `gather_all` iterates each column's
+  entries sequentially — its native access pattern.
+- Comparing $S_{\text{scatter}}$ vs $S_{\text{gather}}$ per format
+  reveals the scatter/gather asymmetry inherent in each layout.
+
+### 5. Bytes per Spike
 
 $$B_s = \frac{M_{\text{matrix}}}{S_{\text{total}}}$$
 
@@ -208,9 +220,11 @@ Use the following framework to explain format performance differences:
    - If yes → memory-bound; format layout determines performance.
    - If no → latency-bound (random access) or compute-bound.
 
-3. **Check scatter throughput** — Which format processes edges fastest?
+3. **Check scatter & gather throughput** — Which format processes edges fastest?
    - CSR should dominate for scatter (push-based propagation).
    - CSC should dominate for gather (pull-based propagation).
+   - Comparing $S_{\text{scatter}}$ vs $S_{\text{gather}}$ per format
+     reveals the inherent layout asymmetry.
    - ELL trades memory for regularity (no branch mispredictions).
 
 4. **Check dTLB misses** — Is address translation a bottleneck?

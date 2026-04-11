@@ -73,6 +73,41 @@ format-specific storage footprint directly from each matrix object.
 
 ---
 
+## 2b  Statistical Robustness Improvements (Post-Run 2)
+
+Analysis of Run 1 and Run 2 results revealed several configurations with
+severely corrupted timing statistics caused by rare system interference
+(OS scheduling, swapping).  For example:
+
+- `coo,er,10000,0.05` reported `mean_time_ms = 3.59 × 10⁶` (expected ~14 000)
+- `coo,ba,10000,0.1` reported `mean_time_ms = 3.85 × 10⁶` (expected ~28 000)
+- `csc,ws,1000,0.05,rate=25` reported `mean_time_ms = 1.25 × 10⁶` (expected ~220)
+- Multiple gather times had `std > mean`, indicating single-trial contamination
+
+### Root cause
+
+A single outlier trial (e.g., due to OS page reclaim or scheduling) with
+a runtime 100–1000× above normal dominates the arithmetic mean.  With
+only 10 trials, one bad value shifts the mean by an order of magnitude.
+
+### Fixes applied
+
+| Change | Before | After |
+|--------|--------|-------|
+| **Outlier rejection** | None | IQR-based: trials outside $[Q_1 - 1.5 \cdot \text{IQR}, Q_3 + 1.5 \cdot \text{IQR}]$ are removed before computing mean/std |
+| **Standard deviation** | Population std ($\div n$) | Sample std with Bessel's correction ($\div (n-1)$) |
+| **Median reporting** | Not reported | `median_time_ms` and `gather_median_time_ms` added as robust central tendency |
+| **Audit column** | Not available | `outliers_removed` records how many trials were rejected per config |
+
+### Impact
+
+- Eliminates 10⁶ ms timing anomalies in the CSV data
+- Std values now reflect true trial-to-trial variability, not outlier contamination
+- Median provides a second check: if `median ≈ mean`, data is clean;
+  if they diverge, outlier rejection was necessary
+
+---
+
 ## 3  Performance Results
 
 ### 3.1  Wall-Clock Time (ms, mean ± std, 10 trials, 1 000 timesteps)

@@ -41,9 +41,11 @@ static void print_result(const BenchmarkResult& r)
               << "  Poisson rate:    " << r.poisson_rate    << "\n"
               << "  Timesteps:       " << r.timesteps       << "\n"
               << "  Trials:          " << r.trials          << "\n"
+              << "  Outliers removed:" << r.outliers_removed << "\n"
               << "  NNZ:             " << r.nnz             << "\n"
               << "  Matrix memory:   " << r.memory_bytes    << " bytes\n"
               << "  Mean time:       " << r.mean_time_ms    << " ms\n"
+              << "  Median time:     " << r.median_time_ms  << " ms\n"
               << "  Std time:        " << r.std_time_ms     << " ms\n"
               << "  Peak RSS:        " << r.peak_rss_kb     << " kB\n"
               << "  Avg spikes/step: " << r.spikes_per_step << "\n"
@@ -55,6 +57,7 @@ static void print_result(const BenchmarkResult& r)
               << "  --- Gather metrics ---\n"
               << "  Gather time:     " << r.gather_mean_time_ms << " ms (±"
                                        << r.gather_std_time_ms  << ")\n"
+              << "  Gather median:   " << r.gather_median_time_ms << " ms\n"
               << "  Gather thruput:  " << r.gather_throughput   << " edges/ms\n"
               << "  --- Cache ratios ---\n"
               << "  Cache ratio L1d: " << r.matrix_cache_ratio_L1 << "x\n"
@@ -147,17 +150,20 @@ int main(int argc, char* argv[])
                   << result.N        << "," << result.density  << ","
                   << result.timesteps << "," << result.trials  << ","
                   << result.mean_time_ms  << "," << result.std_time_ms << ","
+                  << result.median_time_ms << ","
                   << result.peak_rss_kb   << ","
                   << result.total_spikes  << "," << result.spikes_per_step << ","
                   << result.memory_bytes  << "," << result.nnz << ","
                   << result.effective_bw_gbps << "," << result.scatter_throughput << ","
                   << result.bytes_per_spike << ","
                   << result.gather_mean_time_ms << "," << result.gather_std_time_ms << ","
+                  << result.gather_median_time_ms << ","
                   << result.gather_throughput << ","
                   << result.matrix_cache_ratio_L1 << ","
                   << result.matrix_cache_ratio_L2 << ","
                   << result.matrix_cache_ratio_L3 << ","
-                  << result.poisson_rate << "\n";
+                  << result.poisson_rate << ","
+                  << result.outliers_removed << "\n";
 
         return 0;
     }

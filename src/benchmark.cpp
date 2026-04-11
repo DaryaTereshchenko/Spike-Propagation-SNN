@@ -253,23 +253,69 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
         gather_times[trial] = std::chrono::duration<double, std::milli>(g1 - g0).count();
     }
 
-    // Compute mean and std of scatter trial times.
+    // ---- IQR-based outlier rejection for robust statistics ----
+    // Removes trials beyond Q1 - 1.5*IQR .. Q3 + 1.5*IQR, then computes
+    // mean/std from the remaining ("trimmed") set.  This guards against
+    // occasional system hiccups (scheduling, swapping) that can produce
+    // single-trial times 100-1000x higher than the true value.
+    auto reject_outliers = [](std::vector<double>& times) -> int {
+        if (times.size() < 4) return 0; // Need at least 4 for meaningful IQR
+        std::vector<double> sorted = times;
+        std::sort(sorted.begin(), sorted.end());
+        size_t n = sorted.size();
+        double Q1 = sorted[n / 4];
+        double Q3 = sorted[3 * n / 4];
+        double IQR = Q3 - Q1;
+        double lo = Q1 - 1.5 * IQR;
+        double hi = Q3 + 1.5 * IQR;
+        std::vector<double> clean;
+        clean.reserve(n);
+        for (double t : times) {
+            if (t >= lo && t <= hi) clean.push_back(t);
+        }
+        int removed = static_cast<int>(times.size() - clean.size());
+        if (!clean.empty()) times = std::move(clean);
+        return removed;
+    };
+
+    auto compute_median = [](std::vector<double> v) -> double {
+        if (v.empty()) return 0.0;
+        std::sort(v.begin(), v.end());
+        size_t n = v.size();
+        if (n % 2 == 1) return v[n / 2];
+        return (v[n / 2 - 1] + v[n / 2]) / 2.0;
+    };
+
+    // Compute medians before outlier removal (on full data).
+    double scatter_median = compute_median(trial_times);
+    double gather_median  = compute_median(gather_times);
+
+    // Remove outliers.
+    int scatter_outliers = reject_outliers(trial_times);
+    int gather_outliers  = reject_outliers(gather_times);
+    (void)gather_outliers;
+
+    // Compute mean and std of scatter trial times (sample std, Bessel's correction).
     double sum  = std::accumulate(trial_times.begin(), trial_times.end(), 0.0);
-    double mean = sum / config.trials;
+    double mean = sum / static_cast<double>(trial_times.size());
     double sq_sum = 0.0;
     for (double t : trial_times) {
         sq_sum += (t - mean) * (t - mean);
     }
-    double std_dev = std::sqrt(sq_sum / config.trials);
+    double std_dev = (trial_times.size() > 1)
+                   ? std::sqrt(sq_sum / (trial_times.size() - 1))
+                   : 0.0;
 
     // Compute mean and std of gather trial times.
     double g_sum  = std::accumulate(gather_times.begin(), gather_times.end(), 0.0);
-    double g_mean = g_sum / config.trials;
+    double g_mean = g_sum / static_cast<double>(gather_times.size());
     double g_sq_sum = 0.0;
     for (double t : gather_times) {
         g_sq_sum += (t - g_mean) * (t - g_mean);
     }
-    double g_std = std::sqrt(g_sq_sum / config.trials);
+    double g_std = (gather_times.size() > 1)
+                 ? std::sqrt(g_sq_sum / (gather_times.size() - 1))
+                 : 0.0;
 
     BenchmarkResult result;
     result.format        = config.format;
@@ -287,6 +333,11 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
     result.memory_bytes  = matrix->memory_bytes();
     result.nnz           = matrix->num_nonzeros();
     result.poisson_rate  = config.poisson_rate;
+
+    // --- Robust statistics ---
+    result.median_time_ms        = scatter_median;
+    result.gather_median_time_ms = gather_median;
+    result.outliers_removed      = scatter_outliers;
 
     // --- Gather metrics ---
     result.gather_mean_time_ms = g_mean;
@@ -343,13 +394,14 @@ void write_csv_header(const std::string& filename)
 {
     std::ofstream f(filename);
     f << "format,topology,N,density,timesteps,trials,"
-         "mean_time_ms,std_time_ms,peak_rss_kb,"
+         "mean_time_ms,std_time_ms,median_time_ms,peak_rss_kb,"
          "total_spikes,spikes_per_step,memory_bytes,nnz,"
          "effective_bw_gbps,scatter_throughput_edges_per_ms,"
          "bytes_per_spike,"
-         "gather_mean_time_ms,gather_std_time_ms,gather_throughput_edges_per_ms,"
+         "gather_mean_time_ms,gather_std_time_ms,gather_median_time_ms,"
+         "gather_throughput_edges_per_ms,"
          "cache_ratio_L1,cache_ratio_L2,cache_ratio_L3,"
-         "poisson_rate\n";
+         "poisson_rate,outliers_removed\n";
 }
 
 void append_csv_row(const std::string& filename, const BenchmarkResult& r)
@@ -358,15 +410,18 @@ void append_csv_row(const std::string& filename, const BenchmarkResult& r)
     f << r.format   << "," << r.topology << "," << r.N << ","
       << r.density  << "," << r.timesteps << "," << r.trials << ","
       << r.mean_time_ms  << "," << r.std_time_ms << ","
+      << r.median_time_ms << ","
       << r.peak_rss_kb   << ","
       << r.total_spikes  << "," << r.spikes_per_step << ","
       << r.memory_bytes  << "," << r.nnz << ","
       << r.effective_bw_gbps << "," << r.scatter_throughput << ","
       << r.bytes_per_spike << ","
       << r.gather_mean_time_ms << "," << r.gather_std_time_ms << ","
+      << r.gather_median_time_ms << ","
       << r.gather_throughput << ","
       << r.matrix_cache_ratio_L1 << ","
       << r.matrix_cache_ratio_L2 << ","
       << r.matrix_cache_ratio_L3 << ","
-      << r.poisson_rate << "\n";
+      << r.poisson_rate << ","
+      << r.outliers_removed << "\n";
 }

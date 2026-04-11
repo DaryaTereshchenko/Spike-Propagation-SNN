@@ -40,6 +40,9 @@ Each benchmark trial proceeds as follows:
    where CSC's column-oriented layout is the natural fit.
 7. **Measurement** — Record scatter wall-clock time, gather wall-clock time,
    peak RSS (from `/proc/self/status` VmHWM), and cumulative spike count.
+8. **Robust statistics** — Apply IQR-based outlier rejection to both
+   scatter and gather trial timings before computing mean and standard
+   deviation.  Report median times alongside mean/std for robustness.
 
 ### Rationale for Excluding Construction
 
@@ -80,6 +83,8 @@ The benchmark computes the following derived metrics for each configuration:
 | Scatter throughput (edges/ms) | `spikes_per_step × avg_out_degree × timesteps / scatter_time` | Direct measure of push-based spike-propagation efficiency per format |
 | Gather throughput (edges/ms) | `spikes_per_step × avg_out_degree × timesteps / gather_time` | Direct measure of pull-based spike-propagation efficiency per format |
 | Bytes per spike | `matrix_bytes / total_spikes` | Memory cost per propagated spike event |
+| Median time (ms) | Median of per-trial scatter times | Robust central tendency, unaffected by outliers |
+| Outliers removed | Count of trials rejected by IQR filter | Indicates measurement reliability |
 | Cache ratio L1d | `matrix_bytes / L1d_size` | >1 means the matrix spills out of L1 |
 | Cache ratio L2 | `matrix_bytes / L2_size` | >1 means the matrix spills out of L2 |
 | Cache ratio L3 | `matrix_bytes / L3_size` | >1 means the matrix must fetch from DRAM |
@@ -97,6 +102,35 @@ LIF rheobase of 15 mV ($V_{\text{thresh}} - V_{\text{rest}}$).  This
 produces a sustained firing rate of approximately 4% across all topologies
 and sizes.  The Poisson rate can be adjusted via `--poisson-rate` and
 `--poisson-weight` to control network activity.
+
+### Robust Statistics (IQR Outlier Rejection)
+
+Long-running benchmark sweeps are susceptible to occasional system
+interference (OS scheduling, swapping, thermal throttling) that can
+produce single-trial times 100–1000× above the true value.  Because the
+arithmetic mean is not robust to such outliers, a single bad trial can
+corrupt the reported timing for an entire configuration.
+
+**Method:** Before computing mean and standard deviation, both scatter
+and gather trial-time vectors are filtered using the Interquartile Range
+(IQR) method:
+
+1. Sort the trial times and compute $Q_1$ (25th percentile) and $Q_3$
+   (75th percentile).
+2. Compute $\text{IQR} = Q_3 - Q_1$.
+3. Reject any trial outside $[Q_1 - 1.5 \cdot \text{IQR},\; Q_3 + 1.5 \cdot \text{IQR}]$.
+4. Compute mean and standard deviation from the remaining trials only.
+
+Additionally:
+
+- **Bessel's correction** is applied when computing standard deviation
+  (dividing by $n - 1$ instead of $n$), yielding an unbiased sample
+  estimator.
+- **Median time** is computed from the *full* (pre-rejection) trial set
+  and reported alongside mean/std as a second robust central tendency
+  measure.
+- The CSV column `outliers_removed` records how many trials were
+  rejected per configuration so data quality can be audited.
 
 ### Spike-Rate Sweeps
 
@@ -150,8 +184,8 @@ The `--sweep` CLI option runs a full grid over:
 | Format | coo, csr, csc, ell | (all four) |
 
 Each configuration is run with 10 trials (configurable via `--trials`);
-the output CSV contains one row per configuration with mean and std
-across trials.
+the output CSV contains one row per configuration with mean, std, and
+median across trials, after IQR-based outlier rejection.
 
 ---
 
@@ -167,8 +201,9 @@ across trials.
 | `density` | float | Connection density parameter |
 | `timesteps` | int | Number of simulation steps |
 | `trials` | int | Number of repeat trials |
-| `mean_time_ms` | float | Mean wall-clock time across trials |
-| `std_time_ms` | float | Standard deviation of time |
+| `mean_time_ms` | float | Mean wall-clock time across trials (after outlier rejection) |
+| `std_time_ms` | float | Sample standard deviation of time (Bessel-corrected, after outlier rejection) |
+| `median_time_ms` | float | Median scatter trial time (computed before outlier rejection) |
 | `peak_rss_kb` | int | Peak resident set size in kilobytes |
 | `total_spikes` | int | Mean total spike events per trial |
 | `spikes_per_step` | float | Average spikes per timestep |
@@ -177,13 +212,15 @@ across trials.
 | `effective_bw_gbps` | float | Effective memory bandwidth (GB/s) |
 | `scatter_throughput_edges_per_ms` | float | Edges scattered per millisecond |
 | `bytes_per_spike` | float | Matrix bytes per propagated spike |
-| `gather_mean_time_ms` | float | Mean gather trial time (ms) |
-| `gather_std_time_ms` | float | Std of gather trial time (ms) |
+| `gather_mean_time_ms` | float | Mean gather trial time (ms, after outlier rejection) |
+| `gather_std_time_ms` | float | Sample std of gather trial time (ms, Bessel-corrected) |
+| `gather_median_time_ms` | float | Median gather trial time (ms) |
 | `gather_throughput_edges_per_ms` | float | Edges gathered per millisecond |
 | `cache_ratio_L1` | float | Matrix size / L1d cache size |
 | `cache_ratio_L2` | float | Matrix size / L2 cache size |
 | `cache_ratio_L3` | float | Matrix size / L3 cache size |
 | `poisson_rate` | float | External Poisson drive rate used |
+| `outliers_removed` | int | Number of scatter trials rejected by IQR filter |
 
 ### perf_results.csv
 
@@ -240,7 +277,10 @@ struct BenchmarkResult {
     std::string format, topology;
     int         N, timesteps, trials;
     double      density;
-    double      mean_time_ms, std_time_ms;     // Scatter timing
+    double      mean_time_ms, std_time_ms;     // Scatter timing (after outlier rejection)
+    double      median_time_ms;                // Scatter median (pre-rejection)
+    double      gather_median_time_ms;         // Gather median (pre-rejection)
+    int         outliers_removed;              // Trials rejected by IQR filter
     long        peak_rss_kb;
     long        total_spikes;
     double      spikes_per_step;
@@ -251,7 +291,7 @@ struct BenchmarkResult {
     double      scatter_throughput;             // edges/ms
     double      bytes_per_spike;
 
-    // Gather metrics
+    // Gather metrics (after outlier rejection)
     double      gather_mean_time_ms, gather_std_time_ms;
     double      gather_throughput;              // edges/ms
 

@@ -166,6 +166,28 @@ timesteps (averaged over trials).
 - This is only meaningful when the network sustains spiking activity
   (i.e., $S_{\text{total}} > 0$).
 
+### 6. Median Time (ms)
+
+The median of per-trial scatter (or gather) times, computed from the full
+set of trials *before* outlier rejection.
+
+**Interpretation:**
+- Robust central tendency measure, unaffected by single extreme outliers.
+- If `median ≈ mean`, the data is clean. If they diverge significantly,
+  outlier rejection was necessary and the mean alone would be unreliable.
+
+### 7. Outliers Removed
+
+Count of trials rejected by the IQR filter before computing mean/std.
+
+**Interpretation:**
+- 0 = all trials were clean.
+- ≥ 1 = system interference occurred; the reported mean/std exclude the
+  contaminated trials.
+- If a large fraction of trials are rejected (e.g., > 30%), the
+  measurement environment may be unreliable and results should be
+  re-examined.
+
 ---
 
 ## Hardware Performance Counters (perf stat)

@@ -45,6 +45,11 @@ struct BenchmarkResult {
     size_t      memory_bytes   = 0;
     size_t      nnz            = 0;
 
+    // --- Robust statistics ---
+    double      median_time_ms = 0.0;         // Median scatter trial time
+    double      gather_median_time_ms = 0.0;  // Median gather trial time
+    int         outliers_removed = 0;         // Number of outlier trials removed
+
     // --- Scatter metrics ---
     double      effective_bw_gbps  = 0.0;  // Effective bandwidth (GB/s)
     double      scatter_throughput = 0.0;  // Edges processed per ms

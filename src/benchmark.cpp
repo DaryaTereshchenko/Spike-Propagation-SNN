@@ -208,8 +208,28 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
                 I_syn[i] += poisson_dist(ext_rng) * config.poisson_weight;
             }
 
+            // Background current: constant DC injection to sustain activity.
+            if (config.background_current != 0.0) {
+                for (int i = 0; i < N; ++i) {
+                    I_syn[i] += config.background_current;
+                }
+            }
+
             // Step LIF and collect new spikes for next iteration.
             spikes = lif.step(I_syn);
+
+            // Controlled spike injection: override LIF spikes with a fixed
+            // fraction of randomly selected neurons (independent of dynamics).
+            if (config.inject_spike_rate > 0.0) {
+                spikes.clear();
+                std::uniform_real_distribution<double> inj_dist(0.0, 1.0);
+                for (int i = 0; i < N; ++i) {
+                    if (inj_dist(ext_rng) < config.inject_spike_rate) {
+                        spikes.push_back(i);
+                    }
+                }
+            }
+
             trial_spikes += static_cast<long>(spikes.size());
         }
 
@@ -246,11 +266,66 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
                 I_syn[i] += g_poisson_dist(g_ext_rng) * config.poisson_weight;
             }
 
+            // Background current (must match scatter loop).
+            if (config.background_current != 0.0) {
+                for (int i = 0; i < N; ++i) {
+                    I_syn[i] += config.background_current;
+                }
+            }
+
             g_spikes = lif.step(I_syn);
+
+            // Controlled spike injection (must match scatter loop).
+            if (config.inject_spike_rate > 0.0) {
+                g_spikes.clear();
+                std::uniform_real_distribution<double> inj_dist(0.0, 1.0);
+                for (int i = 0; i < N; ++i) {
+                    if (inj_dist(g_ext_rng) < config.inject_spike_rate) {
+                        g_spikes.push_back(i);
+                    }
+                }
+            }
         }
 
         auto g1 = std::chrono::high_resolution_clock::now();
         gather_times[trial] = std::chrono::duration<double, std::milli>(g1 - g0).count();
+    }
+
+    // ---- Dedicated gather-only benchmark ----
+    // Times gather_all in isolation, with controlled spike injection at a
+    // fixed rate.  This measures pure column-indexed access performance
+    // (CSC's natural advantage) without scatter/LIF overhead.
+    std::vector<double> gather_only_times;
+    if (config.gather_only_benchmark) {
+        gather_only_times.resize(config.trials);
+        // Use inject_spike_rate if set, otherwise default to 5% activity.
+        double go_rate = (config.inject_spike_rate > 0.0)
+                       ? config.inject_spike_rate : 0.05;
+
+        for (int trial = 0; trial < config.trials; ++trial) {
+            std::mt19937 go_rng(config.seed + trial + 2000);
+            std::uniform_real_distribution<double> go_dist(0.0, 1.0);
+
+            auto go_t0 = std::chrono::high_resolution_clock::now();
+
+            for (int t = 0; t < config.timesteps; ++t) {
+                // Generate spikes at fixed rate.
+                std::vector<int> go_spikes;
+                for (int i = 0; i < N; ++i) {
+                    if (go_dist(go_rng) < go_rate) go_spikes.push_back(i);
+                }
+
+                // Pure gather: time only the matrix operation.
+                std::fill(I_syn.begin(), I_syn.end(), 0.0);
+                if (!go_spikes.empty()) {
+                    matrix->gather_all(go_spikes, I_syn);
+                }
+            }
+
+            auto go_t1 = std::chrono::high_resolution_clock::now();
+            gather_only_times[trial] =
+                std::chrono::duration<double, std::milli>(go_t1 - go_t0).count();
+        }
     }
 
     // ---- IQR-based outlier rejection for robust statistics ----
@@ -317,6 +392,21 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
                  ? std::sqrt(g_sq_sum / (gather_times.size() - 1))
                  : 0.0;
 
+    // Compute gather-only statistics.
+    double go_mean = 0.0, go_std = 0.0, go_median = 0.0;
+    if (!gather_only_times.empty()) {
+        go_median = compute_median(gather_only_times);
+        reject_outliers(gather_only_times);
+        double go_sum = std::accumulate(gather_only_times.begin(),
+                                        gather_only_times.end(), 0.0);
+        go_mean = go_sum / static_cast<double>(gather_only_times.size());
+        double go_sq = 0.0;
+        for (double t : gather_only_times) go_sq += (t - go_mean) * (t - go_mean);
+        go_std = (gather_only_times.size() > 1)
+               ? std::sqrt(go_sq / (gather_only_times.size() - 1))
+               : 0.0;
+    }
+
     BenchmarkResult result;
     result.format        = config.format;
     result.topology      = config.topology;
@@ -342,6 +432,15 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
     // --- Gather metrics ---
     result.gather_mean_time_ms = g_mean;
     result.gather_std_time_ms  = g_std;
+
+    // --- Gather-only benchmark results ---
+    result.gather_only_mean_time_ms   = go_mean;
+    result.gather_only_std_time_ms    = go_std;
+    result.gather_only_median_time_ms = go_median;
+
+    // --- Config parameters ---
+    result.background_current = config.background_current;
+    result.inject_spike_rate  = config.inject_spike_rate;
 
     // --- Compute derived metrics ---
     // Effective bandwidth: during scatter, each spike reads its row of the
@@ -369,6 +468,15 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
         double edges_traversed = result.spikes_per_step * avg_out_degree
                                * config.timesteps;
         result.gather_throughput = edges_traversed / g_mean;
+    }
+
+    // Gather-only throughput: uses the controlled injection rate.
+    if (go_mean > 0.0 && result.N > 0) {
+        double go_rate = (config.inject_spike_rate > 0.0)
+                       ? config.inject_spike_rate : 0.05;
+        double avg_out_degree = static_cast<double>(result.nnz) / result.N;
+        double go_edges = go_rate * result.N * avg_out_degree * config.timesteps;
+        result.gather_only_throughput = go_edges / go_mean;
     }
 
     // Bytes per spike: matrix memory / total spikes propagated.
@@ -401,7 +509,10 @@ void write_csv_header(const std::string& filename)
          "gather_mean_time_ms,gather_std_time_ms,gather_median_time_ms,"
          "gather_throughput_edges_per_ms,"
          "cache_ratio_L1,cache_ratio_L2,cache_ratio_L3,"
-         "poisson_rate,outliers_removed\n";
+         "poisson_rate,outliers_removed,"
+         "gather_only_mean_time_ms,gather_only_std_time_ms,"
+         "gather_only_median_time_ms,gather_only_throughput_edges_per_ms,"
+         "background_current,inject_spike_rate\n";
 }
 
 void append_csv_row(const std::string& filename, const BenchmarkResult& r)
@@ -423,5 +534,11 @@ void append_csv_row(const std::string& filename, const BenchmarkResult& r)
       << r.matrix_cache_ratio_L2 << ","
       << r.matrix_cache_ratio_L3 << ","
       << r.poisson_rate << ","
-      << r.outliers_removed << "\n";
+      << r.outliers_removed << ","
+      << r.gather_only_mean_time_ms << ","
+      << r.gather_only_std_time_ms << ","
+      << r.gather_only_median_time_ms << ","
+      << r.gather_only_throughput << ","
+      << r.background_current << ","
+      << r.inject_spike_rate << "\n";
 }

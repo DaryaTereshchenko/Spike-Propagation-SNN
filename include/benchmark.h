@@ -27,6 +27,18 @@ struct BenchmarkConfig {
     double      poisson_weight    = 1.5;   // Weight (mV) per external spike
     // Recurrent weight normalisation: w = coupling_strength / sqrt(K_avg).
     double      coupling_strength = 2.0;
+
+    // Background current injected into every neuron each timestep (mV).
+    // Set to ~14.0 to sustain near-threshold activity (V_rest + I_bg ≈ V_thresh).
+    double      background_current = 0.0;
+
+    // Controlled spike injection: if > 0, inject spikes at this fixed
+    // fraction of neurons per timestep (independent of LIF dynamics).
+    // Value in [0,1], e.g. 0.05 = 5% of neurons spike each step.
+    double      inject_spike_rate = 0.0;
+
+    // Run a dedicated gather-only benchmark (separate from scatter).
+    bool        gather_only_benchmark = false;
 };
 
 /// Results from a single benchmark configuration.
@@ -67,6 +79,16 @@ struct BenchmarkResult {
 
     // --- Drive parameters (recorded for spike-rate sweep analysis) ---
     double      poisson_rate   = 0.0;
+
+    // --- Gather-only benchmark results ---
+    double      gather_only_mean_time_ms = 0.0;
+    double      gather_only_std_time_ms  = 0.0;
+    double      gather_only_median_time_ms = 0.0;
+    double      gather_only_throughput   = 0.0;
+
+    // --- Background / injection parameters ---
+    double      background_current = 0.0;
+    double      inject_spike_rate  = 0.0;
 };
 
 /// Run a single benchmark configuration and return aggregated results.

@@ -17,22 +17,33 @@ cd build && ctest --output-on-failure && cd ..
 # 4. Single benchmark run
 ./build/spike_benchmark --format csr --topology er --size 5000 --density 0.05
 
-# 5. Full parameter sweep (in-process, shared RSS)
-./build/spike_benchmark --sweep --output-csv results/benchmark_results.csv
+# 5. Single run with background current (sustains ~5-8% firing rate)
+./build/spike_benchmark --format csr --topology er --size 5000 --density 0.05 \
+    --bg-current 14.0 --gather-only
 
-# 6. Full sweep with per-config RSS (subprocess mode — recommended)
-./build/spike_benchmark --sweep --subprocess --output-csv results/benchmark_results.csv
+# 6. Single run with controlled spike injection (5% fixed rate, LIF-independent)
+./build/spike_benchmark --format csc --topology er --size 5000 --density 0.05 \
+    --inject-rate 0.05 --gather-only
 
-# 7. Spike-rate sweep (characterise cost vs. activity level)
+# 7. Full parameter sweep with background current + gather-only benchmark
+./build/spike_benchmark --sweep --bg-current 14.0 --gather-only \
+    --output-csv results/sweep_bg14.csv
+
+# 8. Full sweep with per-config RSS (subprocess mode — recommended)
+./build/spike_benchmark --sweep --subprocess --bg-current 14.0 --gather-only \
+    --output-csv results/benchmark_results.csv
+
+# 9. Spike-rate sweep (characterise cost vs. activity level)
 ./build/spike_benchmark --sweep --subprocess \
+    --inject-rate 0.05 --gather-only \
     --sweep-sizes "1000 5000" --sweep-densities "0.05" \
     --sweep-rates "5 10 15 20 25 30" \
     --output-csv results/rate_sweep_results.csv
 
-# 8. Full sweep WITH hardware counters (cache misses, IPC)
+# 10. Full sweep WITH hardware counters (cache misses, IPC)
 ./scripts/run_benchmarks.sh --perf
 
-# 9. Generate plots
+# 11. Generate plots
 pip install matplotlib pandas numpy
 python3 scripts/plot_results.py
 ```
@@ -51,6 +62,9 @@ python3 scripts/plot_results.py
 | `--poisson-rate R` | External Poisson rate (spikes/neuron/step) | `15.0` |
 | `--poisson-weight W` | External spike weight (mV) | `1.5` |
 | `--coupling G` | Recurrent weight = G/sqrt(K) | `2.0` |
+| `--bg-current I` | Background DC current per neuron (mV) | `0.0` |
+| `--inject-rate F` | Fixed spike injection rate [0,1] (overrides LIF) | `0.0` |
+| `--gather-only` | Run dedicated gather-only benchmark | (off) |
 | `--output-csv FILE` | Write results as CSV | (none) |
 | `--sweep` | Run full parameter sweep | (off) |
 | `--sweep-sizes "..."` | Space-separated sizes to sweep | `"1000 5000 10000"` |

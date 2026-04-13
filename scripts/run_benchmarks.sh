@@ -52,6 +52,8 @@ else
 fi
 
 SEED=42
+BG_CURRENT=14.0
+GATHER_ONLY=true
 OUTPUT_CSV="$RESULTS_DIR/benchmark_results.csv"
 PERF_CSV="$RESULTS_DIR/perf_results.csv"
 CACHE_CSV="$RESULTS_DIR/cache_info.csv"
@@ -64,49 +66,40 @@ echo "  Topologies: $TOPOLOGIES"
 echo "  Formats:    $FORMATS"
 echo "  Timesteps:  $TIMESTEPS"
 echo "  Trials:     $TRIALS"
+echo "  Bg current: $BG_CURRENT"
+echo "  Gather-only: $GATHER_ONLY"
 echo "  Output:     $OUTPUT_CSV"
 echo ""
 
-# Write CSV header
-echo "format,topology,N,density,timesteps,trials,mean_time_ms,std_time_ms,peak_rss_kb,total_spikes,spikes_per_step,memory_bytes,nnz,effective_bw_gbps,scatter_throughput_edges_per_ms,bytes_per_spike,cache_ratio_L1,cache_ratio_L2,cache_ratio_L3" > "$OUTPUT_CSV"
-
-if $USE_PERF; then
-    echo "format,topology,N,density,cache_misses,cache_refs,instructions,cycles,L1d_load_misses,LLC_load_misses,dTLB_load_misses,branch_misses" > "$PERF_CSV"
+# Build sweep args
+SWEEP_ARGS="--sweep"
+SWEEP_ARGS="$SWEEP_ARGS --sweep-sizes \"$SIZES\""
+SWEEP_ARGS="$SWEEP_ARGS --sweep-densities \"$DENSITIES\""
+SWEEP_ARGS="$SWEEP_ARGS --timesteps $TIMESTEPS"
+SWEEP_ARGS="$SWEEP_ARGS --trials $TRIALS"
+SWEEP_ARGS="$SWEEP_ARGS --seed $SEED"
+SWEEP_ARGS="$SWEEP_ARGS --bg-current $BG_CURRENT"
+SWEEP_ARGS="$SWEEP_ARGS --output-csv $OUTPUT_CSV"
+if $GATHER_ONLY; then
+    SWEEP_ARGS="$SWEEP_ARGS --gather-only"
 fi
 
-RUN_COUNT=0
-CACHE_LOGGED=false
-for fmt in $FORMATS; do
-    for topo in $TOPOLOGIES; do
-        for size in $SIZES; do
-            for dens in $DENSITIES; do
-                RUN_COUNT=$((RUN_COUNT + 1))
-                echo -n "[$RUN_COUNT] $fmt / $topo / N=$size / d=$dens ... "
+eval "$BINARY" $SWEEP_ARGS
 
-                # On first run, also write cache info CSV
-                CACHE_FLAG=""
-                if ! $CACHE_LOGGED; then
-                    CACHE_FLAG="--cache-csv $CACHE_CSV"
-                    CACHE_LOGGED=true
-                fi
+# ---- Optional perf stat pass ----
+if $USE_PERF && command -v perf &>/dev/null; then
+    echo ""
+    echo "=== Running perf stat pass ==="
+    echo "format,topology,N,density,cache_misses,cache_refs,instructions,cycles,L1d_load_misses,LLC_load_misses,dTLB_load_misses,branch_misses" > "$PERF_CSV"
 
-                # Run the benchmark
-                "$BINARY" \
-                    --format "$fmt" \
-                    --topology "$topo" \
-                    --size "$size" \
-                    --density "$dens" \
-                    --timesteps "$TIMESTEPS" \
-                    --trials "$TRIALS" \
-                    --seed "$SEED" \
-                    --output-csv "$OUTPUT_CSV" \
-                    $CACHE_FLAG \
-                    2>/dev/null || { echo "SKIPPED"; continue; }
+    RUN_COUNT=0
+    for fmt in $FORMATS; do
+        for topo in $TOPOLOGIES; do
+            for size in $SIZES; do
+                for dens in $DENSITIES; do
+                    RUN_COUNT=$((RUN_COUNT + 1))
+                    echo -n "[perf $RUN_COUNT] $fmt / $topo / N=$size / d=$dens ... "
 
-                echo "done"
-
-                # Optionally run with expanded perf stat counters
-                if $USE_PERF && command -v perf &>/dev/null; then
                     PERF_OUTPUT=$(perf stat -e cache-misses,cache-references,instructions,cycles,L1-dcache-load-misses,LLC-load-misses,dTLB-load-misses,branch-misses \
                         "$BINARY" \
                         --format "$fmt" \
@@ -116,6 +109,7 @@ for fmt in $FORMATS; do
                         --timesteps "$TIMESTEPS" \
                         --trials 1 \
                         --seed "$SEED" \
+                        --bg-current "$BG_CURRENT" \
                         2>&1 >/dev/null || true)
 
                     # Parse perf output
@@ -129,17 +123,17 @@ for fmt in $FORMATS; do
                     branch_misses=$(echo "$PERF_OUTPUT" | grep "branch-misses" | awk '{gsub(/,/,"",$1); print $1}')
 
                     echo "$fmt,$topo,$size,$dens,$cache_misses,$cache_refs,$instructions,$cycles,$l1d_misses,$llc_misses,$dtlb_misses,$branch_misses" >> "$PERF_CSV"
-                fi
+
+                    echo "done"
+                done
             done
         done
     done
-done
+fi
 
 echo ""
 echo "=== Sweep complete ==="
 echo "  Results:    $OUTPUT_CSV"
-echo "  Cache info: $CACHE_CSV"
 if $USE_PERF; then
     echo "  Perf data:  $PERF_CSV"
 fi
-echo "  Total runs: $RUN_COUNT"

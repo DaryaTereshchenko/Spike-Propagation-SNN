@@ -1,0 +1,40 @@
+=== CPU Cache Hierarchy ===
+  L1 Data:        48 KB
+  L1 Instruction: 64 KB
+  L2 Unified:     2 MB
+  L3 Unified:     24 MB
+
+  Format:          csr
+  Topology:        er
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1248498
+  Matrix memory:   15001980 bytes
+  Mean time:       782.179 ms
+  Median time:     786.183 ms
+  Std time:        11.2366 ms
+  Peak RSS:        47376 kB
+  Avg spikes/step: 414.562
+  Total spikes:    414562
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0191797 GB/s
+  Scatter thruput: 132343 edges/ms
+  Bytes/spike:     36.1875
+  --- Gather metrics ---
+  Gather time:     773.366 ms (±14.7963)
+  Gather median:   774.328 ms
+  Gather thruput:  133851 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         134.166 ms (±4.32989)
+  GO median:       134.305 ms
+  GO throughput:   465281 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 305.216x
+  Cache ratio L2:  7.1535x
+  Cache ratio L3:  0.596125x

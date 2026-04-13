@@ -38,6 +38,9 @@ remains clamped at $V_{\text{rest}}$.
 The continuous ODE is discretised with a forward (explicit) Euler step of
 size $\Delta t = 1$ ms:
 
+Backward Euler (implicit) integration is also possible
+Centered Euler
+
 $$
 V^{(n+1)} = V^{(n)} + \frac{\Delta t}{\tau_m} \left[ -(V^{(n)} - V_{\text{rest}}) + R \, I_{\text{syn}}^{(n)} \right]
 $$
@@ -91,6 +94,107 @@ reproduces:
 For the purpose of comparing sparse-format performance, the LIF model
 provides a computationally inexpensive per-neuron update so that runtime
 is dominated by the spike-propagation kernel (matrix–vector operation).
+
+---
+
+## Background Current Injection
+
+### Motivation
+
+With default parameters the recurrent weight normalisation
+($w = G/\sqrt{K_{\text{avg}}}$) scales synaptic weights inversely with
+network size.  At large $N$ (e.g. 10 000) this scaling causes the network
+to fall silent after the initial seed spikes at $t = 0$: the synaptic input
+from ~100 initial spikes is far below the 15 mV threshold gap
+($V_{\text{thresh}} - V_{\text{rest}}$), and there is no sustained drive to
+keep neurons firing.  A silent network means the benchmark only measures
+cache pollution from an empty scatter call — not real spike-propagation cost.
+
+### Solution
+
+A constant **background current** $I_{\text{bg}}$ is added to every neuron's
+synaptic input at each timestep:
+
+$$
+I_{\text{syn},i}(t) \leftarrow I_{\text{syn},i}(t) + I_{\text{bg}}
+$$
+
+This is applied *after* the recurrent scatter and external Poisson drive,
+before the LIF integration step.
+
+### Parameter Choice
+
+The equilibrium membrane potential under constant input $I$ is:
+
+$$
+V_{\text{eq}} = V_{\text{rest}} + R \cdot I
+$$
+
+Setting $I_{\text{bg}} \approx 14$ mV places $V_{\text{eq}} = -65 + 14 = -51$ mV,
+just above $V_{\text{thresh}} = -50$ mV.  Combined with the stochastic Poisson
+drive and recurrent input, this produces a sustained firing rate of roughly
+5–8% of the population per timestep — a biologically plausible operating
+point for cortical networks and sufficient to stress-test the spike-
+propagation kernel across all timesteps.
+
+### CLI Usage
+
+```bash
+./build/spike_benchmark --bg-current 14.0 ...
+```
+
+Default: `0.0` (no background current — original behaviour preserved).
+
+---
+
+## Controlled Spike Injection
+
+### Motivation
+
+Even with background current the actual spike rate depends on LIF dynamics,
+Poisson drive, and recurrent feedback — making it difficult to isolate the
+effect of spike rate on sparse-format performance.  To measure the pure
+cost curve (scatter/gather time as a function of network activity) an
+independent spike-rate control is needed.
+
+### Solution
+
+When `--inject-rate F` is set ($F \in (0, 1]$), the LIF spike output is
+**overridden** each timestep: instead of using the neurons that crossed
+threshold, a random fraction $F$ of all $N$ neurons is selected as spiking
+(uniformly, independently per timestep).  The LIF integration still runs
+(to preserve its cache/compute overhead in the timing), but its spikes are
+discarded.
+
+This decouples the sparse-matrix workload from the network dynamics,
+enabling controlled experiments such as:
+
+- **Format crossover analysis**: at what activity level does ELL's strided
+  access outperform CSR's row-indexed access?
+- **Scaling studies**: how does scatter time grow with spike fraction for
+  each format at fixed $N$ and density?
+
+### CLI Usage
+
+```bash
+# 5% of neurons spike each timestep (independent of LIF)
+./build/spike_benchmark --inject-rate 0.05 ...
+
+# Sweep injection rates
+./build/spike_benchmark --sweep --inject-rate 0.10 \
+    --sweep-rates "5 10 15 20 25 30" ...
+```
+
+Default: `0.0` (disabled — LIF dynamics determine spikes).
+
+### Expected Outcomes
+
+| Inject rate | Expected spikes/step (N=5000) | Purpose |
+|-------------|-------------------------------|---------|
+| 0.01 | ~50 | Sparse activity — CSR should dominate |
+| 0.05 | ~250 | Moderate activity — realistic cortical regime |
+| 0.10 | ~500 | High activity — memory bandwidth becomes bottleneck |
+| 0.25 | ~1250 | Stress test — reveals format scaling limits |
 
 ---
 

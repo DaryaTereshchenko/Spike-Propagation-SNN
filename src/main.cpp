@@ -39,6 +39,8 @@ static void print_result(const BenchmarkResult& r)
               << "  N:               " << r.N               << "\n"
               << "  Density/param:   " << r.density         << "\n"
               << "  Poisson rate:    " << r.poisson_rate    << "\n"
+              << "  Background I:    " << r.background_current << " mV\n"
+              << "  Inject rate:     " << r.inject_spike_rate  << "\n"
               << "  Timesteps:       " << r.timesteps       << "\n"
               << "  Trials:          " << r.trials          << "\n"
               << "  Outliers removed:" << r.outliers_removed << "\n"
@@ -59,6 +61,11 @@ static void print_result(const BenchmarkResult& r)
                                        << r.gather_std_time_ms  << ")\n"
               << "  Gather median:   " << r.gather_median_time_ms << " ms\n"
               << "  Gather thruput:  " << r.gather_throughput   << " edges/ms\n"
+              << "  --- Gather-only benchmark ---\n"
+              << "  GO time:         " << r.gather_only_mean_time_ms << " ms (±"
+                                       << r.gather_only_std_time_ms  << ")\n"
+              << "  GO median:       " << r.gather_only_median_time_ms << " ms\n"
+              << "  GO throughput:   " << r.gather_only_throughput << " edges/ms\n"
               << "  --- Cache ratios ---\n"
               << "  Cache ratio L1d: " << r.matrix_cache_ratio_L1 << "x\n"
               << "  Cache ratio L2:  " << r.matrix_cache_ratio_L2 << "x\n"
@@ -84,6 +91,11 @@ static void print_usage()
         << "  --poisson-rate   R               External Poisson rate  (default: 15.0)\n"
         << "  --poisson-weight W               External spike weight  (default: 1.5)\n"
         << "  --coupling       G               Recurrent w=G/sqrt(K) (default: 2.0)\n"
+        << "  --bg-current     I               Background DC current  (default: 0; ~14 for sustained activity)\n"
+        << "  --inject-rate    F               Fixed spike injection rate [0,1] (default: 0 = use LIF)\n"
+        << "\n"
+        << "Benchmark modes:\n"
+        << "  --gather-only                    Run dedicated gather-only benchmark\n"
         << "\n"
         << "Output:\n"
         << "  --output-csv FILE                Write results as CSV\n"
@@ -142,6 +154,9 @@ int main(int argc, char* argv[])
         cfg.poisson_rate      = std::stod(get_arg(argc, argv, "--poisson-rate",   "15.0"));
         cfg.poisson_weight    = std::stod(get_arg(argc, argv, "--poisson-weight", "1.5"));
         cfg.coupling_strength = std::stod(get_arg(argc, argv, "--coupling",       "2.0"));
+        cfg.background_current = std::stod(get_arg(argc, argv, "--bg-current",    "0.0"));
+        cfg.inject_spike_rate  = std::stod(get_arg(argc, argv, "--inject-rate",   "0.0"));
+        cfg.gather_only_benchmark = has_flag(argc, argv, "--gather-only");
 
         auto result = run_benchmark(cfg);
 
@@ -163,7 +178,13 @@ int main(int argc, char* argv[])
                   << result.matrix_cache_ratio_L2 << ","
                   << result.matrix_cache_ratio_L3 << ","
                   << result.poisson_rate << ","
-                  << result.outliers_removed << "\n";
+                  << result.outliers_removed << ","
+                  << result.gather_only_mean_time_ms << ","
+                  << result.gather_only_std_time_ms << ","
+                  << result.gather_only_median_time_ms << ","
+                  << result.gather_only_throughput << ","
+                  << result.background_current << ","
+                  << result.inject_spike_rate << "\n";
 
         return 0;
     }
@@ -187,6 +208,9 @@ int main(int argc, char* argv[])
         double poisson_rate   = std::stod(get_arg(argc, argv, "--poisson-rate",   "15.0"));
         double poisson_weight = std::stod(get_arg(argc, argv, "--poisson-weight", "1.5"));
         double coupling       = std::stod(get_arg(argc, argv, "--coupling",       "2.0"));
+        double bg_current     = std::stod(get_arg(argc, argv, "--bg-current",     "0.0"));
+        double inject_rate    = std::stod(get_arg(argc, argv, "--inject-rate",    "0.0"));
+        bool gather_only      = has_flag(argc, argv, "--gather-only");
         bool use_subprocess   = has_flag(argc, argv, "--subprocess");
 
         auto sizes     = parse_doubles(sizes_str);
@@ -252,7 +276,10 @@ int main(int argc, char* argv[])
                                         << " --seed "      << seed
                                         << " --poisson-rate "   << rate
                                         << " --poisson-weight " << poisson_weight
-                                        << " --coupling "       << coupling;
+                                        << " --coupling "       << coupling
+                                        << " --bg-current "     << bg_current
+                                        << " --inject-rate "    << inject_rate;
+                                    if (gather_only) cmd << " --gather-only";
 
                                     FILE* pipe = popen(cmd.str().c_str(), "r");
                                     if (!pipe) throw std::runtime_error("popen failed");
@@ -305,6 +332,9 @@ int main(int argc, char* argv[])
                                     cfg.poisson_rate      = rate;
                                     cfg.poisson_weight    = poisson_weight;
                                     cfg.coupling_strength = coupling;
+                                    cfg.background_current = bg_current;
+                                    cfg.inject_spike_rate  = inject_rate;
+                                    cfg.gather_only_benchmark = gather_only;
 
                                     result = run_benchmark(cfg);
                                     std::cout << " " << result.mean_time_ms
@@ -337,6 +367,9 @@ int main(int argc, char* argv[])
         cfg.poisson_rate      = std::stod(get_arg(argc, argv, "--poisson-rate",   "15.0"));
         cfg.poisson_weight    = std::stod(get_arg(argc, argv, "--poisson-weight", "1.5"));
         cfg.coupling_strength = std::stod(get_arg(argc, argv, "--coupling",       "2.0"));
+        cfg.background_current = std::stod(get_arg(argc, argv, "--bg-current",    "0.0"));
+        cfg.inject_spike_rate  = std::stod(get_arg(argc, argv, "--inject-rate",   "0.0"));
+        cfg.gather_only_benchmark = has_flag(argc, argv, "--gather-only");
 
         std::cout << "Running benchmark...\n";
         auto result = run_benchmark(cfg);

@@ -38,10 +38,19 @@ Each benchmark trial proceeds as follows:
    with identical spike patterns, but using `matrix.gather_all(spikes, I_syn)`
    instead of `scatter`.  This provides a symmetric timing comparison
    where CSC's column-oriented layout is the natural fit.
-7. **Measurement** — Record scatter wall-clock time, gather wall-clock time,
-   peak RSS (from `/proc/self/status` VmHWM), and cumulative spike count.
-8. **Robust statistics** — Apply IQR-based outlier rejection to both
-   scatter and gather trial timings before computing mean and standard
+7. **Gather-only benchmark (pure matrix timing)** — When `--gather-only`
+   is enabled, an additional benchmark loop runs `gather_all` in isolation:
+   spikes are generated at a controlled fixed rate (from `--inject-rate`,
+   or 5% by default) and only the matrix operation is timed — no LIF
+   integration, no Poisson drive.  This eliminates the LIF overhead that
+   otherwise dominates the measurement (999/1000 timesteps are LIF-only
+   when the network is nearly silent) and directly measures CSC's
+   column-indexed access advantage.
+8. **Measurement** — Record scatter wall-clock time, gather wall-clock time,
+   gather-only wall-clock time, peak RSS (from `/proc/self/status` VmHWM),
+   and cumulative spike count.
+9. **Robust statistics** — Apply IQR-based outlier rejection to scatter,
+   gather, and gather-only trial timings before computing mean and standard
    deviation.  Report median times alongside mean/std for robustness.
 
 ### Rationale for Excluding Construction
@@ -148,6 +157,78 @@ via `popen()`.  Each child runs `--single-config` mode, producing a CSV
 row on stdout, then exits — ensuring that `peak_rss_kb` reflects only
 that configuration's memory footprint.
 
+---
+
+## Network Activity Controls
+
+Three mechanisms are provided to ensure the network sustains meaningful
+spiking activity throughout the benchmark, addressing the silent-network
+problem where weight normalisation suppresses firing after the initial seed.
+
+### Background Current (`--bg-current`)
+
+A constant DC current $I_{\text{bg}}$ is injected into every neuron at each
+timestep, added to the synaptic current buffer after scatter/gather and
+Poisson drive:
+
+$$
+I_{\text{syn},i}(t) \leftarrow I_{\text{syn},i}(t) + I_{\text{bg}}
+$$
+
+**Recommended value:** `--bg-current 14.0` places the equilibrium potential
+at $V_{\text{eq}} = V_{\text{rest}} + 14 = -51$ mV, just above $V_{\text{thresh}}$,
+producing a sustained ~5–8% firing rate.  This is the simplest way to
+keep the network active while preserving realistic LIF dynamics.
+
+**Expected outcomes:**
+- Consistent non-zero `total_spikes` across all configurations
+- Valid `scatter_throughput`, `gather_throughput`, and `bytes_per_spike` metrics
+- Meaningful activity-dependent differences between formats (CSR's spike-
+  proportional cost becomes measurable)
+
+### Controlled Spike Injection (`--inject-rate`)
+
+When set to a value in $(0, 1]$, each timestep's spikes are **overridden**
+with a uniformly random subset of neurons at the specified fraction.  The
+LIF integration still runs (preserving its compute/cache overhead) but its
+threshold crossings are ignored.
+
+This decouples the sparse-matrix workload from network dynamics, enabling:
+- **Cost-vs-activity curves**: measure scatter/gather time at 1%, 5%, 10%,
+  25% spike rates to find format crossover points
+- **Reproducible comparisons**: identical spike counts across formats and
+  topologies, isolating the access-pattern effect
+
+**Example:** `--inject-rate 0.05` produces exactly ~5% of neurons spiking
+per timestep regardless of topology, density, or Poisson drive settings.
+
+### Dedicated Gather-Only Benchmark (`--gather-only`)
+
+Adds a separate timed benchmark loop that measures `gather_all()` in
+isolation.  In this loop:
+
+1. Spikes are generated at a fixed rate (from `--inject-rate`, or 5%
+   by default).
+2. Only `matrix.gather_all(spikes, I_syn)` is called and timed — no LIF
+   integration, no Poisson drive, no scatter.
+3. Results are reported as `gather_only_mean_time_ms`, `gather_only_std_time_ms`,
+   `gather_only_median_time_ms`, and `gather_only_throughput`.
+
+**Purpose:** The standard scatter and gather benchmarks include full LIF
+simulation in the timing loop.  When the network is mostly silent, 999 of
+1000 timesteps are pure LIF updates (identical across formats), drowning
+out format-specific differences.  The gather-only benchmark eliminates this
+confound and directly tests CSC's column-indexed access pattern advantage
+against CSR's row-indexed layout.
+
+**Expected outcomes:**
+- CSC should outperform CSR on gather-only (column-indexed access is CSC's
+  natural strength)
+- ELL should show consistent gather-only timing (fixed $K_{\max}$ per row)
+- COO should be slowest (full-matrix scan regardless of spike count)
+- Performance differences between formats will be more pronounced than in
+  the mixed scatter+LIF benchmark
+
 ### External (perf stat)
 
 The shell script `scripts/run_benchmarks.sh --perf` wraps each benchmark
@@ -221,6 +302,12 @@ median across trials, after IQR-based outlier rejection.
 | `cache_ratio_L3` | float | Matrix size / L3 cache size |
 | `poisson_rate` | float | External Poisson drive rate used |
 | `outliers_removed` | int | Number of scatter trials rejected by IQR filter |
+| `gather_only_mean_time_ms` | float | Mean gather-only trial time (ms, after outlier rejection) |
+| `gather_only_std_time_ms` | float | Std of gather-only trial time (ms) |
+| `gather_only_median_time_ms` | float | Median gather-only trial time (ms) |
+| `gather_only_throughput_edges_per_ms` | float | Edges gathered per ms (gather-only benchmark) |
+| `background_current` | float | Background DC current injected per neuron per step (mV) |
+| `inject_spike_rate` | float | Controlled spike injection rate (0 = LIF dynamics) |
 
 ### perf_results.csv
 
@@ -267,6 +354,17 @@ struct BenchmarkConfig {
     double      poisson_weight    = 1.5;   // Weight (mV) per external spike
     // Recurrent weight normalisation: w = coupling_strength / sqrt(K_avg)
     double      coupling_strength = 2.0;
+
+    // Background current injected into every neuron each timestep (mV).
+    // Set to ~14.0 to sustain near-threshold activity.
+    double      background_current = 0.0;
+
+    // Controlled spike injection: fixed fraction of neurons spike each step.
+    // Overrides LIF dynamics when > 0. Value in [0,1].
+    double      inject_spike_rate = 0.0;
+
+    // Run a dedicated gather-only benchmark (pure matrix timing).
+    bool        gather_only_benchmark = false;
 };
 ```
 
@@ -300,6 +398,15 @@ struct BenchmarkResult {
 
     // Drive parameters
     double      poisson_rate;
+
+    // Gather-only benchmark results
+    double      gather_only_mean_time_ms, gather_only_std_time_ms;
+    double      gather_only_median_time_ms;
+    double      gather_only_throughput;         // edges/ms
+
+    // Background / injection parameters
+    double      background_current;
+    double      inject_spike_rate;
 };
 ```
 

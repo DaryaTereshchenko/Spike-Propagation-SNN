@@ -29,6 +29,28 @@ static bool has_flag(int argc, char* argv[], const std::string& flag)
     return false;
 }
 
+// Collect all consecutive non-flag values following a flag into a single
+// space-separated string.  This allows e.g.
+//   --sweep-sizes 1000 5000 10000
+// to be parsed as "1000 5000 10000" instead of just "1000".
+static std::string get_multi_arg(int argc, char* argv[], const std::string& flag,
+                                 const std::string& default_val = "")
+{
+    for (int i = 1; i < argc; ++i) {
+        if (std::string(argv[i]) == flag) {
+            std::string result;
+            for (int j = i + 1; j < argc; ++j) {
+                std::string val = argv[j];
+                if (val.rfind("--", 0) == 0) break;  // next flag
+                if (!result.empty()) result += ' ';
+                result += val;
+            }
+            return result.empty() ? default_val : result;
+        }
+    }
+    return default_val;
+}
+
 // ---------------------------------------------------------------------------
 // Print helpers
 // ---------------------------------------------------------------------------
@@ -199,9 +221,9 @@ int main(int argc, char* argv[])
 
     if (has_flag(argc, argv, "--sweep")) {
         // ---- Sweep mode ----
-        auto sizes_str     = get_arg(argc, argv, "--sweep-sizes", "1000 5000 10000");
-        auto densities_str = get_arg(argc, argv, "--sweep-densities", "0.01 0.05 0.1");
-        auto rates_str     = get_arg(argc, argv, "--sweep-rates", "");
+        auto sizes_str     = get_multi_arg(argc, argv, "--sweep-sizes", "1000 5000 10000");
+        auto densities_str = get_multi_arg(argc, argv, "--sweep-densities", "0.01 0.05 0.1");
+        auto rates_str     = get_multi_arg(argc, argv, "--sweep-rates", "");
         int  timesteps     = std::stoi(get_arg(argc, argv, "--timesteps", "1000"));
         int  trials        = std::stoi(get_arg(argc, argv, "--trials", "10"));
         unsigned seed      = static_cast<unsigned>(std::stoul(get_arg(argc, argv, "--seed", "42")));

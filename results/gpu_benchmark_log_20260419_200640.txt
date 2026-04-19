@@ -1,0 +1,1250 @@
+============================================================
+GeNN 5 GPU Benchmark -- DGX Spark (GB10)
+============================================================
+
+[1/27] DENSE / N=1000 / d=0.01 ...
+2026-04-19 20:06:42.422 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:06:42.422 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:06:42.422 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_0_CODE'
+2026-04-19 20:06:45.461 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:06:45.461 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:06:45.461 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_1_CODE'
+2026-04-19 20:06:48.475 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:06:48.475 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:06:48.475 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_2_CODE'
+2026-04-19 20:06:51.406 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:06:51.406 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:06:51.406 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_3_CODE'
+2026-04-19 20:06:54.356 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:06:54.356 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:06:54.356 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_4_CODE'
+2026-04-19 20:06:57.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:06:57.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:06:57.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_5_CODE'
+2026-04-19 20:07:00.276 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:00.276 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:00.276 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_6_CODE'
+2026-04-19 20:07:03.283 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:03.283 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:03.283 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_7_CODE'
+2026-04-19 20:07:06.301 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:06.301 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:06.301 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_8_CODE'
+2026-04-19 20:07:09.279 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:09.279 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:09.279 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_9_CODE'
+  Mode:               DENSE
+  N:                  1000
+  Density:            0.01
+  NNZ:                10000
+  Wall time:          25.44 +/- 1.18 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.01 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.02 ms
+  GPU throughput:     627784222.3 edges/ms
+  Total spikes:       250000
+  Spikes/step:        250.0
+  GPU mem delta:      -1.0 MB
+
+[2/27] SPARSE / N=1000 / d=0.01 ...
+2026-04-19 20:07:12.368 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:12.368 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:12.368 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_0_CODE'
+2026-04-19 20:07:15.577 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:15.577 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:15.577 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_1_CODE'
+2026-04-19 20:07:18.742 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:18.742 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:18.742 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_2_CODE'
+2026-04-19 20:07:21.934 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:21.934 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:21.934 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_3_CODE'
+2026-04-19 20:07:25.048 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:25.049 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:25.049 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_4_CODE'
+2026-04-19 20:07:28.179 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:28.180 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:28.180 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_5_CODE'
+2026-04-19 20:07:31.285 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:31.285 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:31.285 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_6_CODE'
+2026-04-19 20:07:34.458 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:34.458 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:34.458 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_7_CODE'
+2026-04-19 20:07:37.669 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:37.669 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:37.669 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_8_CODE'
+2026-04-19 20:07:40.892 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:40.892 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:40.892 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_9_CODE'
+  Mode:               SPARSE
+  N:                  1000
+  Density:            0.01
+  NNZ:                10000
+  Wall time:          73.08 +/- 1.01 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.06 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.06 ms
+  GPU throughput:     155931611.1 edges/ms
+  Total spikes:       250000
+  Spikes/step:        250.0
+  GPU mem delta:      -1.0 MB
+
+[3/27] BITMASK / N=1000 / d=0.01 ...
+2026-04-19 20:07:44.023 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:44.023 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:44.023 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_1000_0_CODE'
+  SKIPPED: cannot reshape array of size 1024000 into shape (1000000,)
+
+[4/27] DENSE / N=1000 / d=0.05 ...
+2026-04-19 20:07:46.032 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:46.032 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:46.032 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_0_CODE'
+2026-04-19 20:07:48.058 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:48.058 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:48.058 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_1_CODE'
+2026-04-19 20:07:50.051 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:50.051 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:50.051 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_2_CODE'
+2026-04-19 20:07:52.162 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:52.162 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:52.162 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_3_CODE'
+2026-04-19 20:07:54.165 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:54.165 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:54.165 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_4_CODE'
+2026-04-19 20:07:56.220 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:56.220 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:56.220 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_5_CODE'
+2026-04-19 20:07:58.297 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:07:58.297 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:07:58.297 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_6_CODE'
+2026-04-19 20:08:00.231 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:00.231 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:00.231 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_7_CODE'
+2026-04-19 20:08:02.290 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:02.290 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:02.290 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_8_CODE'
+2026-04-19 20:08:04.273 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:04.273 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:04.273 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_9_CODE'
+  Mode:               DENSE
+  N:                  1000
+  Density:            0.05
+  NNZ:                50000
+  Wall time:          25.77 +/- 1.30 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.01 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.02 ms
+  GPU throughput:     3069195278.3 edges/ms
+  Total spikes:       250000
+  Spikes/step:        250.0
+  GPU mem delta:      -1.0 MB
+
+[5/27] SPARSE / N=1000 / d=0.05 ...
+2026-04-19 20:08:06.310 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:06.310 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:06.310 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_0_CODE'
+2026-04-19 20:08:08.403 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:08.403 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:08.403 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_1_CODE'
+2026-04-19 20:08:10.502 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:10.502 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:10.502 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_2_CODE'
+2026-04-19 20:08:12.635 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:12.635 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:12.635 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_3_CODE'
+2026-04-19 20:08:14.767 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:14.767 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:14.767 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_4_CODE'
+2026-04-19 20:08:16.846 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:16.846 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:16.846 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_5_CODE'
+2026-04-19 20:08:18.986 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:18.986 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:18.986 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_6_CODE'
+2026-04-19 20:08:21.139 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:21.139 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:21.139 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_7_CODE'
+2026-04-19 20:08:23.283 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:23.283 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:23.283 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_8_CODE'
+2026-04-19 20:08:25.367 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:25.367 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:25.367 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_9_CODE'
+  Mode:               SPARSE
+  N:                  1000
+  Density:            0.05
+  NNZ:                50000
+  Wall time:          74.47 +/- 0.91 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.06 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.07 ms
+  GPU throughput:     763102503.1 edges/ms
+  Total spikes:       250000
+  Spikes/step:        250.0
+  GPU mem delta:      -1.0 MB
+
+[6/27] BITMASK / N=1000 / d=0.05 ...
+2026-04-19 20:08:27.401 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:27.401 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:27.401 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_1000_0_CODE'
+  SKIPPED: cannot reshape array of size 1024000 into shape (1000000,)
+
+[7/27] DENSE / N=1000 / d=0.1 ...
+2026-04-19 20:08:29.415 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:29.415 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:29.415 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_0_CODE'
+2026-04-19 20:08:31.385 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:31.385 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:31.385 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_1_CODE'
+2026-04-19 20:08:33.417 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:33.417 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:33.417 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_2_CODE'
+2026-04-19 20:08:35.468 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:35.468 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:35.468 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_3_CODE'
+2026-04-19 20:08:37.455 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:37.455 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:37.455 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_4_CODE'
+2026-04-19 20:08:39.451 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:39.451 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:39.451 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_5_CODE'
+2026-04-19 20:08:41.503 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:41.503 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:41.503 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_6_CODE'
+2026-04-19 20:08:43.568 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:43.568 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:43.568 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_7_CODE'
+2026-04-19 20:08:45.565 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:45.566 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:45.566 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_8_CODE'
+2026-04-19 20:08:47.601 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:47.601 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:47.601 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_1000_9_CODE'
+  Mode:               DENSE
+  N:                  1000
+  Density:            0.1
+  NNZ:                100000
+  Wall time:          25.35 +/- 1.17 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.01 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.02 ms
+  GPU throughput:     6273649152.2 edges/ms
+  Total spikes:       250000
+  Spikes/step:        250.0
+  GPU mem delta:      -1.0 MB
+
+[8/27] SPARSE / N=1000 / d=0.1 ...
+2026-04-19 20:08:49.658 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:49.658 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:49.658 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_0_CODE'
+2026-04-19 20:08:51.770 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:51.770 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:51.770 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_1_CODE'
+2026-04-19 20:08:53.856 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:53.856 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:53.856 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_2_CODE'
+2026-04-19 20:08:55.957 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:55.957 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:55.957 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_3_CODE'
+2026-04-19 20:08:58.109 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:08:58.109 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:08:58.109 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_4_CODE'
+2026-04-19 20:09:00.186 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:00.186 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:00.186 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_5_CODE'
+2026-04-19 20:09:02.247 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:02.248 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:02.248 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_6_CODE'
+2026-04-19 20:09:04.410 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:04.410 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:04.410 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_7_CODE'
+2026-04-19 20:09:06.544 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:06.544 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:06.544 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_8_CODE'
+2026-04-19 20:09:08.642 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:08.642 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:08.642 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_1000_9_CODE'
+  Mode:               SPARSE
+  N:                  1000
+  Density:            0.1
+  NNZ:                100000
+  Wall time:          73.41 +/- 1.00 ms
+  Neuron update:      0.01 ms
+  Presynaptic:        0.06 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.06 ms
+  GPU throughput:     1548771225.9 edges/ms
+  Total spikes:       250000
+  Spikes/step:        250.0
+  GPU mem delta:      -1.0 MB
+
+[9/27] BITMASK / N=1000 / d=0.1 ...
+2026-04-19 20:09:10.780 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:10.781 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:10.781 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_1000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_1000_0_CODE'
+  SKIPPED: cannot reshape array of size 1024000 into shape (1000000,)
+
+[10/27] DENSE / N=5000 / d=0.01 ...
+2026-04-19 20:09:13.768 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:13.768 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:13.768 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_0_CODE'
+2026-04-19 20:09:16.953 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:16.953 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:16.953 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_1_CODE'
+2026-04-19 20:09:20.237 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:20.237 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:20.237 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_2_CODE'
+2026-04-19 20:09:23.504 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:23.504 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:23.504 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_3_CODE'
+2026-04-19 20:09:26.706 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:26.706 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:26.706 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_4_CODE'
+2026-04-19 20:09:29.957 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:29.957 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:29.957 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_5_CODE'
+2026-04-19 20:09:33.258 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:33.258 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:33.258 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_6_CODE'
+2026-04-19 20:09:36.564 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:36.564 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:36.564 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_7_CODE'
+2026-04-19 20:09:39.752 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:39.752 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:39.752 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_8_CODE'
+2026-04-19 20:09:43.023 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:43.023 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:43.023 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_9_CODE'
+  Mode:               DENSE
+  N:                  5000
+  Density:            0.01
+  NNZ:                250000
+  Wall time:          153.55 +/- 1.61 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.14 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.15 ms
+  GPU throughput:     1721854688.1 edges/ms
+  Total spikes:       1250000
+  Spikes/step:        1250.0
+  GPU mem delta:      -1.0 MB
+
+[11/27] SPARSE / N=5000 / d=0.01 ...
+2026-04-19 20:09:46.382 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:46.382 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:46.382 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_0_CODE'
+2026-04-19 20:09:49.902 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:49.902 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:49.902 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_1_CODE'
+2026-04-19 20:09:53.315 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:53.315 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:53.315 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_2_CODE'
+2026-04-19 20:09:56.788 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:09:56.788 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:09:56.788 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_3_CODE'
+2026-04-19 20:10:00.254 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:00.254 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:00.254 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_4_CODE'
+2026-04-19 20:10:03.745 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:03.745 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:03.745 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_5_CODE'
+2026-04-19 20:10:07.131 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:07.131 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:07.131 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_6_CODE'
+2026-04-19 20:10:10.593 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:10.593 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:10.593 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_7_CODE'
+2026-04-19 20:10:14.079 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:14.079 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:14.079 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_8_CODE'
+2026-04-19 20:10:17.467 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:17.467 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:17.467 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_9_CODE'
+  Mode:               SPARSE
+  N:                  5000
+  Density:            0.01
+  NNZ:                250000
+  Wall time:          302.28 +/- 0.42 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.29 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.30 ms
+  GPU throughput:     845459862.3 edges/ms
+  Total spikes:       1250000
+  Spikes/step:        1250.0
+  GPU mem delta:      -1.0 MB
+
+[12/27] BITMASK / N=5000 / d=0.01 ...
+2026-04-19 20:10:21.010 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:21.010 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:21.010 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_5000_0_CODE'
+  SKIPPED: cannot reshape array of size 25120000 into shape (25000000,)
+
+[13/27] DENSE / N=5000 / d=0.05 ...
+2026-04-19 20:10:23.034 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:23.034 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:23.034 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_0_CODE'
+2026-04-19 20:10:25.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:25.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:25.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_1_CODE'
+2026-04-19 20:10:27.581 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:27.581 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:27.581 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_2_CODE'
+2026-04-19 20:10:29.891 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:29.891 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:29.891 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_3_CODE'
+2026-04-19 20:10:32.214 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:32.214 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:32.214 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_4_CODE'
+2026-04-19 20:10:34.450 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:34.450 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:34.450 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_5_CODE'
+2026-04-19 20:10:36.695 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:36.695 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:36.695 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_6_CODE'
+2026-04-19 20:10:38.946 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:38.946 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:38.946 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_7_CODE'
+2026-04-19 20:10:41.182 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:41.182 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:41.182 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_8_CODE'
+2026-04-19 20:10:43.429 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:43.429 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:43.429 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_9_CODE'
+  Mode:               DENSE
+  N:                  5000
+  Density:            0.05
+  NNZ:                1250000
+  Wall time:          151.19 +/- 2.57 ms
+  Neuron update:      0.01 ms
+  Presynaptic:        0.14 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.14 ms
+  GPU throughput:     8750236006.3 edges/ms
+  Total spikes:       1250000
+  Spikes/step:        1250.0
+  GPU mem delta:      -1.0 MB
+
+[14/27] SPARSE / N=5000 / d=0.05 ...
+2026-04-19 20:10:45.743 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:45.743 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:45.743 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_0_CODE'
+2026-04-19 20:10:48.196 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:48.196 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:48.196 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_1_CODE'
+2026-04-19 20:10:50.600 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:50.600 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:50.600 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_2_CODE'
+2026-04-19 20:10:53.009 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:53.009 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:53.009 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_3_CODE'
+2026-04-19 20:10:55.457 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:55.457 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:55.457 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_4_CODE'
+2026-04-19 20:10:57.872 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:10:57.872 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:10:57.872 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_5_CODE'
+2026-04-19 20:11:00.296 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:00.296 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:00.296 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_6_CODE'
+2026-04-19 20:11:02.777 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:02.777 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:02.777 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_7_CODE'
+2026-04-19 20:11:05.159 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:05.159 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:05.159 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_8_CODE'
+2026-04-19 20:11:07.693 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:07.693 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:07.693 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_9_CODE'
+  Mode:               SPARSE
+  N:                  5000
+  Density:            0.05
+  NNZ:                1250000
+  Wall time:          303.19 +/- 0.68 ms
+  Neuron update:      0.01 ms
+  Presynaptic:        0.29 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.30 ms
+  GPU throughput:     4213450250.9 edges/ms
+  Total spikes:       1250000
+  Spikes/step:        1250.0
+  GPU mem delta:      -1.0 MB
+
+[15/27] BITMASK / N=5000 / d=0.05 ...
+2026-04-19 20:11:10.067 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:10.067 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:10.067 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_5000_0_CODE'
+  SKIPPED: cannot reshape array of size 25120000 into shape (25000000,)
+
+[16/27] DENSE / N=5000 / d=0.1 ...
+2026-04-19 20:11:12.114 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:12.114 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:12.114 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_0_CODE'
+2026-04-19 20:11:14.426 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:14.426 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:14.426 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_1_CODE'
+2026-04-19 20:11:16.681 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:16.681 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:16.681 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_2_CODE'
+2026-04-19 20:11:18.954 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:18.954 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:18.954 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_3_CODE'
+2026-04-19 20:11:21.197 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:21.197 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:21.197 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_4_CODE'
+2026-04-19 20:11:23.487 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:23.487 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:23.487 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_5_CODE'
+2026-04-19 20:11:25.799 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:25.799 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:25.799 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_6_CODE'
+2026-04-19 20:11:28.075 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:28.075 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:28.075 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_7_CODE'
+2026-04-19 20:11:30.358 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:30.358 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:30.358 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_8_CODE'
+2026-04-19 20:11:32.644 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:32.644 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:32.644 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_5000_9_CODE'
+  Mode:               DENSE
+  N:                  5000
+  Density:            0.1
+  NNZ:                2500000
+  Wall time:          153.93 +/- 1.07 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.14 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.15 ms
+  GPU throughput:     17190661089.9 edges/ms
+  Total spikes:       1250000
+  Spikes/step:        1250.0
+  GPU mem delta:      -1.0 MB
+
+[17/27] SPARSE / N=5000 / d=0.1 ...
+2026-04-19 20:11:34.940 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:34.940 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:34.940 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_0_CODE'
+2026-04-19 20:11:37.626 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:37.626 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:37.626 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_1_CODE'
+2026-04-19 20:11:40.152 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:40.152 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:40.152 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_2_CODE'
+2026-04-19 20:11:42.687 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:42.687 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:42.687 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_3_CODE'
+2026-04-19 20:11:45.287 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:45.287 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:45.287 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_4_CODE'
+2026-04-19 20:11:47.858 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:47.858 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:47.858 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_5_CODE'
+2026-04-19 20:11:50.384 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:50.384 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:50.384 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_6_CODE'
+2026-04-19 20:11:52.932 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:52.932 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:52.932 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_7_CODE'
+2026-04-19 20:11:55.361 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:55.361 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:55.361 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_8_CODE'
+2026-04-19 20:11:57.843 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:11:57.843 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:11:57.843 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_5000_9_CODE'
+  Mode:               SPARSE
+  N:                  5000
+  Density:            0.1
+  NNZ:                2500000
+  Wall time:          411.86 +/- 33.71 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        0.40 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.41 ms
+  GPU throughput:     6168229073.5 edges/ms
+  Total spikes:       1250000
+  Spikes/step:        1250.0
+  GPU mem delta:      -1.0 MB
+
+[18/27] BITMASK / N=5000 / d=0.1 ...
+2026-04-19 20:12:00.474 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:00.474 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:00.474 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_5000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_5000_0_CODE'
+  SKIPPED: cannot reshape array of size 25120000 into shape (25000000,)
+
+[19/27] DENSE / N=10000 / d=0.01 ...
+2026-04-19 20:12:03.470 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:03.470 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:03.470 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_0_CODE'
+2026-04-19 20:12:07.294 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:07.294 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:07.294 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_1_CODE'
+2026-04-19 20:12:11.105 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:11.105 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:11.105 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_2_CODE'
+2026-04-19 20:12:14.844 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:14.844 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:14.844 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_3_CODE'
+2026-04-19 20:12:18.659 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:18.659 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:18.659 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_4_CODE'
+2026-04-19 20:12:22.458 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:22.458 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:22.458 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_5_CODE'
+2026-04-19 20:12:26.280 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:26.280 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:26.280 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_6_CODE'
+2026-04-19 20:12:30.009 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:30.009 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:30.009 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_7_CODE'
+2026-04-19 20:12:33.745 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:33.745 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:33.745 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_8_CODE'
+2026-04-19 20:12:37.574 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:37.575 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:37.575 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_9_CODE'
+  Mode:               DENSE
+  N:                  10000
+  Density:            0.01
+  NNZ:                1000000
+  Wall time:          452.99 +/- 2.12 ms
+  Neuron update:      0.01 ms
+  Presynaptic:        0.44 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.45 ms
+  GPU throughput:     2243495521.7 edges/ms
+  Total spikes:       2500000
+  Spikes/step:        2500.0
+  GPU mem delta:      -1.0 MB
+
+[20/27] SPARSE / N=10000 / d=0.01 ...
+2026-04-19 20:12:41.418 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:41.418 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:41.418 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_0_CODE'
+2026-04-19 20:12:45.320 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:45.321 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:45.321 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_1_CODE'
+2026-04-19 20:12:49.174 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:49.174 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:49.174 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_2_CODE'
+2026-04-19 20:12:52.974 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:52.974 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:52.974 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_3_CODE'
+2026-04-19 20:12:56.822 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:12:56.822 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:12:56.822 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_4_CODE'
+2026-04-19 20:13:00.703 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:00.703 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:00.703 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_5_CODE'
+2026-04-19 20:13:04.483 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:04.483 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:04.483 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_6_CODE'
+2026-04-19 20:13:08.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:08.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:08.342 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_7_CODE'
+2026-04-19 20:13:12.157 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:12.157 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:12.157 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_8_CODE'
+2026-04-19 20:13:16.030 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:16.030 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:16.030 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_9_CODE'
+  Mode:               SPARSE
+  N:                  10000
+  Density:            0.01
+  NNZ:                1000000
+  Wall time:          586.41 +/- 1.77 ms
+  Neuron update:      0.01 ms
+  Presynaptic:        0.58 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.58 ms
+  GPU throughput:     1717250265.0 edges/ms
+  Total spikes:       2500000
+  Spikes/step:        2500.0
+  GPU mem delta:      -1.0 MB
+
+[21/27] BITMASK / N=10000 / d=0.01 ...
+2026-04-19 20:13:19.813 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:19.813 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:19.813 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_10000_0_CODE'
+  SKIPPED: cannot reshape array of size 100160000 into shape (100000000,)
+
+[22/27] DENSE / N=10000 / d=0.05 ...
+2026-04-19 20:13:22.048 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:22.048 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:22.048 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_0_CODE'
+2026-04-19 20:13:24.901 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:24.901 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:24.901 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_1_CODE'
+2026-04-19 20:13:27.734 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:27.734 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:27.734 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_2_CODE'
+2026-04-19 20:13:30.557 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:30.557 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:30.557 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_3_CODE'
+2026-04-19 20:13:33.337 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:33.337 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:33.337 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_4_CODE'
+2026-04-19 20:13:36.166 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:36.166 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:36.166 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_5_CODE'
+2026-04-19 20:13:38.943 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:38.943 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:38.943 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_6_CODE'
+2026-04-19 20:13:41.798 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:41.798 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:41.798 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_7_CODE'
+2026-04-19 20:13:44.553 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:44.553 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:44.553 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_8_CODE'
+2026-04-19 20:13:47.421 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:47.421 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:47.421 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_9_CODE'
+  Mode:               DENSE
+  N:                  10000
+  Density:            0.05
+  NNZ:                5000000
+  Wall time:          451.83 +/- 1.37 ms
+  Neuron update:      0.01 ms
+  Presynaptic:        0.44 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.44 ms
+  GPU throughput:     11242352800.2 edges/ms
+  Total spikes:       2500000
+  Spikes/step:        2500.0
+  GPU mem delta:      -1.0 MB
+
+[23/27] SPARSE / N=10000 / d=0.05 ...
+2026-04-19 20:13:50.263 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:50.263 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:50.263 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_0_CODE'
+2026-04-19 20:13:53.644 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:53.644 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:53.644 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_1_CODE'
+2026-04-19 20:13:57.158 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:13:57.158 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:13:57.158 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_2_CODE'
+2026-04-19 20:14:00.555 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:00.555 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:00.555 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_3_CODE'
+2026-04-19 20:14:04.040 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:04.040 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:04.040 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_4_CODE'
+2026-04-19 20:14:07.498 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:07.498 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:07.498 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_5_CODE'
+2026-04-19 20:14:10.944 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:10.944 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:10.944 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_6_CODE'
+2026-04-19 20:14:14.387 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:14.387 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:14.387 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_7_CODE'
+2026-04-19 20:14:17.824 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:17.824 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:17.824 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_8_CODE'
+2026-04-19 20:14:21.247 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:21.247 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:21.247 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_9_CODE'
+  Mode:               SPARSE
+  N:                  10000
+  Density:            0.05
+  NNZ:                5000000
+  Wall time:          1190.51 +/- 10.13 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        1.18 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       1.19 ms
+  GPU throughput:     4214654782.2 edges/ms
+  Total spikes:       2500000
+  Spikes/step:        2500.0
+  GPU mem delta:      -1.0 MB
+
+[24/27] BITMASK / N=10000 / d=0.05 ...
+2026-04-19 20:14:24.659 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:24.659 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:24.659 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_10000_0_CODE'
+  SKIPPED: cannot reshape array of size 100160000 into shape (100000000,)
+
+[25/27] DENSE / N=10000 / d=0.1 ...
+2026-04-19 20:14:26.853 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:26.853 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:26.853 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_0_CODE'
+2026-04-19 20:14:29.717 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:29.717 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:29.717 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_1_CODE'
+2026-04-19 20:14:32.554 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:32.554 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:32.554 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_2_CODE'
+2026-04-19 20:14:35.462 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:35.462 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:35.462 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_3_CODE'
+2026-04-19 20:14:38.242 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:38.242 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:38.242 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_4_CODE'
+2026-04-19 20:14:41.108 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:41.108 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:41.108 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_5_CODE'
+2026-04-19 20:14:43.986 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:43.986 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:43.986 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_6_CODE'
+2026-04-19 20:14:46.860 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:46.860 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:46.860 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_7_CODE'
+2026-04-19 20:14:49.735 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:49.735 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:49.735 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_8_CODE'
+2026-04-19 20:14:52.565 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:52.565 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:52.565 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_DENSE_10000_9_CODE'
+  Mode:               DENSE
+  N:                  10000
+  Density:            0.1
+  NNZ:                10000000
+  Wall time:          451.42 +/- 2.21 ms
+  Neuron update:      0.01 ms
+  Presynaptic:        0.44 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       0.44 ms
+  GPU throughput:     22507991042.8 edges/ms
+  Total spikes:       2500000
+  Spikes/step:        2500.0
+  GPU mem delta:      -1.0 MB
+
+[26/27] SPARSE / N=10000 / d=0.1 ...
+2026-04-19 20:14:55.447 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:55.447 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:55.447 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_0_CODE'
+2026-04-19 20:14:58.956 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:14:58.956 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:14:58.956 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_1_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_1_CODE'
+2026-04-19 20:15:02.508 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:02.508 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:02.508 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_2_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_2_CODE'
+2026-04-19 20:15:06.043 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:06.043 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:06.043 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_3_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_3_CODE'
+2026-04-19 20:15:09.573 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:09.573 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:09.573 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_4_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_4_CODE'
+2026-04-19 20:15:13.111 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:13.111 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:13.111 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_5_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_5_CODE'
+2026-04-19 20:15:16.593 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:16.593 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:16.593 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_6_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_6_CODE'
+2026-04-19 20:15:20.124 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:20.124 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:20.124 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_7_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_7_CODE'
+2026-04-19 20:15:23.703 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:23.703 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:23.703 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_8_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_8_CODE'
+2026-04-19 20:15:27.285 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:27.285 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:27.285 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_9_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_SPARSE_10000_9_CODE'
+  Mode:               SPARSE
+  N:                  10000
+  Density:            0.1
+  NNZ:                10000000
+  Wall time:          1249.32 +/- 4.14 ms
+  Neuron update:      0.00 ms
+  Presynaptic:        1.24 ms
+  Postsynaptic:       0.00 ms
+  Total kernel:       1.25 ms
+  GPU throughput:     8031366620.9 edges/ms
+  Total spikes:       2500000
+  Spikes/step:        2500.0
+  GPU mem delta:      -1.0 MB
+
+[27/27] BITMASK / N=10000 / d=0.1 ...
+2026-04-19 20:15:30.748 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@198] Unsupported CUDA device version: 12.1
+2026-04-19 20:15:30.748 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@199] This is a bug! Please report it at https://github.com/genn-team/genn.
+2026-04-19 20:15:30.748 WARN  [1021342] [{anonymous}::getDeviceArchitectureProperties@200] Falling back to SM 12.0 parameters.
+make: Entering directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_10000_0_CODE'
+make: Leaving directory '/home/spark-dasha/Documents/Spike-Propagation-SNN/bench_BITMASK_10000_0_CODE'
+  SKIPPED: cannot reshape array of size 100160000 into shape (100000000,)
+
+Results written to results/gpu_results.csv
+============================================================
+Done. 18 benchmarks completed.
+============================================================

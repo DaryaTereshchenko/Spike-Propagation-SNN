@@ -2,11 +2,6 @@
 build/
 cmake-build-*/
 
-# Results
-results/*.csv
-results/*.png
-results/*.svg
-
 # Object files
 *.o
 *.obj

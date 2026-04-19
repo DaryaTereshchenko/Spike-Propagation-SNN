@@ -1,0 +1,5190 @@
+=== CPU Cache Hierarchy ===
+  L1 Data:        64 KB
+  L1 Instruction: 64 KB
+  L2 Unified:     512 KB
+  L3 Unified:     8 MB
+
+[1/144] coo / er / N=1000 / d=0.01 ... 74.9889 ms (±0.29917)
+  Format:          coo
+  Topology:        er
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             9964
+  Matrix memory:   159424 bytes
+  Mean time:       74.9889 ms
+  Median time:     74.9111 ms
+  Std time:        0.29917 ms
+  Peak RSS:        4012 kB
+  Avg spikes/step: 78.626
+  Total spikes:    78626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00212597 GB/s
+  Scatter thruput: 10447.3 edges/ms
+  Bytes/spike:     2.02762
+  --- Gather metrics ---
+  Gather time:     75.1498 ms (±0.48473)
+  Gather median:   74.9724 ms
+  Gather thruput:  10424.9 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2.43262x
+  Cache ratio L2:  0.304077x
+  Cache ratio L3:  0.0190048x
+
+[2/144] coo / er / N=1000 / d=0.05 ... 104.818 ms (±0.18453)
+  Format:          coo
+  Topology:        er
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             50225
+  Matrix memory:   803600 bytes
+  Mean time:       104.818 ms
+  Median time:     104.803 ms
+  Std time:        0.18453 ms
+  Peak RSS:        5256 kB
+  Avg spikes/step: 79.948
+  Total spikes:    79948
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00766659 GB/s
+  Scatter thruput: 38308 edges/ms
+  Bytes/spike:     10.0515
+  --- Gather metrics ---
+  Gather time:     104.894 ms (±0.232868)
+  Gather median:   104.93 ms
+  Gather thruput:  38280.5 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 12.262x
+  Cache ratio L2:  1.53275x
+  Cache ratio L3:  0.0957966x
+
+[3/144] coo / er / N=1000 / d=0.1 ... 142.564 ms (±0.472235)
+  Format:          coo
+  Topology:        er
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             99994
+  Matrix memory:   1599904 bytes
+  Mean time:       142.564 ms
+  Median time:     142.524 ms
+  Std time:        0.472235 ms
+  Peak RSS:        7156 kB
+  Avg spikes/step: 80.91
+  Total spikes:    80910
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0112223 GB/s
+  Scatter thruput: 56749.9 edges/ms
+  Bytes/spike:     19.7739
+  --- Gather metrics ---
+  Gather time:     142.713 ms (±0.460915)
+  Gather median:   142.47 ms
+  Gather thruput:  56691 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 24.4126x
+  Cache ratio L2:  3.05157x
+  Cache ratio L3:  0.190723x
+
+[4/144] coo / er / N=5000 / d=0.01 ... 533.423 ms (±1.18584)
+  Format:          coo
+  Topology:        er
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             250003
+  Matrix memory:   4000048 bytes
+  Mean time:       533.423 ms
+  Median time:     533.37 ms
+  Std time:        1.18584 ms
+  Peak RSS:        12596 kB
+  Avg spikes/step: 399.698
+  Total spikes:    399698
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00749883 GB/s
+  Scatter thruput: 37465.8 edges/ms
+  Bytes/spike:     10.0077
+  --- Gather metrics ---
+  Gather time:     533.655 ms (±1.05667)
+  Gather median:   533.31 ms
+  Gather thruput:  37449.6 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 61.0359x
+  Cache ratio L2:  7.62949x
+  Cache ratio L3:  0.476843x
+
+[5/144] coo / er / N=5000 / d=0.05 ... 1333.42 ms (±4.70573)
+  Format:          coo
+  Topology:        er
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             1248498
+  Matrix memory:   19975968 bytes
+  Mean time:       1333.42 ms
+  Median time:     1334.56 ms
+  Std time:        4.70573 ms
+  Peak RSS:        42792 kB
+  Avg spikes/step: 414.562
+  Total spikes:    414562
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0149811 GB/s
+  Scatter thruput: 77632.2 edges/ms
+  Bytes/spike:     48.1857
+  --- Gather metrics ---
+  Gather time:     1337.27 ms (±10.2033)
+  Gather median:   1333.01 ms
+  Gather thruput:  77408.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 304.809x
+  Cache ratio L2:  38.1011x
+  Cache ratio L3:  2.38132x
+
+[6/144] coo / er / N=5000 / d=0.1 ... 2363.08 ms (±3.81574)
+  Format:          coo
+  Topology:        er
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2497624
+  Matrix memory:   39961984 bytes
+  Mean time:       2363.08 ms
+  Median time:     2362.81 ms
+  Std time:        3.81574 ms
+  Peak RSS:        101600 kB
+  Avg spikes/step: 424.968
+  Total spikes:    424968
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.016911 GB/s
+  Scatter thruput: 89832.8 edges/ms
+  Bytes/spike:     94.0353
+  --- Gather metrics ---
+  Gather time:     2365.76 ms (±6.19979)
+  Gather median:   2364.81 ms
+  Gather thruput:  89730.9 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 609.771x
+  Cache ratio L2:  76.2214x
+  Cache ratio L3:  4.76384x
+
+[7/144] coo / er / N=10000 / d=0.01 ... 1491.05 ms (±6.4813)
+  Format:          coo
+  Topology:        er
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             999815
+  Matrix memory:   15997040 bytes
+  Mean time:       1491.05 ms
+  Median time:     1490.21 ms
+  Std time:        6.4813 ms
+  Peak RSS:        101392 kB
+  Avg spikes/step: 809.11
+  Total spikes:    809110
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0107287 GB/s
+  Scatter thruput: 54254.6 edges/ms
+  Bytes/spike:     19.7712
+  --- Gather metrics ---
+  Gather time:     1490.26 ms (±3.02983)
+  Gather median:   1492.57 ms
+  Gather thruput:  54283.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 244.095x
+  Cache ratio L2:  30.5119x
+  Cache ratio L3:  1.907x
+
+[8/144] coo / er / N=10000 / d=0.05 ... 4653.76 ms (±7.23108)
+  Format:          coo
+  Topology:        er
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             4998968
+  Matrix memory:   79983488 bytes
+  Mean time:       4653.76 ms
+  Median time:     4653 ms
+  Std time:        7.23108 ms
+  Peak RSS:        186360 kB
+  Avg spikes/step: 849.847
+  Total spikes:    849847
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0171868 GB/s
+  Scatter thruput: 91288.6 edges/ms
+  Bytes/spike:     94.1152
+  --- Gather metrics ---
+  Gather time:     4654.53 ms (±8.3449)
+  Gather median:   4655.76 ms
+  Gather thruput:  91273.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1220.45x
+  Cache ratio L2:  152.556x
+  Cache ratio L3:  9.53477x
+
+[9/144] coo / er / N=10000 / d=0.1 ... 8589.83 ms (±15.9323)
+  Format:          coo
+  Topology:        er
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000192
+  Matrix memory:   160003072 bytes
+  Mean time:       8589.83 ms
+  Median time:     8588.86 ms
+  Std time:        15.9323 ms
+  Peak RSS:        316412 kB
+  Avg spikes/step: 874.231
+  Total spikes:    874231
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.018627 GB/s
+  Scatter thruput: 101777 edges/ms
+  Bytes/spike:     183.022
+  --- Gather metrics ---
+  Gather time:     8596.92 ms (±15.7637)
+  Gather median:   8596.72 ms
+  Gather thruput:  101693 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2441.45x
+  Cache ratio L2:  305.182x
+  Cache ratio L3:  19.0739x
+
+[10/144] coo / fi / N=1000 / d=0.01 ... 78.1987 ms (±0.0607616)
+  Format:          coo
+  Topology:        fi
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             10000
+  Matrix memory:   160000 bytes
+  Mean time:       78.1987 ms
+  Median time:     78.2232 ms
+  Std time:        0.0607616 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 78.633
+  Total spikes:    78633
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00204607 GB/s
+  Scatter thruput: 10055.5 edges/ms
+  Bytes/spike:     2.03477
+  --- Gather metrics ---
+  Gather time:     78.2165 ms (±0.124951)
+  Gather median:   78.1878 ms
+  Gather thruput:  10053.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2.44141x
+  Cache ratio L2:  0.305176x
+  Cache ratio L3:  0.0190735x
+
+[11/144] coo / fi / N=1000 / d=0.05 ... 125.761 ms (±0.153542)
+  Format:          coo
+  Topology:        fi
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             50000
+  Matrix memory:   800000 bytes
+  Mean time:       125.761 ms
+  Median time:     125.769 ms
+  Std time:        0.153542 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 79.929
+  Total spikes:    79929
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00636126 GB/s
+  Scatter thruput: 31778.1 edges/ms
+  Bytes/spike:     10.0089
+  --- Gather metrics ---
+  Gather time:     125.827 ms (±0.204658)
+  Gather median:   125.817 ms
+  Gather thruput:  31761.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 12.207x
+  Cache ratio L2:  1.52588x
+  Cache ratio L3:  0.0953674x
+
+[12/144] coo / fi / N=1000 / d=0.1 ... 187.49 ms (±0.204381)
+  Format:          coo
+  Topology:        fi
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             100000
+  Matrix memory:   1600000 bytes
+  Mean time:       187.49 ms
+  Median time:     187.491 ms
+  Std time:        0.204381 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 80.879
+  Total spikes:    80879
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00853379 GB/s
+  Scatter thruput: 43137.8 edges/ms
+  Bytes/spike:     19.7826
+  --- Gather metrics ---
+  Gather time:     187.543 ms (±0.306936)
+  Gather median:   187.514 ms
+  Gather thruput:  43125.5 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 24.4141x
+  Cache ratio L2:  3.05176x
+  Cache ratio L3:  0.190735x
+
+[13/144] coo / fi / N=5000 / d=0.01 ... 630.875 ms (±0.51723)
+  Format:          coo
+  Topology:        fi
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             250000
+  Matrix memory:   4000000 bytes
+  Mean time:       630.875 ms
+  Median time:     630.782 ms
+  Std time:        0.51723 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 399.645
+  Total spikes:    399645
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0063404 GB/s
+  Scatter thruput: 31673.8 edges/ms
+  Bytes/spike:     10.0089
+  --- Gather metrics ---
+  Gather time:     631.526 ms (±0.812561)
+  Gather median:   631.451 ms
+  Gather thruput:  31641.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 61.0352x
+  Cache ratio L2:  7.62939x
+  Cache ratio L3:  0.476837x
+
+[14/144] coo / fi / N=5000 / d=0.05 ... 1902.82 ms (±1.85512)
+  Format:          coo
+  Topology:        fi
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             1250000
+  Matrix memory:   20000000 bytes
+  Mean time:       1902.82 ms
+  Median time:     1903.1 ms
+  Std time:        1.85512 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 414.548
+  Total spikes:    414548
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0105107 GB/s
+  Scatter thruput: 54465 edges/ms
+  Bytes/spike:     48.2453
+  --- Gather metrics ---
+  Gather time:     1902.16 ms (±2.05082)
+  Gather median:   1903.15 ms
+  Gather thruput:  54483.9 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 305.176x
+  Cache ratio L2:  38.147x
+  Cache ratio L3:  2.38419x
+
+[15/144] coo / fi / N=5000 / d=0.1 ... 3585.26 ms (±11.5633)
+  Format:          coo
+  Topology:        fi
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             2500000
+  Matrix memory:   40000000 bytes
+  Mean time:       3585.26 ms
+  Median time:     3582.01 ms
+  Std time:        11.5633 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 424.855
+  Total spikes:    424855
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0111568 GB/s
+  Scatter thruput: 59250.2 edges/ms
+  Bytes/spike:     94.1498
+  --- Gather metrics ---
+  Gather time:     3583.9 ms (±6.44421)
+  Gather median:   3583.57 ms
+  Gather thruput:  59272.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 610.352x
+  Cache ratio L2:  76.2939x
+  Cache ratio L3:  4.76837x
+
+[16/144] coo / fi / N=10000 / d=0.01 ... 1890.91 ms (±3.95969)
+  Format:          coo
+  Topology:        fi
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             1000000
+  Matrix memory:   16000000 bytes
+  Mean time:       1890.91 ms
+  Median time:     1892.07 ms
+  Std time:        3.95969 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 808.883
+  Total spikes:    808883
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00846155 GB/s
+  Scatter thruput: 42777.5 edges/ms
+  Bytes/spike:     19.7804
+  --- Gather metrics ---
+  Gather time:     1891.98 ms (±1.42081)
+  Gather median:   1891.66 ms
+  Gather thruput:  42753.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 244.141x
+  Cache ratio L2:  30.5176x
+  Cache ratio L3:  1.90735x
+
+[17/144] coo / fi / N=10000 / d=0.05 ... 7184.47 ms (±16.6853)
+  Format:          coo
+  Topology:        fi
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             5000000
+  Matrix memory:   80000000 bytes
+  Mean time:       7184.47 ms
+  Median time:     7185.09 ms
+  Std time:        16.6853 ms
+  Peak RSS:        316196 kB
+  Avg spikes/step: 849.626
+  Total spikes:    849626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0111351 GB/s
+  Scatter thruput: 59129.3 edges/ms
+  Bytes/spike:     94.1591
+  --- Gather metrics ---
+  Gather time:     7177.1 ms (±11.4001)
+  Gather median:   7180.42 ms
+  Gather thruput:  59190.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1220.7x
+  Cache ratio L2:  152.588x
+  Cache ratio L3:  9.53674x
+
+[18/144] coo / fi / N=10000 / d=0.1 ... 13962 ms (±59.1024)
+  Format:          coo
+  Topology:        fi
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000000
+  Matrix memory:   160000000 bytes
+  Mean time:       13962 ms
+  Median time:     13952.1 ms
+  Std time:        59.1024 ms
+  Peak RSS:        316408 kB
+  Avg spikes/step: 874.013
+  Total spikes:    874013
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0114596 GB/s
+  Scatter thruput: 62599.3 edges/ms
+  Bytes/spike:     183.064
+  --- Gather metrics ---
+  Gather time:     13956.2 ms (±26.0197)
+  Gather median:   13951.4 ms
+  Gather thruput:  62625.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2441.41x
+  Cache ratio L2:  305.176x
+  Cache ratio L3:  19.0735x
+
+[19/144] coo / ba / N=1000 / d=0.01 ... 87.9906 ms (±0.151691)
+  Format:          coo
+  Topology:        ba
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             19890
+  Matrix memory:   318240 bytes
+  Mean time:       87.9906 ms
+  Median time:     87.9587 ms
+  Std time:        0.151691 ms
+  Peak RSS:        316236 kB
+  Avg spikes/step: 79.102
+  Total spikes:    79102
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00361675 GB/s
+  Scatter thruput: 17880.8 edges/ms
+  Bytes/spike:     4.02316
+  --- Gather metrics ---
+  Gather time:     87.9321 ms (±0.0959259)
+  Gather median:   87.9428 ms
+  Gather thruput:  17892.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 4.85596x
+  Cache ratio L2:  0.606995x
+  Cache ratio L3:  0.0379372x
+
+[20/144] coo / ba / N=1000 / d=0.05 ... 166.666 ms (±0.133373)
+  Format:          coo
+  Topology:        ba
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             97450
+  Matrix memory:   1559200 bytes
+  Mean time:       166.666 ms
+  Median time:     166.651 ms
+  Std time:        0.133373 ms
+  Peak RSS:        316236 kB
+  Avg spikes/step: 81.028
+  Total spikes:    81028
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00935525 GB/s
+  Scatter thruput: 47377.3 edges/ms
+  Bytes/spike:     19.2427
+  --- Gather metrics ---
+  Gather time:     166.869 ms (±0.361859)
+  Gather median:   166.848 ms
+  Gather thruput:  47319.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 23.7915x
+  Cache ratio L2:  2.97394x
+  Cache ratio L3:  0.185871x
+
+[21/144] coo / ba / N=1000 / d=0.1 ... 257.269 ms (±0.399971)
+  Format:          coo
+  Topology:        ba
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             189900
+  Matrix memory:   3038400 bytes
+  Mean time:       257.269 ms
+  Median time:     257.466 ms
+  Std time:        0.399971 ms
+  Peak RSS:        316236 kB
+  Avg spikes/step: 82.433
+  Total spikes:    82433
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0118102 GB/s
+  Scatter thruput: 60847 edges/ms
+  Bytes/spike:     36.859
+  --- Gather metrics ---
+  Gather time:     257.402 ms (±0.386259)
+  Gather median:   257.464 ms
+  Gather thruput:  60815.5 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 46.3623x
+  Cache ratio L2:  5.79529x
+  Cache ratio L3:  0.362206x
+
+[22/144] coo / ba / N=5000 / d=0.01 ... 840.856 ms (±0.958317)
+  Format:          coo
+  Topology:        ba
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             497450
+  Matrix memory:   7959200 bytes
+  Mean time:       840.856 ms
+  Median time:     841.067 ms
+  Std time:        0.958317 ms
+  Peak RSS:        316236 kB
+  Avg spikes/step: 405.554
+  Total spikes:    405554
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00946559 GB/s
+  Scatter thruput: 47985.1 edges/ms
+  Bytes/spike:     19.6255
+  --- Gather metrics ---
+  Gather time:     840.599 ms (±0.810855)
+  Gather median:   840.458 ms
+  Gather thruput:  47999.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 121.448x
+  Cache ratio L2:  15.181x
+  Cache ratio L3:  0.948811x
+
+[23/144] coo / ba / N=5000 / d=0.05 ... 3228.58 ms (±13.697)
+  Format:          coo
+  Topology:        ba
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2437250
+  Matrix memory:   38996000 bytes
+  Mean time:       3228.58 ms
+  Median time:     3226.23 ms
+  Std time:        13.697 ms
+  Peak RSS:        316236 kB
+  Avg spikes/step: 428.446
+  Total spikes:    428446
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0120784 GB/s
+  Scatter thruput: 64686.6 edges/ms
+  Bytes/spike:     91.0173
+  --- Gather metrics ---
+  Gather time:     3230.12 ms (±6.29101)
+  Gather median:   3230.95 ms
+  Gather thruput:  64655.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 595.032x
+  Cache ratio L2:  74.379x
+  Cache ratio L3:  4.64869x
+
+[24/144] coo / ba / N=5000 / d=0.1 ... 5758.56 ms (±18.9034)
+  Format:          coo
+  Topology:        ba
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             4749500
+  Matrix memory:   75992000 bytes
+  Mean time:       5758.56 ms
+  Median time:     5760.37 ms
+  Std time:        18.9034 ms
+  Peak RSS:        347612 kB
+  Avg spikes/step: 445.495
+  Total spikes:    445495
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0131964 GB/s
+  Scatter thruput: 73486.4 edges/ms
+  Bytes/spike:     170.579
+  --- Gather metrics ---
+  Gather time:     5755.45 ms (±11.0062)
+  Gather median:   5756.2 ms
+  Gather thruput:  73526.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1159.55x
+  Cache ratio L2:  144.943x
+  Cache ratio L3:  9.05895x
+
+[25/144] coo / ba / N=10000 / d=0.01 ... 3010.36 ms (±8.88715)
+  Format:          coo
+  Topology:        ba
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1989900
+  Matrix memory:   31838400 bytes
+  Mean time:       3010.36 ms
+  Median time:     3007.7 ms
+  Std time:        8.88715 ms
+  Peak RSS:        347612 kB
+  Avg spikes/step: 826.832
+  Total spikes:    826832
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0105763 GB/s
+  Scatter thruput: 54655 edges/ms
+  Bytes/spike:     38.5065
+  --- Gather metrics ---
+  Gather time:     3011.04 ms (±6.49666)
+  Gather median:   3010.5 ms
+  Gather thruput:  54642.6 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 485.815x
+  Cache ratio L2:  60.7269x
+  Cache ratio L3:  3.79543x
+
+[26/144] coo / ba / N=10000 / d=0.05 ... 11654 ms (±16.574)
+  Format:          coo
+  Topology:        ba
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             9749500
+  Matrix memory:   155992000 bytes
+  Mean time:       11654 ms
+  Median time:     11653.4 ms
+  Std time:        16.574 ms
+  Peak RSS:        650860 kB
+  Avg spikes/step: 894.486
+  Total spikes:    894486
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0133853 GB/s
+  Scatter thruput: 74831 edges/ms
+  Bytes/spike:     174.393
+  --- Gather metrics ---
+  Gather time:     11654.6 ms (±24.5418)
+  Gather median:   11657.1 ms
+  Gather thruput:  74826.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2380.25x
+  Cache ratio L2:  297.531x
+  Cache ratio L3:  18.5957x
+
+[27/144] coo / ba / N=10000 / d=0.1 ... 22007.5 ms (±31.7295)
+  Format:          coo
+  Topology:        ba
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             18999000
+  Matrix memory:   303984000 bytes
+  Mean time:       22007.5 ms
+  Median time:     22003.9 ms
+  Std time:        31.7295 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 944.559
+  Total spikes:    944559
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0138127 GB/s
+  Scatter thruput: 81543.4 edges/ms
+  Bytes/spike:     321.826
+  --- Gather metrics ---
+  Gather time:     21999.4 ms (±33.9679)
+  Gather median:   22013 ms
+  Gather thruput:  81573.5 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 4638.43x
+  Cache ratio L2:  579.803x
+  Cache ratio L3:  36.2377x
+
+[28/144] coo / ws / N=1000 / d=0.01 ... 77.0518 ms (±0.193222)
+  Format:          coo
+  Topology:        ws
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000
+  Matrix memory:   160000 bytes
+  Mean time:       77.0518 ms
+  Median time:     77.024 ms
+  Std time:        0.193222 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.614
+  Total spikes:    78614
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00207653 GB/s
+  Scatter thruput: 10202.7 edges/ms
+  Bytes/spike:     2.03526
+  --- Gather metrics ---
+  Gather time:     77.1313 ms (±0.106952)
+  Gather median:   77.1808 ms
+  Gather thruput:  10192.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2.44141x
+  Cache ratio L2:  0.305176x
+  Cache ratio L3:  0.0190735x
+
+[29/144] coo / ws / N=1000 / d=0.05 ... 116.63 ms (±0.0933237)
+  Format:          coo
+  Topology:        ws
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             50000
+  Matrix memory:   800000 bytes
+  Mean time:       116.63 ms
+  Median time:     116.635 ms
+  Std time:        0.0933237 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.92
+  Total spikes:    79920
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00685929 GB/s
+  Scatter thruput: 34262.2 edges/ms
+  Bytes/spike:     10.01
+  --- Gather metrics ---
+  Gather time:     116.752 ms (±0.149834)
+  Gather median:   116.745 ms
+  Gather thruput:  34226.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 12.207x
+  Cache ratio L2:  1.52588x
+  Cache ratio L3:  0.0953674x
+
+[30/144] coo / ws / N=1000 / d=0.1 ... 167.373 ms (±0.32795)
+  Format:          coo
+  Topology:        ws
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             100000
+  Matrix memory:   1600000 bytes
+  Mean time:       167.373 ms
+  Median time:     167.421 ms
+  Std time:        0.32795 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.872
+  Total spikes:    80872
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00955951 GB/s
+  Scatter thruput: 48318.5 edges/ms
+  Bytes/spike:     19.7844
+  --- Gather metrics ---
+  Gather time:     167.457 ms (±0.268711)
+  Gather median:   167.542 ms
+  Gather thruput:  48294.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 24.4141x
+  Cache ratio L2:  3.05176x
+  Cache ratio L3:  0.190735x
+
+[31/144] coo / ws / N=5000 / d=0.01 ... 584.523 ms (±0.564197)
+  Format:          coo
+  Topology:        ws
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             250000
+  Matrix memory:   4000000 bytes
+  Mean time:       584.523 ms
+  Median time:     584.298 ms
+  Std time:        0.564197 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.585
+  Total spikes:    399585
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00684318 GB/s
+  Scatter thruput: 34180.4 edges/ms
+  Bytes/spike:     10.0104
+  --- Gather metrics ---
+  Gather time:     584.455 ms (±0.302772)
+  Gather median:   584.476 ms
+  Gather thruput:  34184.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 61.0352x
+  Cache ratio L2:  7.62939x
+  Cache ratio L3:  0.476837x
+
+[32/144] coo / ws / N=5000 / d=0.05 ... 1731.94 ms (±19.6999)
+  Format:          coo
+  Topology:        ws
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             1250000
+  Matrix memory:   20000000 bytes
+  Mean time:       1731.94 ms
+  Median time:     1735.47 ms
+  Std time:        19.6999 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.451
+  Total spikes:    414451
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0115478 GB/s
+  Scatter thruput: 59824.8 edges/ms
+  Bytes/spike:     48.2566
+  --- Gather metrics ---
+  Gather time:     1732.24 ms (±11.4396)
+  Gather median:   1737.49 ms
+  Gather thruput:  59814.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 305.176x
+  Cache ratio L2:  38.147x
+  Cache ratio L3:  2.38419x
+
+[33/144] coo / ws / N=5000 / d=0.1 ... 3491.69 ms (±8.73032)
+  Format:          coo
+  Topology:        ws
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             2500000
+  Matrix memory:   40000000 bytes
+  Mean time:       3491.69 ms
+  Median time:     3486.94 ms
+  Std time:        8.73032 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.846
+  Total spikes:    424846
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0114558 GB/s
+  Scatter thruput: 60836.7 edges/ms
+  Bytes/spike:     94.1518
+  --- Gather metrics ---
+  Gather time:     3486.36 ms (±6.77127)
+  Gather median:   3487.86 ms
+  Gather thruput:  60929.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 610.352x
+  Cache ratio L2:  76.2939x
+  Cache ratio L3:  4.76837x
+
+[34/144] coo / ws / N=10000 / d=0.01 ... 1728.85 ms (±2.06673)
+  Format:          coo
+  Topology:        ws
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             1000000
+  Matrix memory:   16000000 bytes
+  Mean time:       1728.85 ms
+  Median time:     1728.08 ms
+  Std time:        2.06673 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 808.803
+  Total spikes:    808803
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00925472 GB/s
+  Scatter thruput: 46782.8 edges/ms
+  Bytes/spike:     19.7823
+  --- Gather metrics ---
+  Gather time:     1729.62 ms (±3.61149)
+  Gather median:   1729.34 ms
+  Gather thruput:  46761.9 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 244.141x
+  Cache ratio L2:  30.5176x
+  Cache ratio L3:  1.90735x
+
+[35/144] coo / ws / N=10000 / d=0.05 ... 6870.96 ms (±24.6763)
+  Format:          coo
+  Topology:        ws
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             5000000
+  Matrix memory:   80000000 bytes
+  Mean time:       6870.96 ms
+  Median time:     6875.32 ms
+  Std time:        24.6763 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.607
+  Total spikes:    849607
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0116432 GB/s
+  Scatter thruput: 61826 edges/ms
+  Bytes/spike:     94.1612
+  --- Gather metrics ---
+  Gather time:     6892.56 ms (±18.7452)
+  Gather median:   6889.89 ms
+  Gather thruput:  61632.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1220.7x
+  Cache ratio L2:  152.588x
+  Cache ratio L3:  9.53674x
+
+[36/144] coo / ws / N=10000 / d=0.1 ... 13745 ms (±67.2614)
+  Format:          coo
+  Topology:        ws
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000000
+  Matrix memory:   160000000 bytes
+  Mean time:       13745 ms
+  Median time:     13753.2 ms
+  Std time:        67.2614 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 876.637
+  Total spikes:    876637
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0116406 GB/s
+  Scatter thruput: 63778.7 edges/ms
+  Bytes/spike:     182.516
+  --- Gather metrics ---
+  Gather time:     13749.9 ms (±77.0838)
+  Gather median:   13769.4 ms
+  Gather thruput:  63756.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2441.41x
+  Cache ratio L2:  305.176x
+  Cache ratio L3:  19.0735x
+
+[37/144] csr / er / N=1000 / d=0.01 ... 66.8929 ms (±0.0936817)
+  Format:          csr
+  Topology:        er
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             9964
+  Matrix memory:   123572 bytes
+  Mean time:       66.8929 ms
+  Median time:     66.8831 ms
+  Std time:        0.0936817 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.626
+  Total spikes:    78626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00184731 GB/s
+  Scatter thruput: 11711.7 edges/ms
+  Bytes/spike:     1.57164
+  --- Gather metrics ---
+  Gather time:     66.9199 ms (±0.0170654)
+  Gather median:   66.9195 ms
+  Gather thruput:  11707 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1.88556x
+  Cache ratio L2:  0.235695x
+  Cache ratio L3:  0.0147309x
+
+[38/144] csr / er / N=1000 / d=0.05 ... 68.0562 ms (±0.166163)
+  Format:          csr
+  Topology:        er
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             50225
+  Matrix memory:   606704 bytes
+  Mean time:       68.0562 ms
+  Median time:     68.0331 ms
+  Std time:        0.166163 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.948
+  Total spikes:    79948
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00891474 GB/s
+  Scatter thruput: 59001 edges/ms
+  Bytes/spike:     7.58873
+  --- Gather metrics ---
+  Gather time:     68.1117 ms (±0.0711723)
+  Gather median:   68.1258 ms
+  Gather thruput:  58953 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 9.25757x
+  Cache ratio L2:  1.1572x
+  Cache ratio L3:  0.0723248x
+
+[39/144] csr / er / N=1000 / d=0.1 ... 69.5778 ms (±0.113332)
+  Format:          csr
+  Topology:        er
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             99994
+  Matrix memory:   1203932 bytes
+  Mean time:       69.5778 ms
+  Median time:     69.565 ms
+  Std time:        0.113332 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.91
+  Total spikes:    80910
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0173034 GB/s
+  Scatter thruput: 116280 edges/ms
+  Bytes/spike:     14.8799
+  --- Gather metrics ---
+  Gather time:     69.6171 ms (±0.101401)
+  Gather median:   69.5836 ms
+  Gather thruput:  116215 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 18.3705x
+  Cache ratio L2:  2.29632x
+  Cache ratio L3:  0.14352x
+
+[40/144] csr / er / N=5000 / d=0.01 ... 342.603 ms (±0.401853)
+  Format:          csr
+  Topology:        er
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             250003
+  Matrix memory:   3020040 bytes
+  Mean time:       342.603 ms
+  Median time:     342.511 ms
+  Std time:        0.401853 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.698
+  Total spikes:    399698
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00881499 GB/s
+  Scatter thruput: 58333.2 edges/ms
+  Bytes/spike:     7.5558
+  --- Gather metrics ---
+  Gather time:     342.82 ms (±0.181189)
+  Gather median:   342.834 ms
+  Gather thruput:  58296.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 46.0822x
+  Cache ratio L2:  5.76027x
+  Cache ratio L3:  0.360017x
+
+[41/144] csr / er / N=5000 / d=0.05 ... 390.168 ms (±4.0459)
+  Format:          csr
+  Topology:        er
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1248498
+  Matrix memory:   15001980 bytes
+  Mean time:       390.168 ms
+  Median time:     387.497 ms
+  Std time:        4.0459 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.562
+  Total spikes:    414562
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.03845 GB/s
+  Scatter thruput: 265311 edges/ms
+  Bytes/spike:     36.1875
+  --- Gather metrics ---
+  Gather time:     390.604 ms (±4.07997)
+  Gather median:   388.433 ms
+  Gather thruput:  265015 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 228.912x
+  Cache ratio L2:  28.614x
+  Cache ratio L3:  1.78838x
+
+[42/144] csr / er / N=5000 / d=0.1 ... 487.526 ms (±5.72179)
+  Format:          csr
+  Topology:        er
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2497624
+  Matrix memory:   29991492 bytes
+  Mean time:       487.526 ms
+  Median time:     487.148 ms
+  Std time:        5.72179 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.968
+  Total spikes:    424968
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0615177 GB/s
+  Scatter thruput: 435427 edges/ms
+  Bytes/spike:     70.5735
+  --- Gather metrics ---
+  Gather time:     487.351 ms (±4.06722)
+  Gather median:   487.333 ms
+  Gather thruput:  435584 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 457.634x
+  Cache ratio L2:  57.2042x
+  Cache ratio L3:  3.57526x
+
+[43/144] csr / er / N=10000 / d=0.01 ... 720.777 ms (±3.44085)
+  Format:          csr
+  Topology:        er
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             999815
+  Matrix memory:   12037784 bytes
+  Mean time:       720.777 ms
+  Median time:     720.498 ms
+  Std time:        3.44085 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 809.11
+  Total spikes:    809110
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0167011 GB/s
+  Scatter thruput: 112234 edges/ms
+  Bytes/spike:     14.8778
+  --- Gather metrics ---
+  Gather time:     722.967 ms (±4.03217)
+  Gather median:   720.995 ms
+  Gather thruput:  111895 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 183.682x
+  Cache ratio L2:  22.9603x
+  Cache ratio L3:  1.43502x
+
+[44/144] csr / er / N=10000 / d=0.05 ... 1009.83 ms (±2.94275)
+  Format:          csr
+  Topology:        er
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             4998968
+  Matrix memory:   60027620 bytes
+  Mean time:       1009.83 ms
+  Median time:     1008.76 ms
+  Std time:        2.94275 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.847
+  Total spikes:    849847
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0594434 GB/s
+  Scatter thruput: 420701 edges/ms
+  Bytes/spike:     70.6334
+  --- Gather metrics ---
+  Gather time:     1009.65 ms (±2.83495)
+  Gather median:   1010.87 ms
+  Gather thruput:  420776 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 915.949x
+  Cache ratio L2:  114.494x
+  Cache ratio L3:  7.15585x
+
+[45/144] csr / er / N=10000 / d=0.1 ... 1252.94 ms (±1.49801)
+  Format:          csr
+  Topology:        er
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000192
+  Matrix memory:   120042308 bytes
+  Mean time:       1252.94 ms
+  Median time:     1252.77 ms
+  Std time:        1.49801 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 874.231
+  Total spikes:    874231
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0958086 GB/s
+  Scatter thruput: 697758 edges/ms
+  Bytes/spike:     137.312
+  --- Gather metrics ---
+  Gather time:     1254.75 ms (±3.52679)
+  Gather median:   1253.92 ms
+  Gather thruput:  696749 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1831.7x
+  Cache ratio L2:  228.963x
+  Cache ratio L3:  14.3102x
+
+[46/144] csr / fi / N=1000 / d=0.01 ... 66.9324 ms (±0.0904002)
+  Format:          csr
+  Topology:        fi
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000
+  Matrix memory:   124004 bytes
+  Mean time:       66.9324 ms
+  Median time:     66.9429 ms
+  Std time:        0.0904002 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.633
+  Total spikes:    78633
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00185268 GB/s
+  Scatter thruput: 11748.1 edges/ms
+  Bytes/spike:     1.577
+  --- Gather metrics ---
+  Gather time:     66.9484 ms (±0.0592353)
+  Gather median:   66.94 ms
+  Gather thruput:  11745.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1.89215x
+  Cache ratio L2:  0.236519x
+  Cache ratio L3:  0.0147824x
+
+[47/144] csr / fi / N=1000 / d=0.05 ... 68.0568 ms (±0.126018)
+  Format:          csr
+  Topology:        fi
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             50000
+  Matrix memory:   604004 bytes
+  Mean time:       68.0568 ms
+  Median time:     68.0807 ms
+  Std time:        0.126018 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.929
+  Total spikes:    79929
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00887499 GB/s
+  Scatter thruput: 58722.2 edges/ms
+  Bytes/spike:     7.55676
+  --- Gather metrics ---
+  Gather time:     68.0152 ms (±0.103946)
+  Gather median:   67.9993 ms
+  Gather thruput:  58758.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 9.21637x
+  Cache ratio L2:  1.15205x
+  Cache ratio L3:  0.0720029x
+
+[48/144] csr / fi / N=1000 / d=0.1 ... 70.3977 ms (±0.0776771)
+  Format:          csr
+  Topology:        fi
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             100000
+  Matrix memory:   1204004 bytes
+  Mean time:       70.3977 ms
+  Median time:     70.3955 ms
+  Std time:        0.0776771 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.879
+  Total spikes:    80879
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0171029 GB/s
+  Scatter thruput: 114889 edges/ms
+  Bytes/spike:     14.8865
+  --- Gather metrics ---
+  Gather time:     70.4403 ms (±0.130901)
+  Gather median:   70.446 ms
+  Gather thruput:  114819 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 18.3716x
+  Cache ratio L2:  2.29646x
+  Cache ratio L3:  0.143528x
+
+[49/144] csr / fi / N=5000 / d=0.01 ... 343.986 ms (±1.87063)
+  Format:          csr
+  Topology:        fi
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             250000
+  Matrix memory:   3020004 bytes
+  Mean time:       343.986 ms
+  Median time:     343 ms
+  Std time:        1.87063 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.645
+  Total spikes:    399645
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00877943 GB/s
+  Scatter thruput: 58090.3 edges/ms
+  Bytes/spike:     7.55672
+  --- Gather metrics ---
+  Gather time:     343.965 ms (±1.57177)
+  Gather median:   343.378 ms
+  Gather thruput:  58093.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 46.0816x
+  Cache ratio L2:  5.7602x
+  Cache ratio L3:  0.360013x
+
+[50/144] csr / fi / N=5000 / d=0.05 ... 390.779 ms (±1.70314)
+  Format:          csr
+  Topology:        fi
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1250000
+  Matrix memory:   15020004 bytes
+  Mean time:       390.779 ms
+  Median time:     390.276 ms
+  Std time:        1.70314 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.548
+  Total spikes:    414548
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0384361 GB/s
+  Scatter thruput: 265206 edges/ms
+  Bytes/spike:     36.2322
+  --- Gather metrics ---
+  Gather time:     391.198 ms (±1.92239)
+  Gather median:   390.246 ms
+  Gather thruput:  264922 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 229.187x
+  Cache ratio L2:  28.6484x
+  Cache ratio L3:  1.79052x
+
+[51/144] csr / fi / N=5000 / d=0.1 ... 487.222 ms (±6.03972)
+  Format:          csr
+  Topology:        fi
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2500000
+  Matrix memory:   30020004 bytes
+  Mean time:       487.222 ms
+  Median time:     486.593 ms
+  Std time:        6.03972 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.855
+  Total spikes:    424855
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0616146 GB/s
+  Scatter thruput: 435997 edges/ms
+  Bytes/spike:     70.6594
+  --- Gather metrics ---
+  Gather time:     487.476 ms (±5.16688)
+  Gather median:   487.142 ms
+  Gather thruput:  435770 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 458.069x
+  Cache ratio L2:  57.2586x
+  Cache ratio L3:  3.57866x
+
+[52/144] csr / fi / N=10000 / d=0.01 ... 719.933 ms (±0.857683)
+  Format:          csr
+  Topology:        fi
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             1000000
+  Matrix memory:   12040004 bytes
+  Mean time:       719.933 ms
+  Median time:     719.706 ms
+  Std time:        0.857683 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 808.883
+  Total spikes:    808883
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0167238 GB/s
+  Scatter thruput: 112355 edges/ms
+  Bytes/spike:     14.8847
+  --- Gather metrics ---
+  Gather time:     720.169 ms (±0.402022)
+  Gather median:   720.186 ms
+  Gather thruput:  112318 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 183.716x
+  Cache ratio L2:  22.9645x
+  Cache ratio L3:  1.43528x
+
+[53/144] csr / fi / N=10000 / d=0.05 ... 1010.97 ms (±0.866837)
+  Format:          csr
+  Topology:        fi
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:3
+  NNZ:             5000000
+  Matrix memory:   60040004 bytes
+  Mean time:       1010.97 ms
+  Median time:     1011.27 ms
+  Std time:        0.866837 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.626
+  Total spikes:    849626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0593886 GB/s
+  Scatter thruput: 420204 edges/ms
+  Bytes/spike:     70.6664
+  --- Gather metrics ---
+  Gather time:     1012.02 ms (±1.42185)
+  Gather median:   1012.39 ms
+  Gather thruput:  419768 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 916.138x
+  Cache ratio L2:  114.517x
+  Cache ratio L3:  7.15733x
+
+[54/144] csr / fi / N=10000 / d=0.1 ... 1258.94 ms (±1.76481)
+  Format:          csr
+  Topology:        fi
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000000
+  Matrix memory:   120040004 bytes
+  Mean time:       1258.94 ms
+  Median time:     1258.26 ms
+  Std time:        1.76481 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 874.013
+  Total spikes:    874013
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0953498 GB/s
+  Scatter thruput: 694243 edges/ms
+  Bytes/spike:     137.343
+  --- Gather metrics ---
+  Gather time:     1258.65 ms (±0.704464)
+  Gather median:   1258.78 ms
+  Gather thruput:  694404 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1831.67x
+  Cache ratio L2:  228.958x
+  Cache ratio L3:  14.3099x
+
+[55/144] csr / ba / N=1000 / d=0.01 ... 67.1617 ms (±0.0936817)
+  Format:          csr
+  Topology:        ba
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             19890
+  Matrix memory:   242684 bytes
+  Mean time:       67.1617 ms
+  Median time:     67.1921 ms
+  Std time:        0.0936817 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.102
+  Total spikes:    79102
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00361343 GB/s
+  Scatter thruput: 23426.1 edges/ms
+  Bytes/spike:     3.06799
+  --- Gather metrics ---
+  Gather time:     67.2627 ms (±0.149638)
+  Gather median:   67.2623 ms
+  Gather thruput:  23391 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 3.70306x
+  Cache ratio L2:  0.462883x
+  Cache ratio L3:  0.0289302x
+
+[56/144] csr / ba / N=1000 / d=0.05 ... 69.7823 ms (±0.358586)
+  Format:          csr
+  Topology:        ba
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             97450
+  Matrix memory:   1173404 bytes
+  Mean time:       69.7823 ms
+  Median time:     69.6946 ms
+  Std time:        0.358586 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 81.028
+  Total spikes:    81028
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0168152 GB/s
+  Scatter thruput: 113154 edges/ms
+  Bytes/spike:     14.4815
+  --- Gather metrics ---
+  Gather time:     69.6356 ms (±0.0584199)
+  Gather median:   69.6467 ms
+  Gather thruput:  113393 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 17.9047x
+  Cache ratio L2:  2.23809x
+  Cache ratio L3:  0.139881x
+
+[57/144] csr / ba / N=1000 / d=0.1 ... 72.6953 ms (±0.117656)
+  Format:          csr
+  Topology:        ba
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             189900
+  Matrix memory:   2282804 bytes
+  Mean time:       72.6953 ms
+  Median time:     72.679 ms
+  Std time:        0.117656 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 82.433
+  Total spikes:    82433
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0314023 GB/s
+  Scatter thruput: 215337 edges/ms
+  Bytes/spike:     27.6928
+  --- Gather metrics ---
+  Gather time:     72.8455 ms (±0.152072)
+  Gather median:   72.8493 ms
+  Gather thruput:  214893 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 34.8328x
+  Cache ratio L2:  4.3541x
+  Cache ratio L3:  0.272131x
+
+[58/144] csr / ba / N=5000 / d=0.01 ... 352.785 ms (±0.347457)
+  Format:          csr
+  Topology:        ba
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             497450
+  Matrix memory:   5989404 bytes
+  Mean time:       352.785 ms
+  Median time:     352.9 ms
+  Std time:        0.347457 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 405.554
+  Total spikes:    405554
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0169775 GB/s
+  Scatter thruput: 114372 edges/ms
+  Bytes/spike:     14.7685
+  --- Gather metrics ---
+  Gather time:     353.426 ms (±0.400182)
+  Gather median:   353.433 ms
+  Gather thruput:  114164 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 91.3911x
+  Cache ratio L2:  11.4239x
+  Cache ratio L3:  0.713993x
+
+[59/144] csr / ba / N=5000 / d=0.05 ... 480.384 ms (±4.00308)
+  Format:          csr
+  Topology:        ba
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2437250
+  Matrix memory:   29267004 bytes
+  Mean time:       480.384 ms
+  Median time:     482.41 ms
+  Std time:        4.00308 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 428.446
+  Total spikes:    428446
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0609242 GB/s
+  Scatter thruput: 434748 edges/ms
+  Bytes/spike:     68.3097
+  --- Gather metrics ---
+  Gather time:     481.299 ms (±2.57723)
+  Gather median:   482.626 ms
+  Gather thruput:  433921 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 446.579x
+  Cache ratio L2:  55.8224x
+  Cache ratio L3:  3.4889x
+
+[60/144] csr / ba / N=5000 / d=0.1 ... 610.008 ms (±0.950263)
+  Format:          csr
+  Topology:        ba
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             4749500
+  Matrix memory:   57014004 bytes
+  Mean time:       610.008 ms
+  Median time:     609.744 ms
+  Std time:        0.950263 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 445.495
+  Total spikes:    445495
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0934643 GB/s
+  Scatter thruput: 693721 edges/ms
+  Bytes/spike:     127.979
+  --- Gather metrics ---
+  Gather time:     611.09 ms (±1.66232)
+  Gather median:   610.875 ms
+  Gather thruput:  692493 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 869.965x
+  Cache ratio L2:  108.746x
+  Cache ratio L3:  6.7966x
+
+[61/144] csr / ba / N=10000 / d=0.01 ... 839.34 ms (±0.557128)
+  Format:          csr
+  Topology:        ba
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             1989900
+  Matrix memory:   23918804 bytes
+  Mean time:       839.34 ms
+  Median time:     839.305 ms
+  Std time:        0.557128 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 826.832
+  Total spikes:    826832
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0284971 GB/s
+  Scatter thruput: 196025 edges/ms
+  Bytes/spike:     28.9283
+  --- Gather metrics ---
+  Gather time:     840.723 ms (±0.640999)
+  Gather median:   840.815 ms
+  Gather thruput:  195702 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 364.972x
+  Cache ratio L2:  45.6215x
+  Cache ratio L3:  2.85134x
+
+[62/144] csr / ba / N=10000 / d=0.05 ... 1287.74 ms (±1.56645)
+  Format:          csr
+  Topology:        ba
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             9749500
+  Matrix memory:   117034004 bytes
+  Mean time:       1287.74 ms
+  Median time:     1287.83 ms
+  Std time:        1.56645 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 894.486
+  Total spikes:    894486
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0908832 GB/s
+  Scatter thruput: 677216 edges/ms
+  Bytes/spike:     130.839
+  --- Gather metrics ---
+  Gather time:     1288.13 ms (±1.43836)
+  Gather median:   1288.74 ms
+  Gather thruput:  677014 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1785.8x
+  Cache ratio L2:  223.225x
+  Cache ratio L3:  13.9515x
+
+[63/144] csr / ba / N=10000 / d=0.1 ... 1760.51 ms (±1.67608)
+  Format:          csr
+  Topology:        ba
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             18999000
+  Matrix memory:   228028004 bytes
+  Mean time:       1760.51 ms
+  Median time:     1760.04 ms
+  Std time:        1.67608 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 944.559
+  Total spikes:    944559
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.129524 GB/s
+  Scatter thruput: 1.01934e+06 edges/ms
+  Bytes/spike:     241.412
+  --- Gather metrics ---
+  Gather time:     1760.06 ms (±1.02108)
+  Gather median:   1759.95 ms
+  Gather thruput:  1.01961e+06 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 3479.43x
+  Cache ratio L2:  434.929x
+  Cache ratio L3:  27.1831x
+
+[64/144] csr / ws / N=1000 / d=0.01 ... 66.9841 ms (±0.15047)
+  Format:          csr
+  Topology:        ws
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000
+  Matrix memory:   124004 bytes
+  Mean time:       66.9841 ms
+  Median time:     66.972 ms
+  Std time:        0.15047 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.614
+  Total spikes:    78614
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00185124 GB/s
+  Scatter thruput: 11736.2 edges/ms
+  Bytes/spike:     1.57738
+  --- Gather metrics ---
+  Gather time:     66.9811 ms (±0.11857)
+  Gather median:   66.9592 ms
+  Gather thruput:  11736.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1.89215x
+  Cache ratio L2:  0.236519x
+  Cache ratio L3:  0.0147824x
+
+[65/144] csr / ws / N=1000 / d=0.05 ... 68.0977 ms (±0.0998363)
+  Format:          csr
+  Topology:        ws
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             50000
+  Matrix memory:   604004 bytes
+  Mean time:       68.0977 ms
+  Median time:     68.0883 ms
+  Std time:        0.0998363 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.92
+  Total spikes:    79920
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00886966 GB/s
+  Scatter thruput: 58680.4 edges/ms
+  Bytes/spike:     7.55761
+  --- Gather metrics ---
+  Gather time:     68.1423 ms (±0.14141)
+  Gather median:   68.1399 ms
+  Gather thruput:  58642 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 9.21637x
+  Cache ratio L2:  1.15205x
+  Cache ratio L3:  0.0720029x
+
+[66/144] csr / ws / N=1000 / d=0.1 ... 69.6201 ms (±0.160161)
+  Format:          csr
+  Topology:        ws
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             100000
+  Matrix memory:   1204004 bytes
+  Mean time:       69.6201 ms
+  Median time:     69.581 ms
+  Std time:        0.160161 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.872
+  Total spikes:    80872
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0172939 GB/s
+  Scatter thruput: 116162 edges/ms
+  Bytes/spike:     14.8878
+  --- Gather metrics ---
+  Gather time:     69.7059 ms (±0.102507)
+  Gather median:   69.7482 ms
+  Gather thruput:  116019 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 18.3716x
+  Cache ratio L2:  2.29646x
+  Cache ratio L3:  0.143528x
+
+[67/144] csr / ws / N=5000 / d=0.01 ... 342.911 ms (±0.374734)
+  Format:          csr
+  Topology:        ws
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             250000
+  Matrix memory:   3020004 bytes
+  Mean time:       342.911 ms
+  Median time:     342.927 ms
+  Std time:        0.374734 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.585
+  Total spikes:    399585
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00880695 GB/s
+  Scatter thruput: 58263.6 edges/ms
+  Bytes/spike:     7.55785
+  --- Gather metrics ---
+  Gather time:     343.585 ms (±0.48858)
+  Gather median:   343.603 ms
+  Gather thruput:  58149.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 46.0816x
+  Cache ratio L2:  5.7602x
+  Cache ratio L3:  0.360013x
+
+[68/144] csr / ws / N=5000 / d=0.05 ... 391.476 ms (±4.62302)
+  Format:          csr
+  Topology:        ws
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1250000
+  Matrix memory:   15020004 bytes
+  Mean time:       391.476 ms
+  Median time:     391.58 ms
+  Std time:        4.62302 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.451
+  Total spikes:    414451
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0383676 GB/s
+  Scatter thruput: 264672 edges/ms
+  Bytes/spike:     36.2407
+  --- Gather metrics ---
+  Gather time:     393.411 ms (±5.63465)
+  Gather median:   395.709 ms
+  Gather thruput:  263370 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 229.187x
+  Cache ratio L2:  28.6484x
+  Cache ratio L3:  1.79052x
+
+[69/144] csr / ws / N=5000 / d=0.1 ... 484.606 ms (±8.1285)
+  Format:          csr
+  Topology:        ws
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2500000
+  Matrix memory:   30020004 bytes
+  Mean time:       484.606 ms
+  Median time:     479.703 ms
+  Std time:        8.1285 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.846
+  Total spikes:    424846
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0619473 GB/s
+  Scatter thruput: 438342 edges/ms
+  Bytes/spike:     70.6609
+  --- Gather metrics ---
+  Gather time:     484.834 ms (±7.48796)
+  Gather median:   480.072 ms
+  Gather thruput:  438135 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 458.069x
+  Cache ratio L2:  57.2586x
+  Cache ratio L3:  3.57866x
+
+[70/144] csr / ws / N=10000 / d=0.01 ... 713.938 ms (±2.1545)
+  Format:          csr
+  Topology:        ws
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1000000
+  Matrix memory:   12040004 bytes
+  Mean time:       713.938 ms
+  Median time:     713.876 ms
+  Std time:        2.1545 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 808.803
+  Total spikes:    808803
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0168642 GB/s
+  Scatter thruput: 113288 edges/ms
+  Bytes/spike:     14.8862
+  --- Gather metrics ---
+  Gather time:     714.35 ms (±2.05171)
+  Gather median:   715.943 ms
+  Gather thruput:  113222 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 183.716x
+  Cache ratio L2:  22.9645x
+  Cache ratio L3:  1.43528x
+
+[71/144] csr / ws / N=10000 / d=0.05 ... 1001.33 ms (±1.92123)
+  Format:          csr
+  Topology:        ws
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             5000000
+  Matrix memory:   60040004 bytes
+  Mean time:       1001.33 ms
+  Median time:     1001.01 ms
+  Std time:        1.92123 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.607
+  Total spikes:    849607
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0599602 GB/s
+  Scatter thruput: 424239 edges/ms
+  Bytes/spike:     70.668
+  --- Gather metrics ---
+  Gather time:     1002.01 ms (±2.34178)
+  Gather median:   1002.22 ms
+  Gather thruput:  423949 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 916.138x
+  Cache ratio L2:  114.517x
+  Cache ratio L3:  7.15733x
+
+[72/144] csr / ws / N=10000 / d=0.1 ... 1245.55 ms (±3.40734)
+  Format:          csr
+  Topology:        ws
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000000
+  Matrix memory:   120040004 bytes
+  Mean time:       1245.55 ms
+  Median time:     1246.54 ms
+  Std time:        3.40734 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 876.637
+  Total spikes:    876637
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0963749 GB/s
+  Scatter thruput: 703814 edges/ms
+  Bytes/spike:     136.932
+  --- Gather metrics ---
+  Gather time:     1247.57 ms (±5.30414)
+  Gather median:   1247.2 ms
+  Gather thruput:  702675 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1831.67x
+  Cache ratio L2:  228.958x
+  Cache ratio L3:  14.3099x
+
+[73/144] csc / er / N=1000 / d=0.01 ... 81.6821 ms (±0.129591)
+  Format:          csc
+  Topology:        er
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             9964
+  Matrix memory:   123572 bytes
+  Mean time:       81.6821 ms
+  Median time:     81.6661 ms
+  Std time:        0.129591 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.626
+  Total spikes:    78626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00151284 GB/s
+  Scatter thruput: 9591.2 edges/ms
+  Bytes/spike:     1.57164
+  --- Gather metrics ---
+  Gather time:     81.6722 ms (±0.0927218)
+  Gather median:   81.6738 ms
+  Gather thruput:  9592.37 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1.88556x
+  Cache ratio L2:  0.235695x
+  Cache ratio L3:  0.0147309x
+
+[74/144] csc / er / N=1000 / d=0.05 ... 128.123 ms (±0.149564)
+  Format:          csc
+  Topology:        er
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             50225
+  Matrix memory:   606704 bytes
+  Mean time:       128.123 ms
+  Median time:     128.148 ms
+  Std time:        0.149564 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.948
+  Total spikes:    79948
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00473533 GB/s
+  Scatter thruput: 31340.1 edges/ms
+  Bytes/spike:     7.58873
+  --- Gather metrics ---
+  Gather time:     128.241 ms (±0.271986)
+  Gather median:   128.199 ms
+  Gather thruput:  31311.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 9.25757x
+  Cache ratio L2:  1.1572x
+  Cache ratio L3:  0.0723248x
+
+[75/144] csc / er / N=1000 / d=0.1 ... 185.999 ms (±0.219827)
+  Format:          csc
+  Topology:        er
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             99994
+  Matrix memory:   1203932 bytes
+  Mean time:       185.999 ms
+  Median time:     185.988 ms
+  Std time:        0.219827 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.91
+  Total spikes:    80910
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00647277 GB/s
+  Scatter thruput: 43497.5 edges/ms
+  Bytes/spike:     14.8799
+  --- Gather metrics ---
+  Gather time:     185.994 ms (±0.0849777)
+  Gather median:   185.978 ms
+  Gather thruput:  43498.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 18.3705x
+  Cache ratio L2:  2.29632x
+  Cache ratio L3:  0.14352x
+
+[76/144] csc / er / N=5000 / d=0.01 ... 641.375 ms (±0.876637)
+  Format:          csc
+  Topology:        er
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             250003
+  Matrix memory:   3020040 bytes
+  Mean time:       641.375 ms
+  Median time:     641.072 ms
+  Std time:        0.876637 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.698
+  Total spikes:    399698
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0047087 GB/s
+  Scatter thruput: 31159.8 edges/ms
+  Bytes/spike:     7.5558
+  --- Gather metrics ---
+  Gather time:     641.234 ms (±0.568944)
+  Gather median:   641.175 ms
+  Gather thruput:  31166.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 46.0822x
+  Cache ratio L2:  5.76027x
+  Cache ratio L3:  0.360017x
+
+[77/144] csc / er / N=5000 / d=0.05 ... 1828.39 ms (±4.27563)
+  Format:          csc
+  Topology:        er
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1248498
+  Matrix memory:   15001980 bytes
+  Mean time:       1828.39 ms
+  Median time:     1829.17 ms
+  Std time:        4.27563 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.562
+  Total spikes:    414562
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00820503 GB/s
+  Scatter thruput: 56616 edges/ms
+  Bytes/spike:     36.1875
+  --- Gather metrics ---
+  Gather time:     1829.27 ms (±5.53316)
+  Gather median:   1829.36 ms
+  Gather thruput:  56588.6 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 228.912x
+  Cache ratio L2:  28.614x
+  Cache ratio L3:  1.78838x
+
+[78/144] csc / er / N=5000 / d=0.1 ... 3432.12 ms (±10.5938)
+  Format:          csc
+  Topology:        er
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             2497624
+  Matrix memory:   29991492 bytes
+  Mean time:       3432.12 ms
+  Median time:     3433.54 ms
+  Std time:        10.5938 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.968
+  Total spikes:    424968
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00873847 GB/s
+  Scatter thruput: 61851.5 edges/ms
+  Bytes/spike:     70.5735
+  --- Gather metrics ---
+  Gather time:     3427.95 ms (±5.1827)
+  Gather median:   3429.86 ms
+  Gather thruput:  61926.9 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 457.634x
+  Cache ratio L2:  57.2042x
+  Cache ratio L3:  3.57526x
+
+[79/144] csc / er / N=10000 / d=0.01 ... 1871.45 ms (±0.688325)
+  Format:          csc
+  Topology:        er
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:3
+  NNZ:             999815
+  Matrix memory:   12037784 bytes
+  Mean time:       1871.45 ms
+  Median time:     1871.51 ms
+  Std time:        0.688325 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 809.11
+  Total spikes:    809110
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00643233 GB/s
+  Scatter thruput: 43226.4 edges/ms
+  Bytes/spike:     14.8778
+  --- Gather metrics ---
+  Gather time:     1872.83 ms (±1.63947)
+  Gather median:   1872.43 ms
+  Gather thruput:  43194.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 183.682x
+  Cache ratio L2:  22.9603x
+  Cache ratio L3:  1.43502x
+
+[80/144] csc / er / N=10000 / d=0.05 ... 6939.46 ms (±4.33121)
+  Format:          csc
+  Topology:        er
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:3
+  NNZ:             4998968
+  Matrix memory:   60027620 bytes
+  Mean time:       6939.46 ms
+  Median time:     6938.8 ms
+  Std time:        4.33121 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.847
+  Total spikes:    849847
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00865019 GB/s
+  Scatter thruput: 61220.3 edges/ms
+  Bytes/spike:     70.6334
+  --- Gather metrics ---
+  Gather time:     6939.93 ms (±6.56067)
+  Gather median:   6938.69 ms
+  Gather thruput:  61216.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 915.949x
+  Cache ratio L2:  114.494x
+  Cache ratio L3:  7.15585x
+
+[81/144] csc / er / N=10000 / d=0.1 ... 13277 ms (±28.563)
+  Format:          csc
+  Topology:        er
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000192
+  Matrix memory:   120042308 bytes
+  Mean time:       13277 ms
+  Median time:     13279.2 ms
+  Std time:        28.563 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 874.231
+  Total spikes:    874231
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00904137 GB/s
+  Scatter thruput: 65846.7 edges/ms
+  Bytes/spike:     137.312
+  --- Gather metrics ---
+  Gather time:     13273.9 ms (±32.5726)
+  Gather median:   13262.4 ms
+  Gather thruput:  65862.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1831.7x
+  Cache ratio L2:  228.963x
+  Cache ratio L3:  14.3102x
+
+[82/144] csc / fi / N=1000 / d=0.01 ... 78.326 ms (±0.145047)
+  Format:          csc
+  Topology:        fi
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000
+  Matrix memory:   124004 bytes
+  Mean time:       78.326 ms
+  Median time:     78.3299 ms
+  Std time:        0.145047 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.633
+  Total spikes:    78633
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00158318 GB/s
+  Scatter thruput: 10039.2 edges/ms
+  Bytes/spike:     1.577
+  --- Gather metrics ---
+  Gather time:     78.2637 ms (±0.0676167)
+  Gather median:   78.2808 ms
+  Gather thruput:  10047.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1.89215x
+  Cache ratio L2:  0.236519x
+  Cache ratio L3:  0.0147824x
+
+[83/144] csc / fi / N=1000 / d=0.05 ... 127.616 ms (±0.181364)
+  Format:          csc
+  Topology:        fi
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             50000
+  Matrix memory:   604004 bytes
+  Mean time:       127.616 ms
+  Median time:     127.632 ms
+  Std time:        0.181364 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.929
+  Total spikes:    79929
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00473297 GB/s
+  Scatter thruput: 31316.1 edges/ms
+  Bytes/spike:     7.55676
+  --- Gather metrics ---
+  Gather time:     127.842 ms (±0.30867)
+  Gather median:   127.821 ms
+  Gather thruput:  31260.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 9.21637x
+  Cache ratio L2:  1.15205x
+  Cache ratio L3:  0.0720029x
+
+[84/144] csc / fi / N=1000 / d=0.1 ... 185.657 ms (±0.265726)
+  Format:          csc
+  Topology:        fi
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             100000
+  Matrix memory:   1204004 bytes
+  Mean time:       185.657 ms
+  Median time:     185.762 ms
+  Std time:        0.265726 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.879
+  Total spikes:    80879
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00648509 GB/s
+  Scatter thruput: 43563.6 edges/ms
+  Bytes/spike:     14.8865
+  --- Gather metrics ---
+  Gather time:     185.695 ms (±0.244606)
+  Gather median:   185.697 ms
+  Gather thruput:  43554.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 18.3716x
+  Cache ratio L2:  2.29646x
+  Cache ratio L3:  0.143528x
+
+[85/144] csc / fi / N=5000 / d=0.01 ... 639.995 ms (±0.498619)
+  Format:          csc
+  Topology:        fi
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             250000
+  Matrix memory:   3020004 bytes
+  Mean time:       639.995 ms
+  Median time:     640.035 ms
+  Std time:        0.498619 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.645
+  Total spikes:    399645
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00471879 GB/s
+  Scatter thruput: 31222.5 edges/ms
+  Bytes/spike:     7.55672
+  --- Gather metrics ---
+  Gather time:     640.031 ms (±0.254049)
+  Gather median:   640.024 ms
+  Gather thruput:  31220.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 46.0816x
+  Cache ratio L2:  5.7602x
+  Cache ratio L3:  0.360013x
+
+[86/144] csc / fi / N=5000 / d=0.05 ... 1829.66 ms (±6.46602)
+  Format:          csc
+  Topology:        fi
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1250000
+  Matrix memory:   15020004 bytes
+  Mean time:       1829.66 ms
+  Median time:     1829.64 ms
+  Std time:        6.46602 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.548
+  Total spikes:    414548
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0082092 GB/s
+  Scatter thruput: 56642.9 edges/ms
+  Bytes/spike:     36.2322
+  --- Gather metrics ---
+  Gather time:     1828.62 ms (±4.63221)
+  Gather median:   1830.32 ms
+  Gather thruput:  56675.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 229.187x
+  Cache ratio L2:  28.6484x
+  Cache ratio L3:  1.79052x
+
+[87/144] csc / fi / N=5000 / d=0.1 ... 3430.64 ms (±11.9854)
+  Format:          csc
+  Topology:        fi
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2500000
+  Matrix memory:   30020004 bytes
+  Mean time:       3430.64 ms
+  Median time:     3428.94 ms
+  Std time:        11.9854 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.855
+  Total spikes:    424855
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00875056 GB/s
+  Scatter thruput: 61920.7 edges/ms
+  Bytes/spike:     70.6594
+  --- Gather metrics ---
+  Gather time:     3428.59 ms (±9.89657)
+  Gather median:   3429.56 ms
+  Gather thruput:  61957.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 458.069x
+  Cache ratio L2:  57.2586x
+  Cache ratio L3:  3.57866x
+
+[88/144] csc / fi / N=10000 / d=0.01 ... 1872.49 ms (±1.89334)
+  Format:          csc
+  Topology:        fi
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1000000
+  Matrix memory:   12040004 bytes
+  Mean time:       1872.49 ms
+  Median time:     1872.97 ms
+  Std time:        1.89334 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 808.883
+  Total spikes:    808883
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00642994 GB/s
+  Scatter thruput: 43198.3 edges/ms
+  Bytes/spike:     14.8847
+  --- Gather metrics ---
+  Gather time:     1873.35 ms (±1.87924)
+  Gather median:   1873.47 ms
+  Gather thruput:  43178.5 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 183.716x
+  Cache ratio L2:  22.9645x
+  Cache ratio L3:  1.43528x
+
+[89/144] csc / fi / N=10000 / d=0.05 ... 6954.26 ms (±11.2361)
+  Format:          csc
+  Topology:        fi
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             5000000
+  Matrix memory:   60040004 bytes
+  Mean time:       6954.26 ms
+  Median time:     6948.82 ms
+  Std time:        11.2361 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.626
+  Total spikes:    849626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00863355 GB/s
+  Scatter thruput: 61086.7 edges/ms
+  Bytes/spike:     70.6664
+  --- Gather metrics ---
+  Gather time:     6948.19 ms (±11.331)
+  Gather median:   6950.38 ms
+  Gather thruput:  61140.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 916.138x
+  Cache ratio L2:  114.517x
+  Cache ratio L3:  7.15733x
+
+[90/144] csc / fi / N=10000 / d=0.1 ... 13281.9 ms (±18.5218)
+  Format:          csc
+  Topology:        fi
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000000
+  Matrix memory:   120040004 bytes
+  Mean time:       13281.9 ms
+  Median time:     13288 ms
+  Std time:        18.5218 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 874.013
+  Total spikes:    874013
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00903786 GB/s
+  Scatter thruput: 65804.8 edges/ms
+  Bytes/spike:     137.343
+  --- Gather metrics ---
+  Gather time:     13275.1 ms (±27.3132)
+  Gather median:   13271.8 ms
+  Gather thruput:  65838.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1831.67x
+  Cache ratio L2:  228.958x
+  Cache ratio L3:  14.3099x
+
+[91/144] csc / ba / N=1000 / d=0.01 ... 93.3585 ms (±0.264366)
+  Format:          csc
+  Topology:        ba
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             19890
+  Matrix memory:   242684 bytes
+  Mean time:       93.3585 ms
+  Median time:     93.3117 ms
+  Std time:        0.264366 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.102
+  Total spikes:    79102
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00259948 GB/s
+  Scatter thruput: 16852.6 edges/ms
+  Bytes/spike:     3.06799
+  --- Gather metrics ---
+  Gather time:     93.3209 ms (±0.144183)
+  Gather median:   93.3579 ms
+  Gather thruput:  16859.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 3.70306x
+  Cache ratio L2:  0.462883x
+  Cache ratio L3:  0.0289302x
+
+[92/144] csc / ba / N=1000 / d=0.05 ... 183.982 ms (±0.280221)
+  Format:          csc
+  Topology:        ba
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             97450
+  Matrix memory:   1173404 bytes
+  Mean time:       183.982 ms
+  Median time:     183.837 ms
+  Std time:        0.280221 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 81.028
+  Total spikes:    81028
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00637782 GB/s
+  Scatter thruput: 42918.2 edges/ms
+  Bytes/spike:     14.4815
+  --- Gather metrics ---
+  Gather time:     183.829 ms (±0.186982)
+  Gather median:   183.826 ms
+  Gather thruput:  42954 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 17.9047x
+  Cache ratio L2:  2.23809x
+  Cache ratio L3:  0.139881x
+
+[93/144] csc / ba / N=1000 / d=0.1 ... 291.756 ms (±0.748519)
+  Format:          csc
+  Topology:        ba
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             189900
+  Matrix memory:   2282804 bytes
+  Mean time:       291.756 ms
+  Median time:     291.557 ms
+  Std time:        0.748519 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 82.433
+  Total spikes:    82433
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00782436 GB/s
+  Scatter thruput: 53654.5 edges/ms
+  Bytes/spike:     27.6928
+  --- Gather metrics ---
+  Gather time:     291.621 ms (±0.649692)
+  Gather median:   291.671 ms
+  Gather thruput:  53679.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 34.8328x
+  Cache ratio L2:  4.3541x
+  Cache ratio L3:  0.272131x
+
+[94/144] csc / ba / N=5000 / d=0.01 ... 938.425 ms (±0.646108)
+  Format:          csc
+  Topology:        ba
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             497450
+  Matrix memory:   5989404 bytes
+  Mean time:       938.425 ms
+  Median time:     938.488 ms
+  Std time:        0.646108 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 405.554
+  Total spikes:    405554
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0063824 GB/s
+  Scatter thruput: 42996.1 edges/ms
+  Bytes/spike:     14.7685
+  --- Gather metrics ---
+  Gather time:     938.484 ms (±1.09178)
+  Gather median:   938.214 ms
+  Gather thruput:  42993.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 91.3911x
+  Cache ratio L2:  11.4239x
+  Cache ratio L3:  0.713993x
+
+[95/144] csc / ba / N=5000 / d=0.05 ... 3346.23 ms (±8.23213)
+  Format:          csc
+  Topology:        ba
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2437250
+  Matrix memory:   29267004 bytes
+  Mean time:       3346.23 ms
+  Median time:     3345.97 ms
+  Std time:        8.23213 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 428.446
+  Total spikes:    428446
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00874626 GB/s
+  Scatter thruput: 62412.3 edges/ms
+  Bytes/spike:     68.3097
+  --- Gather metrics ---
+  Gather time:     3343.54 ms (±4.74524)
+  Gather median:   3344.21 ms
+  Gather thruput:  62462.6 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 446.579x
+  Cache ratio L2:  55.8224x
+  Cache ratio L3:  3.4889x
+
+[96/144] csc / ba / N=5000 / d=0.1 ... 6281.91 ms (±9.14945)
+  Format:          csc
+  Topology:        ba
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             4749500
+  Matrix memory:   57014004 bytes
+  Mean time:       6281.91 ms
+  Median time:     6279.9 ms
+  Std time:        9.14945 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 445.495
+  Total spikes:    445495
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0090759 GB/s
+  Scatter thruput: 67364.2 edges/ms
+  Bytes/spike:     127.979
+  --- Gather metrics ---
+  Gather time:     6280 ms (±5.57783)
+  Gather median:   6281.77 ms
+  Gather thruput:  67384.7 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 869.965x
+  Cache ratio L2:  108.746x
+  Cache ratio L3:  6.7966x
+
+[97/144] csc / ba / N=10000 / d=0.01 ... 3142.76 ms (±5.56526)
+  Format:          csc
+  Topology:        ba
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1989900
+  Matrix memory:   23918804 bytes
+  Mean time:       3142.76 ms
+  Median time:     3143.35 ms
+  Std time:        5.56526 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 826.832
+  Total spikes:    826832
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00761077 GB/s
+  Scatter thruput: 52352.5 edges/ms
+  Bytes/spike:     28.9283
+  --- Gather metrics ---
+  Gather time:     3142.38 ms (±4.41221)
+  Gather median:   3142.73 ms
+  Gather thruput:  52358.9 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 364.972x
+  Cache ratio L2:  45.6215x
+  Cache ratio L3:  2.85134x
+
+[98/144] csc / ba / N=10000 / d=0.05 ... 13014.7 ms (±9.69661)
+  Format:          csc
+  Topology:        ba
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             9749500
+  Matrix memory:   117034004 bytes
+  Mean time:       13014.7 ms
+  Median time:     13014.5 ms
+  Std time:        9.69661 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 894.486
+  Total spikes:    894486
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00899241 GB/s
+  Scatter thruput: 67007 edges/ms
+  Bytes/spike:     130.839
+  --- Gather metrics ---
+  Gather time:     13016.7 ms (±31.2125)
+  Gather median:   13012.6 ms
+  Gather thruput:  66996.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1785.8x
+  Cache ratio L2:  223.225x
+  Cache ratio L3:  13.9515x
+
+[99/144] csc / ba / N=10000 / d=0.1 ... 24802.4 ms (±13.6606)
+  Format:          csc
+  Topology:        ba
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             18999000
+  Matrix memory:   228028004 bytes
+  Mean time:       24802.4 ms
+  Median time:     24803.2 ms
+  Std time:        13.6606 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 944.559
+  Total spikes:    944559
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00919378 GB/s
+  Scatter thruput: 72354.5 edges/ms
+  Bytes/spike:     241.412
+  --- Gather metrics ---
+  Gather time:     24800.8 ms (±32.066)
+  Gather median:   24795.2 ms
+  Gather thruput:  72359.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 3479.43x
+  Cache ratio L2:  434.929x
+  Cache ratio L3:  27.1831x
+
+[100/144] csc / ws / N=1000 / d=0.01 ... 81.3512 ms (±0.16617)
+  Format:          csc
+  Topology:        ws
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000
+  Matrix memory:   124004 bytes
+  Mean time:       81.3512 ms
+  Median time:     81.3417 ms
+  Std time:        0.16617 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.614
+  Total spikes:    78614
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0015243 GB/s
+  Scatter thruput: 9663.54 edges/ms
+  Bytes/spike:     1.57738
+  --- Gather metrics ---
+  Gather time:     81.351 ms (±0.0917664)
+  Gather median:   81.3388 ms
+  Gather thruput:  9663.55 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1.89215x
+  Cache ratio L2:  0.236519x
+  Cache ratio L3:  0.0147824x
+
+[101/144] csc / ws / N=1000 / d=0.05 ... 127.818 ms (±0.191847)
+  Format:          csc
+  Topology:        ws
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             50000
+  Matrix memory:   604004 bytes
+  Mean time:       127.818 ms
+  Median time:     127.837 ms
+  Std time:        0.191847 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.92
+  Total spikes:    79920
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00472548 GB/s
+  Scatter thruput: 31263.1 edges/ms
+  Bytes/spike:     7.55761
+  --- Gather metrics ---
+  Gather time:     128.03 ms (±0.324824)
+  Gather median:   127.979 ms
+  Gather thruput:  31211.5 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 9.21637x
+  Cache ratio L2:  1.15205x
+  Cache ratio L3:  0.0720029x
+
+[102/144] csc / ws / N=1000 / d=0.1 ... 185.675 ms (±0.283009)
+  Format:          csc
+  Topology:        ws
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             100000
+  Matrix memory:   1204004 bytes
+  Mean time:       185.675 ms
+  Median time:     185.747 ms
+  Std time:        0.283009 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.872
+  Total spikes:    80872
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00648447 GB/s
+  Scatter thruput: 43555.7 edges/ms
+  Bytes/spike:     14.8878
+  --- Gather metrics ---
+  Gather time:     185.653 ms (±0.251663)
+  Gather median:   185.705 ms
+  Gather thruput:  43560.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 18.3716x
+  Cache ratio L2:  2.29646x
+  Cache ratio L3:  0.143528x
+
+[103/144] csc / ws / N=5000 / d=0.01 ... 642.361 ms (±0.419967)
+  Format:          csc
+  Topology:        ws
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             250000
+  Matrix memory:   3020004 bytes
+  Mean time:       642.361 ms
+  Median time:     642.212 ms
+  Std time:        0.419967 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.585
+  Total spikes:    399585
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00470141 GB/s
+  Scatter thruput: 31102.8 edges/ms
+  Bytes/spike:     7.55785
+  --- Gather metrics ---
+  Gather time:     642.34 ms (±0.273954)
+  Gather median:   642.244 ms
+  Gather thruput:  31103.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 46.0816x
+  Cache ratio L2:  5.7602x
+  Cache ratio L3:  0.360013x
+
+[104/144] csc / ws / N=5000 / d=0.05 ... 1841.43 ms (±8.46435)
+  Format:          csc
+  Topology:        ws
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1250000
+  Matrix memory:   15020004 bytes
+  Mean time:       1841.43 ms
+  Median time:     1842.22 ms
+  Std time:        8.46435 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.451
+  Total spikes:    414451
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00815671 GB/s
+  Scatter thruput: 56267.6 edges/ms
+  Bytes/spike:     36.2407
+  --- Gather metrics ---
+  Gather time:     1839.47 ms (±4.83288)
+  Gather median:   1841.36 ms
+  Gather thruput:  56327.4 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 229.187x
+  Cache ratio L2:  28.6484x
+  Cache ratio L3:  1.79052x
+
+[105/144] csc / ws / N=5000 / d=0.1 ... 3413.83 ms (±5.39821)
+  Format:          csc
+  Topology:        ws
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             2500000
+  Matrix memory:   30020004 bytes
+  Mean time:       3413.83 ms
+  Median time:     3414.1 ms
+  Std time:        5.39821 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.846
+  Total spikes:    424846
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00879364 GB/s
+  Scatter thruput: 62224.2 edges/ms
+  Bytes/spike:     70.6609
+  --- Gather metrics ---
+  Gather time:     3412.11 ms (±5.69492)
+  Gather median:   3413.04 ms
+  Gather thruput:  62255.6 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 458.069x
+  Cache ratio L2:  57.2586x
+  Cache ratio L3:  3.57866x
+
+[106/144] csc / ws / N=10000 / d=0.01 ... 1872.74 ms (±2.74266)
+  Format:          csc
+  Topology:        ws
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1000000
+  Matrix memory:   12040004 bytes
+  Mean time:       1872.74 ms
+  Median time:     1872.87 ms
+  Std time:        2.74266 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 808.803
+  Total spikes:    808803
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0064291 GB/s
+  Scatter thruput: 43188.3 edges/ms
+  Bytes/spike:     14.8862
+  --- Gather metrics ---
+  Gather time:     1873.92 ms (±3.70463)
+  Gather median:   1874.48 ms
+  Gather thruput:  43161.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 183.716x
+  Cache ratio L2:  22.9645x
+  Cache ratio L3:  1.43528x
+
+[107/144] csc / ws / N=10000 / d=0.05 ... 6939.64 ms (±9.52209)
+  Format:          csc
+  Topology:        ws
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             5000000
+  Matrix memory:   60040004 bytes
+  Mean time:       6939.64 ms
+  Median time:     6940.25 ms
+  Std time:        9.52209 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.607
+  Total spikes:    849607
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00865175 GB/s
+  Scatter thruput: 61214 edges/ms
+  Bytes/spike:     70.668
+  --- Gather metrics ---
+  Gather time:     6936.33 ms (±10.4933)
+  Gather median:   6942.44 ms
+  Gather thruput:  61243.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 916.138x
+  Cache ratio L2:  114.517x
+  Cache ratio L3:  7.15733x
+
+[108/144] csc / ws / N=10000 / d=0.1 ... 13344.8 ms (±48.1145)
+  Format:          csc
+  Topology:        ws
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000000
+  Matrix memory:   120040004 bytes
+  Mean time:       13344.8 ms
+  Median time:     13351.4 ms
+  Std time:        48.1145 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 876.637
+  Total spikes:    876637
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00899524 GB/s
+  Scatter thruput: 65691.1 edges/ms
+  Bytes/spike:     136.932
+  --- Gather metrics ---
+  Gather time:     13338.8 ms (±33.7534)
+  Gather median:   13330.2 ms
+  Gather thruput:  65721 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1831.67x
+  Cache ratio L2:  228.958x
+  Cache ratio L3:  14.3099x
+
+[109/144] ell / er / N=1000 / d=0.01 ... 67.2111 ms (±0.173387)
+  Format:          ell
+  Topology:        er
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             9964
+  Matrix memory:   240000 bytes
+  Mean time:       67.2111 ms
+  Median time:     67.1773 ms
+  Std time:        0.173387 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.626
+  Total spikes:    78626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00357084 GB/s
+  Scatter thruput: 11656.3 edges/ms
+  Bytes/spike:     3.05243
+  --- Gather metrics ---
+  Gather time:     67.2511 ms (±0.0839793)
+  Gather median:   67.2524 ms
+  Gather thruput:  11649.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 3.66211x
+  Cache ratio L2:  0.457764x
+  Cache ratio L3:  0.0286102x
+
+[110/144] ell / er / N=1000 / d=0.05 ... 68.7587 ms (±0.158542)
+  Format:          ell
+  Topology:        er
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             50225
+  Matrix memory:   900000 bytes
+  Mean time:       68.7587 ms
+  Median time:     68.7496 ms
+  Std time:        0.158542 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.948
+  Total spikes:    79948
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0130893 GB/s
+  Scatter thruput: 58398.2 edges/ms
+  Bytes/spike:     11.2573
+  --- Gather metrics ---
+  Gather time:     68.7325 ms (±0.0874209)
+  Gather median:   68.7255 ms
+  Gather thruput:  58420.5 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 13.7329x
+  Cache ratio L2:  1.71661x
+  Cache ratio L3:  0.107288x
+
+[111/144] ell / er / N=1000 / d=0.1 ... 70.9377 ms (±0.131202)
+  Format:          ell
+  Topology:        er
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             99994
+  Matrix memory:   1620000 bytes
+  Mean time:       70.9377 ms
+  Median time:     70.8984 ms
+  Std time:        0.131202 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.91
+  Total spikes:    80910
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0228369 GB/s
+  Scatter thruput: 114051 edges/ms
+  Bytes/spike:     20.0222
+  --- Gather metrics ---
+  Gather time:     70.9415 ms (±0.0983883)
+  Gather median:   70.961 ms
+  Gather thruput:  114045 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 24.7192x
+  Cache ratio L2:  3.0899x
+  Cache ratio L3:  0.193119x
+
+[112/144] ell / er / N=5000 / d=0.01 ... 347.098 ms (±0.225641)
+  Format:          ell
+  Topology:        er
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             250003
+  Matrix memory:   4800000 bytes
+  Mean time:       347.098 ms
+  Median time:     347.008 ms
+  Std time:        0.225641 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.698
+  Total spikes:    399698
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.013829 GB/s
+  Scatter thruput: 57577.9 edges/ms
+  Bytes/spike:     12.0091
+  --- Gather metrics ---
+  Gather time:     347.724 ms (±0.643298)
+  Gather median:   347.446 ms
+  Gather thruput:  57474.1 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 73.2422x
+  Cache ratio L2:  9.15527x
+  Cache ratio L3:  0.572205x
+
+[113/144] ell / er / N=5000 / d=0.05 ... 409.778 ms (±4.05961)
+  Format:          ell
+  Topology:        er
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             1248498
+  Matrix memory:   18420000 bytes
+  Mean time:       409.778 ms
+  Median time:     409.895 ms
+  Std time:        4.05961 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.562
+  Total spikes:    414562
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0449512 GB/s
+  Scatter thruput: 252615 edges/ms
+  Bytes/spike:     44.4324
+  --- Gather metrics ---
+  Gather time:     410.907 ms (±4.06623)
+  Gather median:   413.705 ms
+  Gather thruput:  251920 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 281.067x
+  Cache ratio L2:  35.1334x
+  Cache ratio L3:  2.19584x
+
+[114/144] ell / er / N=5000 / d=0.1 ... 511.754 ms (±1.13977)
+  Format:          ell
+  Topology:        er
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             2497624
+  Matrix memory:   35040000 bytes
+  Mean time:       511.754 ms
+  Median time:     511.446 ms
+  Std time:        1.13977 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.968
+  Total spikes:    424968
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0684704 GB/s
+  Scatter thruput: 414813 edges/ms
+  Bytes/spike:     82.4533
+  --- Gather metrics ---
+  Gather time:     512.182 ms (±0.90405)
+  Gather median:   512.293 ms
+  Gather thruput:  414466 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 534.668x
+  Cache ratio L2:  66.8335x
+  Cache ratio L3:  4.17709x
+
+[115/144] ell / er / N=10000 / d=0.01 ... 744.896 ms (±4.01098)
+  Format:          ell
+  Topology:        er
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             999815
+  Matrix memory:   16920000 bytes
+  Mean time:       744.896 ms
+  Median time:     744.104 ms
+  Std time:        4.01098 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 809.11
+  Total spikes:    809110
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0227146 GB/s
+  Scatter thruput: 108600 edges/ms
+  Bytes/spike:     20.9119
+  --- Gather metrics ---
+  Gather time:     747.112 ms (±5.83049)
+  Gather median:   745.924 ms
+  Gather thruput:  108278 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 258.179x
+  Cache ratio L2:  32.2723x
+  Cache ratio L3:  2.01702x
+
+[116/144] ell / er / N=10000 / d=0.05 ... 1047.65 ms (±4.89814)
+  Format:          ell
+  Topology:        er
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             4998968
+  Matrix memory:   71640000 bytes
+  Mean time:       1047.65 ms
+  Median time:     1049.83 ms
+  Std time:        4.89814 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.847
+  Total spikes:    849847
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0683818 GB/s
+  Scatter thruput: 405514 edges/ms
+  Bytes/spike:     84.2975
+  --- Gather metrics ---
+  Gather time:     1050.95 ms (±0.39078)
+  Gather median:   1050.93 ms
+  Gather thruput:  404240 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1093.14x
+  Cache ratio L2:  136.642x
+  Cache ratio L3:  8.54015x
+
+[117/144] ell / er / N=10000 / d=0.1 ... 1309.05 ms (±3.87525)
+  Format:          ell
+  Topology:        er
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000192
+  Matrix memory:   135000000 bytes
+  Mean time:       1309.05 ms
+  Median time:     1309.46 ms
+  Std time:        3.87525 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 874.231
+  Total spikes:    874231
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.103128 GB/s
+  Scatter thruput: 667848 edges/ms
+  Bytes/spike:     154.421
+  --- Gather metrics ---
+  Gather time:     1309.3 ms (±3.31997)
+  Gather median:   1309.19 ms
+  Gather thruput:  667720 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2059.94x
+  Cache ratio L2:  257.492x
+  Cache ratio L3:  16.0933x
+
+[118/144] ell / fi / N=1000 / d=0.01 ... 67.1637 ms (±0.0767442)
+  Format:          ell
+  Topology:        fi
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             10000
+  Matrix memory:   228000 bytes
+  Mean time:       67.1637 ms
+  Median time:     67.1773 ms
+  Std time:        0.0767442 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.633
+  Total spikes:    78633
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00339469 GB/s
+  Scatter thruput: 11707.7 edges/ms
+  Bytes/spike:     2.89955
+  --- Gather metrics ---
+  Gather time:     67.325 ms (±0.099082)
+  Gather median:   67.3101 ms
+  Gather thruput:  11679.6 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 3.479x
+  Cache ratio L2:  0.434875x
+  Cache ratio L3:  0.0271797x
+
+[119/144] ell / fi / N=1000 / d=0.05 ... 68.7399 ms (±0.12422)
+  Format:          ell
+  Topology:        fi
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             50000
+  Matrix memory:   840000 bytes
+  Mean time:       68.7399 ms
+  Median time:     68.6947 ms
+  Std time:        0.12422 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.929
+  Total spikes:    79929
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.01222 GB/s
+  Scatter thruput: 58138.7 edges/ms
+  Bytes/spike:     10.5093
+  --- Gather metrics ---
+  Gather time:     68.8091 ms (±0.126038)
+  Gather median:   68.7964 ms
+  Gather thruput:  58080.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 12.8174x
+  Cache ratio L2:  1.60217x
+  Cache ratio L3:  0.100136x
+
+[120/144] ell / fi / N=1000 / d=0.1 ... 70.923 ms (±0.0631219)
+  Format:          ell
+  Topology:        fi
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             100000
+  Matrix memory:   1536000 bytes
+  Mean time:       70.923 ms
+  Median time:     70.9212 ms
+  Std time:        0.0631219 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.879
+  Total spikes:    80879
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0216573 GB/s
+  Scatter thruput: 114038 edges/ms
+  Bytes/spike:     18.9913
+  --- Gather metrics ---
+  Gather time:     70.9917 ms (±0.0661796)
+  Gather median:   70.9975 ms
+  Gather thruput:  113927 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 23.4375x
+  Cache ratio L2:  2.92969x
+  Cache ratio L3:  0.183105x
+
+[121/144] ell / fi / N=5000 / d=0.01 ... 349.413 ms (±1.8643)
+  Format:          ell
+  Topology:        fi
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             250000
+  Matrix memory:   4740000 bytes
+  Mean time:       349.413 ms
+  Median time:     349.391 ms
+  Std time:        1.8643 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.645
+  Total spikes:    399645
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0135656 GB/s
+  Scatter thruput: 57188 edges/ms
+  Bytes/spike:     11.8605
+  --- Gather metrics ---
+  Gather time:     349.548 ms (±1.85166)
+  Gather median:   348.79 ms
+  Gather thruput:  57166 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 72.3267x
+  Cache ratio L2:  9.04083x
+  Cache ratio L3:  0.565052x
+
+[122/144] ell / fi / N=5000 / d=0.05 ... 414.699 ms (±1.49044)
+  Format:          ell
+  Topology:        fi
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             1250000
+  Matrix memory:   18600000 bytes
+  Mean time:       414.699 ms
+  Median time:     414.1 ms
+  Std time:        1.49044 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.548
+  Total spikes:    414548
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0448518 GB/s
+  Scatter thruput: 249909 edges/ms
+  Bytes/spike:     44.8681
+  --- Gather metrics ---
+  Gather time:     415.771 ms (±2.4256)
+  Gather median:   414.651 ms
+  Gather thruput:  249265 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 283.813x
+  Cache ratio L2:  35.4767x
+  Cache ratio L3:  2.21729x
+
+[123/144] ell / fi / N=5000 / d=0.1 ... 510.02 ms (±0.911916)
+  Format:          ell
+  Topology:        fi
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             2500000
+  Matrix memory:   34800000 bytes
+  Mean time:       510.02 ms
+  Median time:     509.797 ms
+  Std time:        0.911916 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.855
+  Total spikes:    424855
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0682327 GB/s
+  Scatter thruput: 416509 edges/ms
+  Bytes/spike:     81.9103
+  --- Gather metrics ---
+  Gather time:     512.204 ms (±2.20283)
+  Gather median:   511.333 ms
+  Gather thruput:  414732 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 531.006x
+  Cache ratio L2:  66.3757x
+  Cache ratio L3:  4.14848x
+
+[124/144] ell / fi / N=10000 / d=0.01 ... 741.743 ms (±1.50648)
+  Format:          ell
+  Topology:        fi
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             1000000
+  Matrix memory:   16680000 bytes
+  Mean time:       741.743 ms
+  Median time:     741.479 ms
+  Std time:        1.50648 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 808.883
+  Total spikes:    808883
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0224876 GB/s
+  Scatter thruput: 109052 edges/ms
+  Bytes/spike:     20.621
+  --- Gather metrics ---
+  Gather time:     742.174 ms (±1.72551)
+  Gather median:   741.945 ms
+  Gather thruput:  108988 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 254.517x
+  Cache ratio L2:  31.8146x
+  Cache ratio L3:  1.98841x
+
+[125/144] ell / fi / N=10000 / d=0.05 ... 1047.99 ms (±0.483602)
+  Format:          ell
+  Topology:        fi
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:3
+  NNZ:             5000000
+  Matrix memory:   69120000 bytes
+  Mean time:       1047.99 ms
+  Median time:     1047.7 ms
+  Std time:        0.483602 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.626
+  Total spikes:    849626
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0659546 GB/s
+  Scatter thruput: 405359 edges/ms
+  Bytes/spike:     81.3534
+  --- Gather metrics ---
+  Gather time:     1048.26 ms (±1.16062)
+  Gather median:   1047.83 ms
+  Gather thruput:  405256 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1054.69x
+  Cache ratio L2:  131.836x
+  Cache ratio L3:  8.23975x
+
+[126/144] ell / fi / N=10000 / d=0.1 ... 1312.33 ms (±2.32406)
+  Format:          ell
+  Topology:        fi
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             10000000
+  Matrix memory:   134640000 bytes
+  Mean time:       1312.33 ms
+  Median time:     1313.02 ms
+  Std time:        2.32406 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 874.013
+  Total spikes:    874013
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.102596 GB/s
+  Scatter thruput: 666003 edges/ms
+  Bytes/spike:     154.048
+  --- Gather metrics ---
+  Gather time:     1313.31 ms (±2.37001)
+  Gather median:   1313.29 ms
+  Gather thruput:  665503 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2054.44x
+  Cache ratio L2:  256.805x
+  Cache ratio L3:  16.0503x
+
+[127/144] ell / ba / N=1000 / d=0.01 ... 67.6334 ms (±0.179806)
+  Format:          ell
+  Topology:        ba
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             19890
+  Matrix memory:   2124000 bytes
+  Mean time:       67.6334 ms
+  Median time:     67.5644 ms
+  Std time:        0.179806 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.102
+  Total spikes:    79102
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0314046 GB/s
+  Scatter thruput: 23262.8 edges/ms
+  Bytes/spike:     26.8514
+  --- Gather metrics ---
+  Gather time:     67.5707 ms (±0.0936986)
+  Gather median:   67.5869 ms
+  Gather thruput:  23284.3 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 32.4097x
+  Cache ratio L2:  4.05121x
+  Cache ratio L3:  0.253201x
+
+[128/144] ell / ba / N=1000 / d=0.05 ... 70.9309 ms (±0.0886414)
+  Format:          ell
+  Topology:        ba
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             97450
+  Matrix memory:   4116000 bytes
+  Mean time:       70.9309 ms
+  Median time:     70.9434 ms
+  Std time:        0.0886414 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 81.028
+  Total spikes:    81028
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0580283 GB/s
+  Scatter thruput: 111322 edges/ms
+  Bytes/spike:     50.7973
+  --- Gather metrics ---
+  Gather time:     71.118 ms (±0.174271)
+  Gather median:   71.1149 ms
+  Gather thruput:  111029 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 62.8052x
+  Cache ratio L2:  7.85065x
+  Cache ratio L3:  0.490665x
+
+[129/144] ell / ba / N=1000 / d=0.1 ... 75.3986 ms (±0.0928933)
+  Format:          ell
+  Topology:        ba
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             189900
+  Matrix memory:   5472000 bytes
+  Mean time:       75.3986 ms
+  Median time:     75.4081 ms
+  Std time:        0.0928933 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 82.433
+  Total spikes:    82433
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0725743 GB/s
+  Scatter thruput: 207617 edges/ms
+  Bytes/spike:     66.3812
+  --- Gather metrics ---
+  Gather time:     75.3545 ms (±0.103091)
+  Gather median:   75.3372 ms
+  Gather thruput:  207738 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 83.4961x
+  Cache ratio L2:  10.437x
+  Cache ratio L3:  0.652313x
+
+[130/144] ell / ba / N=5000 / d=0.01 ... 361.779 ms (±0.261526)
+  Format:          ell
+  Topology:        ba
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             497450
+  Matrix memory:   45300000 bytes
+  Mean time:       361.779 ms
+  Median time:     361.813 ms
+  Std time:        0.261526 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 405.554
+  Total spikes:    405554
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.125215 GB/s
+  Scatter thruput: 111528 edges/ms
+  Bytes/spike:     111.699
+  --- Gather metrics ---
+  Gather time:     362.342 ms (±0.243814)
+  Gather median:   362.361 ms
+  Gather thruput:  111355 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 691.223x
+  Cache ratio L2:  86.4029x
+  Cache ratio L3:  5.40018x
+
+[131/144] ell / ba / N=5000 / d=0.05 ... 512.774 ms (±2.86299)
+  Format:          ell
+  Topology:        ba
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             2437250
+  Matrix memory:   96840000 bytes
+  Mean time:       512.774 ms
+  Median time:     513.815 ms
+  Std time:        2.86299 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 428.446
+  Total spikes:    428446
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.188855 GB/s
+  Scatter thruput: 407286 edges/ms
+  Bytes/spike:     226.026
+  --- Gather metrics ---
+  Gather time:     515.395 ms (±1.2057)
+  Gather median:   515.021 ms
+  Gather thruput:  405216 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1477.66x
+  Cache ratio L2:  184.708x
+  Cache ratio L3:  11.5442x
+
+[132/144] ell / ba / N=5000 / d=0.1 ... 651.453 ms (±1.56236)
+  Format:          ell
+  Topology:        ba
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             4749500
+  Matrix memory:   131100000 bytes
+  Mean time:       651.453 ms
+  Median time:     651.012 ms
+  Std time:        1.56236 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 445.495
+  Total spikes:    445495
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.201242 GB/s
+  Scatter thruput: 649587 edges/ms
+  Bytes/spike:     294.279
+  --- Gather metrics ---
+  Gather time:     652.319 ms (±2.13175)
+  Gather median:   651.319 ms
+  Gather thruput:  648725 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2000.43x
+  Cache ratio L2:  250.053x
+  Cache ratio L3:  15.6283x
+
+[133/144] ell / ba / N=10000 / d=0.01 ... 877.917 ms (±0.917905)
+  Format:          ell
+  Topology:        ba
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             1989900
+  Matrix memory:   174600000 bytes
+  Mean time:       877.917 ms
+  Median time:     878.219 ms
+  Std time:        0.917905 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 826.832
+  Total spikes:    826832
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.19888 GB/s
+  Scatter thruput: 187411 edges/ms
+  Bytes/spike:     211.167
+  --- Gather metrics ---
+  Gather time:     879.645 ms (±3.21048)
+  Gather median:   878.605 ms
+  Gather thruput:  187043 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2664.18x
+  Cache ratio L2:  333.023x
+  Cache ratio L3:  20.8139x
+
+[134/144] ell / ba / N=10000 / d=0.05 ... 1387.64 ms (±2.03664)
+  Format:          ell
+  Topology:        ba
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             9749500
+  Matrix memory:   375120000 bytes
+  Mean time:       1387.64 ms
+  Median time:     1388.17 ms
+  Std time:        2.03664 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 894.486
+  Total spikes:    894486
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.27033 GB/s
+  Scatter thruput: 628463 edges/ms
+  Bytes/spike:     419.369
+  --- Gather metrics ---
+  Gather time:     1388.91 ms (±2.49571)
+  Gather median:   1388.55 ms
+  Gather thruput:  627887 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 5723.88x
+  Cache ratio L2:  715.485x
+  Cache ratio L3:  44.7178x
+
+[135/144] ell / ba / N=10000 / d=0.1 ... 1956.12 ms (±10.1695)
+  Format:          ell
+  Topology:        ba
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             18999000
+  Matrix memory:   524640000 bytes
+  Mean time:       1956.12 ms
+  Median time:     1952.5 ms
+  Std time:        10.1695 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 944.559
+  Total spikes:    944559
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.268204 GB/s
+  Scatter thruput: 917411 edges/ms
+  Bytes/spike:     555.434
+  --- Gather metrics ---
+  Gather time:     1951.27 ms (±2.02896)
+  Gather median:   1951.08 ms
+  Gather thruput:  919694 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 8005.37x
+  Cache ratio L2:  1000.67x
+  Cache ratio L3:  62.542x
+
+[136/144] ell / ws / N=1000 / d=0.01 ... 67.1251 ms (±0.0886153)
+  Format:          ell
+  Topology:        ws
+  N:               1000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             10000
+  Matrix memory:   192000 bytes
+  Mean time:       67.1251 ms
+  Median time:     67.1243 ms
+  Std time:        0.0886153 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 78.614
+  Total spikes:    78614
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.00286033 GB/s
+  Scatter thruput: 11711.6 edges/ms
+  Bytes/spike:     2.44231
+  --- Gather metrics ---
+  Gather time:     67.1525 ms (±0.0977425)
+  Gather median:   67.1386 ms
+  Gather thruput:  11706.8 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 2.92969x
+  Cache ratio L2:  0.366211x
+  Cache ratio L3:  0.0228882x
+
+[137/144] ell / ws / N=1000 / d=0.05 ... 69.0214 ms (±0.42468)
+  Format:          ell
+  Topology:        ws
+  N:               1000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             50000
+  Matrix memory:   744000 bytes
+  Mean time:       69.0214 ms
+  Median time:     68.8605 ms
+  Std time:        0.42468 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 79.92
+  Total spikes:    79920
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0107793 GB/s
+  Scatter thruput: 57895.1 edges/ms
+  Bytes/spike:     9.30931
+  --- Gather metrics ---
+  Gather time:     68.8132 ms (±0.178418)
+  Gather median:   68.7633 ms
+  Gather thruput:  58070.2 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 11.3525x
+  Cache ratio L2:  1.41907x
+  Cache ratio L3:  0.0886917x
+
+[138/144] ell / ws / N=1000 / d=0.1 ... 70.8494 ms (±0.0647562)
+  Format:          ell
+  Topology:        ws
+  N:               1000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             100000
+  Matrix memory:   1464000 bytes
+  Mean time:       70.8494 ms
+  Median time:     70.8558 ms
+  Std time:        0.0647562 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 80.872
+  Total spikes:    80872
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0206635 GB/s
+  Scatter thruput: 114146 edges/ms
+  Bytes/spike:     18.1027
+  --- Gather metrics ---
+  Gather time:     70.9327 ms (±0.085387)
+  Gather median:   70.9163 ms
+  Gather thruput:  114012 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 22.3389x
+  Cache ratio L2:  2.79236x
+  Cache ratio L3:  0.174522x
+
+[139/144] ell / ws / N=5000 / d=0.01 ... 346.969 ms (±0.190747)
+  Format:          ell
+  Topology:        ws
+  N:               5000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:3
+  NNZ:             250000
+  Matrix memory:   4020000 bytes
+  Mean time:       346.969 ms
+  Median time:     346.881 ms
+  Std time:        0.190747 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 399.585
+  Total spikes:    399585
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.011586 GB/s
+  Scatter thruput: 57582.2 edges/ms
+  Bytes/spike:     10.0604
+  --- Gather metrics ---
+  Gather time:     347.254 ms (±0.291206)
+  Gather median:   347.301 ms
+  Gather thruput:  57534.9 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 61.3403x
+  Cache ratio L2:  7.66754x
+  Cache ratio L3:  0.479221x
+
+[140/144] ell / ws / N=5000 / d=0.05 ... 414.96 ms (±0.842027)
+  Format:          ell
+  Topology:        ws
+  N:               5000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:3
+  NNZ:             1250000
+  Matrix memory:   16860000 bytes
+  Mean time:       414.96 ms
+  Median time:     415.43 ms
+  Std time:        0.842027 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 414.451
+  Total spikes:    414451
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0406304 GB/s
+  Scatter thruput: 249693 edges/ms
+  Bytes/spike:     40.6803
+  --- Gather metrics ---
+  Gather time:     417.309 ms (±2.89612)
+  Gather median:   416.573 ms
+  Gather thruput:  248288 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 257.263x
+  Cache ratio L2:  32.1579x
+  Cache ratio L3:  2.00987x
+
+[141/144] ell / ws / N=5000 / d=0.1 ... 513.692 ms (±15.8914)
+  Format:          ell
+  Topology:        ws
+  N:               5000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:0
+  NNZ:             2500000
+  Matrix memory:   32580000 bytes
+  Mean time:       513.692 ms
+  Median time:     506.553 ms
+  Std time:        15.8914 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 424.846
+  Total spikes:    424846
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0634232 GB/s
+  Scatter thruput: 413522 edges/ms
+  Bytes/spike:     76.6866
+  --- Gather metrics ---
+  Gather time:     508.261 ms (±3.33162)
+  Gather median:   509.317 ms
+  Gather thruput:  417941 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 497.131x
+  Cache ratio L2:  62.1414x
+  Cache ratio L3:  3.88384x
+
+[142/144] ell / ws / N=10000 / d=0.01 ... 738.01 ms (±0.997539)
+  Format:          ell
+  Topology:        ws
+  N:               10000
+  Density/param:   0.01
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:3
+  NNZ:             1000000
+  Matrix memory:   14640000 bytes
+  Mean time:       738.01 ms
+  Median time:     738.51 ms
+  Std time:        0.997539 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 808.803
+  Total spikes:    808803
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0198371 GB/s
+  Scatter thruput: 109592 edges/ms
+  Bytes/spike:     18.1008
+  --- Gather metrics ---
+  Gather time:     738.871 ms (±1.28283)
+  Gather median:   738.459 ms
+  Gather thruput:  109465 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 223.389x
+  Cache ratio L2:  27.9236x
+  Cache ratio L3:  1.74522x
+
+[143/144] ell / ws / N=10000 / d=0.05 ... 1041.38 ms (±1.75946)
+  Format:          ell
+  Topology:        ws
+  N:               10000
+  Density/param:   0.05
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:2
+  NNZ:             5000000
+  Matrix memory:   65280000 bytes
+  Mean time:       1041.38 ms
+  Median time:     1041.36 ms
+  Std time:        1.75946 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 849.607
+  Total spikes:    849607
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0626858 GB/s
+  Scatter thruput: 407922 edges/ms
+  Bytes/spike:     76.8355
+  --- Gather metrics ---
+  Gather time:     1041.75 ms (±0.663022)
+  Gather median:   1041.58 ms
+  Gather thruput:  407779 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 996.094x
+  Cache ratio L2:  124.512x
+  Cache ratio L3:  7.78198x
+
+[144/144] ell / ws / N=10000 / d=0.1 ... 1302.61 ms (±5.04111)
+  Format:          ell
+  Topology:        ws
+  N:               10000
+  Density/param:   0.1
+  Poisson rate:    15
+  Background I:    14 mV
+  Inject rate:     0
+  Timesteps:       1000
+  Trials:          10
+  Outliers removed:1
+  NNZ:             10000000
+  Matrix memory:   126600000 bytes
+  Mean time:       1302.61 ms
+  Median time:     1304.55 ms
+  Std time:        5.04111 ms
+  Peak RSS:        1265220 kB
+  Avg spikes/step: 876.637
+  Total spikes:    876637
+  --- Scatter metrics ---
+  Eff. bandwidth:  0.0971893 GB/s
+  Scatter thruput: 672984 edges/ms
+  Bytes/spike:     144.416
+  --- Gather metrics ---
+  Gather time:     1303.25 ms (±3.88336)
+  Gather median:   1304.04 ms
+  Gather thruput:  672654 edges/ms
+  --- Gather-only benchmark ---
+  GO time:         0 ms (±0)
+  GO median:       0 ms
+  GO throughput:   0 edges/ms
+  --- Cache ratios ---
+  Cache ratio L1d: 1931.76x
+  Cache ratio L2:  241.47x
+  Cache ratio L3:  15.0919x
+

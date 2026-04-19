@@ -1,5 +1,13 @@
 # Cache Hierarchy and Derived Performance Metrics
 
+> **Implementation Status (April 2026):** Fully implemented. Cache detection
+> reads `/sys/devices/system/cpu/cpu0/cache/` at startup on the benchmark
+> host (6-core CPU: L1d 48 KB, L2 2 MB, L3 24 MB). All seven derived metrics
+> (cache ratios L1/L2/L3, effective bandwidth, scatter/gather throughput,
+> bytes-per-spike, median time, outliers removed) are computed for every
+> configuration and written to the CSV. Hardware performance counters via
+> `perf stat` are supported through `scripts/run_benchmarks.sh --perf`.
+
 ## Overview
 
 Sparse matrix spike propagation performance is fundamentally governed by

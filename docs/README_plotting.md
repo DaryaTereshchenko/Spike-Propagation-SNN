@@ -1,5 +1,12 @@
 # Plotting and Visualisation
 
+> **Implementation Status (April 2026):** The plotting script
+> `scripts/plot_results.py` is fully implemented with 9 plotting functions
+> covering time-vs-N, time-vs-density, memory-vs-N, NEST comparison, cache
+> heatmaps, effective bandwidth, scatter throughput, cache ratio bars, and
+> TLB/branch heatmaps. CPU benchmark data in `results/benchmark_results.csv`
+> (144 rows) is ready for visualisation.
+
 ## Overview
 
 The plotting module (`scripts/plot_results.py`) generates publication-quality

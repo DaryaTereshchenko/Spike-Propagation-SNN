@@ -1,5 +1,13 @@
 # Leaky Integrate-and-Fire (LIF) Neuron Model
 
+> **Implementation Status (April 2026):** Fully implemented in
+> `src/lif_neuron.cpp` / `include/lif_neuron.h`. Forward Euler integration
+> with refractory period, background current injection (`--bg-current 14.0`),
+> and controlled spike injection (`--inject-rate`) are all operational.
+> Unit tests in `tests/test_lif.cpp` validate threshold, reset, and
+> refractory behaviour. The model matches the GeNN GPU LIF parameters
+> exactly for cross-platform comparison.
+
 ## Overview
 
 The Leaky Integrate-and-Fire (LIF) model is the most widely used

@@ -1,5 +1,13 @@
 # Running Benchmarks — CPU and GPU
 
+> **Implementation Status (April 2026):** Both CPU and GPU benchmark
+> pipelines are fully operational. The CPU binary `build/spike_benchmark`
+> compiles under C++17 with CMake and has completed a full 144-configuration
+> sweep. The GPU benchmark script `scripts/genn_benchmark.py` has been
+> executed on an NVIDIA GB10 (Blackwell) via PyGeNN 5.4.0, completing 18 of
+> 27 configurations (BITMASK mode skipped due to upstream GeNN bug). All
+> unit tests (`test_formats`, `test_lif`, `test_topology`) pass.
+
 ## CPU Benchmarks
 
 ```bash

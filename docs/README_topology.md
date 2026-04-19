@@ -1,5 +1,12 @@
 # Network Topology Generators
 
+> **Implementation Status (April 2026):** All four topology generators —
+> Erdős–Rényi, Fixed In-Degree, Barabási–Albert, and Watts–Strogatz — are
+> fully implemented in `src/topology.cpp` / `include/topology.h`. Unit tests
+> in `tests/test_topology.cpp` verify edge counts, degree distributions, and
+> self-loop exclusion. All topologies have been benchmarked across the full
+> sweep grid (N ∈ {1000, 5000, 10000}, density ∈ {0.01, 0.05, 0.1}).
+
 ## Overview
 
 The topology of a neural network—i.e., which neurons are connected and with

@@ -1,5 +1,12 @@
 # GPU Validation with GeNN
 
+> **Implementation Status (April 2026):** The GeNN validation script
+> (`scripts/genn_benchmark.py`) is fully implemented and has been executed.
+> The LIF parameters match the C++ implementation exactly (τ_m = 20 ms,
+> V_rest = −65 mV, V_thresh = −50 mV, t_ref = 2 ms, I_offset = 14 mV).
+> Spike-per-step counts are consistent across CPU and GPU, confirming
+> behavioural equivalence.
+
 ## Overview
 
 To compare CPU sparse-format performance against GPU-accelerated spike

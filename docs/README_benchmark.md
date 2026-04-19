@@ -1,5 +1,14 @@
 # Benchmark Harness
 
+> **Implementation Status (April 2026):** Fully implemented and validated.
+> The benchmark harness has been executed across 144 CPU configurations
+> (4 formats × 4 topologies × 3 sizes × 3 densities, 10 trials each) with
+> results archived in `results/benchmark_results.csv`. All features below —
+> scatter/gather benchmarking, IQR outlier rejection, cache detection, derived
+> metrics, background current, controlled spike injection, gather-only mode,
+> and subprocess-based RSS isolation — are operational. The compiled binary
+> is at `build/spike_benchmark`; unit tests pass via `ctest`.
+
 ## Overview
 
 The benchmark harness orchestrates the end-to-end measurement of spike

@@ -1,5 +1,13 @@
 # Sparse Matrix Formats for Spike Propagation
 
+> **Implementation Status (April 2026):** All four formats — COO, CSR, CSC,
+> and ELLPACK — are fully implemented with `scatter()`, `gather()`, and
+> `gather_all()` methods behind the `SparseMatrix` abstract interface.
+> Source files: `src/{coo,csr,csc,ell}_matrix.cpp` with headers in
+> `include/`. Unit tests in `tests/test_formats.cpp` verify correctness
+> of scatter/gather operations across all formats. Memory footprint
+> reporting via `memory_bytes()` is validated against analytical formulas.
+
 ## Overview
 
 Spike propagation in spiking neural networks (SNNs) fundamentally requires

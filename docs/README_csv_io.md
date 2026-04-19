@@ -1,5 +1,11 @@
 # CSV I/O and NEST Integration
 
+> **Implementation Status (April 2026):** CSV I/O is fully implemented in
+> `src/csv_io.cpp` / `include/csv_io.h`. The NEST export script
+> (`scripts/nest_export.py`) defines the Brunel-style balanced E/I column
+> model. Cross-validation with NEST-exported connectivity is supported via
+> the `--nest-csv` CLI flag.
+
 ## Overview
 
 This module provides CSV import/export for sparse connectivity matrices in

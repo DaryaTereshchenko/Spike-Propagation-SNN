@@ -39,6 +39,10 @@ struct BenchmarkConfig {
 
     // Run a dedicated gather-only benchmark (separate from scatter).
     bool        gather_only_benchmark = false;
+
+    // Path to a NEST-exported CSV connectivity file.  When non-empty the
+    // topology generator is bypassed and the matrix is loaded from this file.
+    std::string nest_csv;
 };
 
 /// Results from a single benchmark configuration.

@@ -121,6 +121,7 @@ static void print_usage()
         << "\n"
         << "Output:\n"
         << "  --output-csv FILE                Write results as CSV\n"
+        << "  --nest-csv   FILE                Load NEST-exported connectivity CSV\n"
         << "\n"
         << "Sweep modes:\n"
         << "  --sweep                          Run full parameter sweep\n"
@@ -158,6 +159,7 @@ int main(int argc, char* argv[])
 
     const std::string output_csv = get_arg(argc, argv, "--output-csv");
     const std::string cache_csv  = get_arg(argc, argv, "--cache-csv");
+    const std::string nest_csv   = get_arg(argc, argv, "--nest-csv");
 
     // -------------------------------------------------------------------
     // Single-config mode: run ONE config and print CSV row to stdout.
@@ -179,6 +181,7 @@ int main(int argc, char* argv[])
         cfg.background_current = std::stod(get_arg(argc, argv, "--bg-current",    "0.0"));
         cfg.inject_spike_rate  = std::stod(get_arg(argc, argv, "--inject-rate",   "0.0"));
         cfg.gather_only_benchmark = has_flag(argc, argv, "--gather-only");
+        cfg.nest_csv = nest_csv;
 
         auto result = run_benchmark(cfg);
 
@@ -302,6 +305,7 @@ int main(int argc, char* argv[])
                                         << " --bg-current "     << bg_current
                                         << " --inject-rate "    << inject_rate;
                                     if (gather_only) cmd << " --gather-only";
+                                    if (!nest_csv.empty()) cmd << " --nest-csv " << nest_csv;
 
                                     FILE* pipe = popen(cmd.str().c_str(), "r");
                                     if (!pipe) throw std::runtime_error("popen failed");
@@ -357,6 +361,7 @@ int main(int argc, char* argv[])
                                     cfg.background_current = bg_current;
                                     cfg.inject_spike_rate  = inject_rate;
                                     cfg.gather_only_benchmark = gather_only;
+                                    cfg.nest_csv = nest_csv;
 
                                     result = run_benchmark(cfg);
                                     std::cout << " " << result.mean_time_ms
@@ -392,13 +397,18 @@ int main(int argc, char* argv[])
         cfg.background_current = std::stod(get_arg(argc, argv, "--bg-current",    "0.0"));
         cfg.inject_spike_rate  = std::stod(get_arg(argc, argv, "--inject-rate",   "0.0"));
         cfg.gather_only_benchmark = has_flag(argc, argv, "--gather-only");
+        cfg.nest_csv = nest_csv;
 
         std::cout << "Running benchmark...\n";
         auto result = run_benchmark(cfg);
         print_result(result);
 
         if (!output_csv.empty()) {
-            write_csv_header(output_csv);
+            // Only write header if the file doesn't exist yet.
+            std::ifstream check(output_csv);
+            if (!check.good()) {
+                write_csv_header(output_csv);
+            }
             append_csv_row(output_csv, result);
             std::cout << "Results written to " << output_csv << "\n";
         }

@@ -1,6 +1,7 @@
 # Build directories
 build/
 cmake-build-*/
+nest-simulator/
 
 # Object files
 *.o
@@ -12,6 +13,9 @@ cmake-build-*/
 *~
 .vscode/
 .idea/
+
+# Large data files
+results/nest_connectivity.csv
 
 # OS files
 .DS_Store

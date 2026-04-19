@@ -2,6 +2,7 @@
 #include "coo_matrix.h"
 #include "csr_matrix.h"
 #include "csc_matrix.h"
+#include "csv_io.h"
 #include "ell_matrix.h"
 #include "topology.h"
 #include "lif_neuron.h"
@@ -143,14 +144,22 @@ std::unique_ptr<SparseMatrix> build_matrix(const std::string& format,
 // ---------------------------------------------------------------------------
 BenchmarkResult run_benchmark(const BenchmarkConfig& config)
 {
-    // 1. Generate topology.
-    COOTriplets triplets = generate_topology(config.topology, config.N,
-                                             config.density, config.seed);
+    // 1. Generate topology (or load from NEST CSV).
+    COOTriplets triplets;
+    if (!config.nest_csv.empty()) {
+        triplets = load_coo_from_csv(config.nest_csv);
+    } else {
+        triplets = generate_topology(config.topology, config.N,
+                                     config.density, config.seed);
+    }
+
+    // When loading from CSV, infer N from the matrix.
+    const int N = config.nest_csv.empty() ? config.N : triplets.N;
 
     // Normalise recurrent weights: w = coupling_strength / sqrt(K_avg).
     // Ensures consistent network dynamics across all topologies.
     {
-        double K_avg = static_cast<double>(triplets.nnz()) / config.N;
+        double K_avg = static_cast<double>(triplets.nnz()) / N;
         double w = config.coupling_strength / std::sqrt(std::max(K_avg, 1.0));
         for (auto& v : triplets.vals) {
             v = w;
@@ -161,9 +170,8 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
     auto matrix = build_matrix(config.format, triplets);
 
     // 3. Create LIF population.
-    LIFPopulation lif(config.N);
+    LIFPopulation lif(N);
 
-    const int N = config.N;
     std::vector<double> I_syn(N, 0.0);
 
     // Storage for per-trial timings and spike counts.
@@ -409,9 +417,10 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
 
     BenchmarkResult result;
     result.format        = config.format;
-    result.topology      = config.topology;
-    result.N             = config.N;
-    result.density       = config.density;
+    result.topology      = config.nest_csv.empty() ? config.topology : "nest";
+    result.N             = N;
+    result.density       = config.nest_csv.empty() ? config.density
+                           : static_cast<double>(triplets.nnz()) / (static_cast<double>(N) * N);
     result.timesteps     = config.timesteps;
     result.trials        = config.trials;
     result.mean_time_ms  = mean;

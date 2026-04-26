@@ -296,3 +296,68 @@ implementations are behaviourally equivalent.
 6. **BITMASK requires a GeNN patch** before it can be evaluated.  It remains
    a promising format for uniform-weight networks due to its $O(N^2/8)$
    memory footprint.
+
+---
+
+## 5. Appendix: What `DENSE` Means in `gpu_results.csv`
+
+The `mode` column in
+[results/gpu_results.csv](../results/gpu_results.csv) takes three values
+(`DENSE`, `SPARSE`, `BITMASK`) that come from GeNN's
+`SynapseMatrixConnectivity` enum (see
+[scripts/genn_benchmark.py](../scripts/genn_benchmark.py) and the
+`GeNN Connectivity Modes` section of
+[docs/README_gpu_validation.md](README_gpu_validation.md)). Because
+`DENSE` has **no analogue on the CPU side of this project**, it is worth
+spelling out exactly what it represents and why it earns its own column
+in the GPU CSV.
+
+### 5.1 Storage layout
+
+| GeNN mode | What is stored on the GPU | CPU analogue in this project |
+|-----------|---------------------------|------------------------------|
+| **`DENSE`** | A full $N \times N$ weight array — every possible synapse, including the zeros. No row pointers, no column indices, just `weight[i*N + j]`. | (none — the CPU side only implements sparse formats) |
+| `SPARSE` | CSR-style on the GPU: `rowLength[N]` + `ind[nnz]` + `g[nnz]`. Only non-zero synapses are stored. | `csr` |
+| `BITMASK` | One bit per *possible* synapse ($N^2/8$ bytes); the weight is a single shared scalar. | (no direct analogue) |
+
+`DENSE` is therefore a property of the **storage on the device**, not of
+the network itself. The underlying graph is identical across the three
+modes — only the way GeNN lays it out in GPU memory changes. This is
+confirmed by the `nnz` column, which records only the actually-existing
+edges and is the same across modes for any given $(N, \text{density})$
+pair.
+
+### 5.2 Why GeNN offers `DENSE` at all
+
+GPUs reward regular, coalesced memory access. With `DENSE`, every thread
+in a warp reads its row at a fixed stride, achieving full memory
+coalescing and letting the streaming multiprocessor hide DRAM latency.
+The trade-off is that the kernel must touch **every** entry, so the
+runtime is decoupled from the actual sparsity pattern.
+
+This is exactly the behaviour observable in
+[results/gpu_results.csv](../results/gpu_results.csv):
+
+* **`DENSE` runtime is essentially independent of density.** At
+  $N = 10\,000$, `DENSE` takes ~452 ms whether $p = 0.01$, $0.05$, or
+  $0.1$ — because the kernel always touches all $N^2$ entries
+  regardless.
+* **`SPARSE` runtime scales with `nnz`.** At $N = 10\,000$, `SPARSE`
+  goes from 586 ms ($p = 0.01$) → 1 190 ms ($p = 0.05$) → 1 249 ms
+  ($p = 0.1$).
+* **The crossover** in the recorded data sits at roughly $p \approx 0.05$
+  for the larger $N$: below that, `SPARSE` wins; above that, `DENSE`
+  wins because it avoids irregular indirect memory accesses.
+
+### 5.3 Why this matters for Research Question 3
+
+RQ3 asks whether the CPU format ranking agrees with the GPU ranking.
+The CPU experiment shows CSR/CSC dominating across all densities. The
+GPU experiment shows that **at high density a fully dense layout beats
+sparse storage on the GPU**, because GPU memory bandwidth is high
+enough to absorb the wasted zeros while it cannot absorb the irregular
+indirection of CSR. That divergence — present *only* because `DENSE`
+exists as a GeNN option — is the headline cross-architecture finding
+the project relies on, and it is the reason `DENSE` rows appear
+alongside `SPARSE` rows in the GPU CSV even though no equivalent layout
+is benchmarked on the CPU.

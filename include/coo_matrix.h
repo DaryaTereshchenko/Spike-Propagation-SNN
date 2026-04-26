@@ -25,6 +25,14 @@ public:
     int    num_cols()     const override { return ncols_; }
     size_t num_nonzeros() const override { return row_.size(); }
 
+    void save_sparsity_pattern(const std::string& filename,
+                               int resolution = 256) const override;
+
+    void save_storage_layout(const std::string& filename,
+                             int resolution = 512) const override;
+
+    void dump() const override;
+
 private:
     int nrows_, ncols_;
     std::vector<int>    row_;

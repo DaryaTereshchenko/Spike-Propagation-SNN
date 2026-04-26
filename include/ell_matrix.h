@@ -33,6 +33,14 @@ public:
     int    num_cols()     const override { return ncols_; }
     size_t num_nonzeros() const override { return nnz_; }
 
+    void save_sparsity_pattern(const std::string& filename,
+                               int resolution = 256) const override;
+
+    void save_storage_layout(const std::string& filename,
+                             int resolution = 512) const override;
+
+    void dump() const override;
+
     /// Maximum non-zeros per row (determines padding).
     int max_nnz_per_row() const { return max_nnz_; }
 

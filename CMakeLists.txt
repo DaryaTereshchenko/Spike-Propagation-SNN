@@ -24,6 +24,7 @@ add_library(spike_lib
     src/lif_neuron.cpp
     src/benchmark.cpp
     src/csv_io.cpp
+    src/stb_image_write_impl.cpp
 )
 target_include_directories(spike_lib PUBLIC ${CMAKE_SOURCE_DIR}/include)
 

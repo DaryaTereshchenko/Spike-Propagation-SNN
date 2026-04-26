@@ -169,6 +169,17 @@ BenchmarkResult run_benchmark(const BenchmarkConfig& config)
     // 2. Build sparse matrix.
     auto matrix = build_matrix(config.format, triplets);
 
+    // Save sparsity pattern visualization.
+    {
+        std::string sparsity_file = "results/sparsity_" + config.topology
+            + "_" + config.format + "_N" + std::to_string(N) + ".png";
+        matrix->save_sparsity_pattern(sparsity_file);
+
+        std::string layout_file = "results/layout_" + config.topology
+            + "_" + config.format + "_N" + std::to_string(N) + ".png";
+        matrix->save_storage_layout(layout_file);
+    }
+
     // 3. Create LIF population.
     LIFPopulation lif(N);
 
